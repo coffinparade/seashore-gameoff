@@ -1,0 +1,42 @@
+[gd_scene load_steps=6 format=3 uid="uid://cqkqq87iyvah"]
+
+[ext_resource type="PackedScene" uid="uid://dundrofrhxqh5" path="res://seashore-gameoff/scenes/player.tscn" id="1_jd5g7"]
+[ext_resource type="Texture2D" uid="uid://tnpxi8fx1eyt" path="res://seashore-gameoff/sprites/sand background.jpg" id="1_vojgn"]
+[ext_resource type="PackedScene" uid="uid://dcb5q4gh7mj7c" path="res://seashore-gameoff/scenes/collectible.tscn" id="3_40u51"]
+[ext_resource type="PackedScene" uid="uid://n2ciyqpf0wuj" path="res://seashore-gameoff/scenes/creature.tscn" id="4_g0wag"]
+[ext_resource type="Texture2D" uid="uid://c8c3sgfi68t5n" path="res://seashore-gameoff/sprites/waves_sprite.png" id="5_vojgn"]
+
+[node name="main" type="Node2D"]
+scale = Vector2(0.99600035, 1.0695513)
+
+[node name="background" type="Sprite2D" parent="."]
+texture_repeat = 2
+texture = ExtResource("1_vojgn")
+
+[node name="Player" parent="." instance=ExtResource("1_jd5g7")]
+position = Vector2(0, -280.49142)
+move_speed = 450.0
+
+[node name="Collectible" parent="." instance=ExtResource("3_40u51")]
+position = Vector2(-422.6906, 43.943665)
+
+[node name="Collectible2" parent="." instance=ExtResource("3_40u51")]
+position = Vector2(267.06818, -1.8699341)
+
+[node name="Collectible3" parent="." instance=ExtResource("3_40u51")]
+position = Vector2(657.63025, -66.38297)
+value = 3
+
+[node name="Collectible4" parent="." instance=ExtResource("3_40u51")]
+position = Vector2(289.15652, 258.05215)
+
+[node name="Collectible5" parent="." instance=ExtResource("3_40u51")]
+position = Vector2(-138.55417, 201.01886)
+value = 5
+
+[node name="creature" parent="." instance=ExtResource("4_g0wag")]
+position = Vector2(-293.17258, 39.268803)
+
+[node name="Wave" type="Sprite2D" parent="."]
+position = Vector2(0, 572.2026)
+texture = ExtResource("5_vojgn")

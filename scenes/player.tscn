@@ -1,0 +1,52 @@
+[gd_scene load_steps=5 format=3 uid="uid://dundrofrhxqh5"]
+
+[ext_resource type="Script" uid="uid://cyjnqolhsu7o3" path="res://seashore-gameoff/Scripts/player.gd" id="1_d61yg"]
+[ext_resource type="Texture2D" uid="uid://caepxx2npfa68" path="res://icon.svg" id="2_y73uf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r7vu2"]
+size = Vector2(128, 128)
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_d61yg"]
+particle_flag_rotate_y = true
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(50, 1, 1)
+angle_min = -19.99999
+angle_max = 20.000011
+direction = Vector3(0, 0, 0)
+gravity = Vector3(0, 83.52, 0)
+scale_min = 4.0
+scale_max = 7.0
+
+[node name="Player" type="CharacterBody2D" groups=["player"]]
+scale = Vector2(0.58708024, 0.58708024)
+motion_mode = 1
+script = ExtResource("1_d61yg")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-1.9073486e-06, -1.9073486e-06)
+texture = ExtResource("2_y73uf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_r7vu2")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(10.220068, 0)
+scale = Vector2(0.99788606, 1)
+limit_left = -1500
+limit_top = -1000
+limit_right = 1500
+limit_bottom = 1600
+position_smoothing_enabled = true
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
+drag_left_margin = 0.1
+drag_top_margin = 0.05
+drag_right_margin = 0.1
+drag_bottom_margin = 0.05
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+position = Vector2(0, 64.7271)
+lifetime = 0.5
+visibility_rect = Rect2(-100, -100, 200, 119.815)
+process_material = SubResource("ParticleProcessMaterial_d61yg")

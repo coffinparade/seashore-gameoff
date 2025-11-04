@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://dcb5q4gh7mj7c"]
+
+[ext_resource type="Script" uid="uid://dkn31f6n70fox" path="res://seashore-gameoff/Scripts/collectible.gd" id="1_1vrnl"]
+[ext_resource type="Texture2D" uid="uid://caepxx2npfa68" path="res://icon.svg" id="1_gjtva"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1vrnl"]
+radius = 62.248974
+
+[node name="Collectible" type="Area2D"]
+script = ExtResource("1_1vrnl")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.7540912, 0.68326867, 0.1342169, 1)
+texture = ExtResource("1_gjtva")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_1vrnl")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
