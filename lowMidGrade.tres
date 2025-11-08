@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Shell" load_steps=3 format=3 uid="uid://dokltrxjewbxd"]
+
+[ext_resource type="Script" uid="uid://dd2lqn8duwqra" path="res://seashore-gameoff/Scripts/shell_data.gd" id="1_qa3as"]
+[ext_resource type="Texture2D" uid="uid://dwgw12qjmfiqp" path="res://seashore-gameoff/sprites/shell_two.png" id="2_dw50a"]
+
+[resource]
+script = ExtResource("1_qa3as")
+texture = ExtResource("2_dw50a")
+value = 2
+metadata/_custom_type_script = "uid://dd2lqn8duwqra"

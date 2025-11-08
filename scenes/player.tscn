@@ -33,6 +33,7 @@ shape = SubResource("RectangleShape2D_r7vu2")
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(10.220068, 0)
 scale = Vector2(0.99788606, 1)
+zoom = Vector2(0.5, 0.5)
 limit_left = -1500
 limit_top = -1000
 limit_right = 1500
@@ -45,7 +46,7 @@ drag_top_margin = 0.05
 drag_right_margin = 0.1
 drag_bottom_margin = 0.05
 
-[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+[node name="Walking Particles" type="GPUParticles2D" parent="."]
 position = Vector2(0, 64.7271)
 lifetime = 0.5
 visibility_rect = Rect2(-100, -100, 200, 119.815)

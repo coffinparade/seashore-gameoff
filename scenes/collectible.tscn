@@ -1,17 +1,18 @@
-[gd_scene load_steps=4 format=3 uid="uid://dcb5q4gh7mj7c"]
+[gd_scene load_steps=5 format=3 uid="uid://dcb5q4gh7mj7c"]
 
 [ext_resource type="Script" uid="uid://dkn31f6n70fox" path="res://seashore-gameoff/Scripts/collectible.gd" id="1_1vrnl"]
-[ext_resource type="Texture2D" uid="uid://caepxx2npfa68" path="res://icon.svg" id="1_gjtva"]
+[ext_resource type="Resource" uid="uid://dokltrxjewbxd" path="res://seashore-gameoff/lowMidGrade.tres" id="2_k0nvh"]
+[ext_resource type="Texture2D" uid="uid://cwj0byk7r4bux" path="res://seashore-gameoff/sprites/shell_one.png" id="3_2cs23"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1vrnl"]
-radius = 62.248974
+radius = 51.0
 
 [node name="Collectible" type="Area2D"]
 script = ExtResource("1_1vrnl")
+type = ExtResource("2_k0nvh")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-modulate = Color(0.7540912, 0.68326867, 0.1342169, 1)
-texture = ExtResource("1_gjtva")
+texture = ExtResource("3_2cs23")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_1vrnl")
