@@ -1,18 +1,55 @@
 extends Node2D
 
-@export var wave_time :=2.0
+@export var wave_time :=30.0
 var last_detect_time:float
-@onready var wave_anim = $AnimationPlayer
+@onready var wave_anim = $Wave/AnimationPlayer
+@onready var collectibleContainer = $CollectibleContainer
+@onready var creatureContainer = $CreatureContainer
+var new_collectible
+var new_creature
+
+
+
 func _on_stand_area_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
 		body.store_shells()
-func _process(delta: float) -> void:
+
+func _process(_delta: float) -> void:
 	var time = Time.get_unix_time_from_system()
 	if time-last_detect_time>wave_time:
 		last_detect_time = time
-		_clear_shore()
-func _clear_shore():
-	wave_anim.current_animation = "wave"
-	pass
+		_reset_shore()
+
+
+func _reset_shore():
+	wave_anim.current_animation = "wave_up"
+	wave_anim.queue("wave_down")
+	wave_anim.queue("still")
+	await wave_anim.animation_changed
+	for creature in creatureContainer.get_children():
+		creature.queue_free()
+	for collectible in collectibleContainer.get_children():
+		collectible.queue_free()
+	
+	_spawn_shore()
+
 func _spawn_shore():
-	pass
+	# create collectibles
+	for i in randi_range(5,15):
+		new_collectible = ShellGrades.collectableShell.instantiate()
+		new_collectible.type = ShellGrades.shellGrades[randi_range(0,ShellGrades.shellGrades.size()-1)]
+		new_collectible.set_texture()
+		new_collectible.global_position = Vector2(randi_range(-1500,1500),randi_range(-200,750))
+		collectibleContainer.add_child(new_collectible)
+	#create creatures 
+	var test
+	for i in randi_range(0,10):
+		test = randf()>0.3
+		if test:
+			new_creature = CreatureScenes.moving_creature.instantiate()
+			new_creature.set_move_dir(Vector2.from_angle(randf_range(0,TAU))*randi_range(100,300))
+			new_creature.set_move_speed(randi_range(40,100))
+		else:
+			new_creature = CreatureScenes.still_creature.instantiate()
+		new_creature.global_position = Vector2(randi_range(-1300,1300),randi_range(-200,650))
+		creatureContainer.add_child(new_creature)

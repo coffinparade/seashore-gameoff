@@ -1,9 +1,16 @@
-[gd_scene load_steps=12 format=3 uid="uid://cqkqq87iyvah"]
+[gd_scene load_steps=18 format=3 uid="uid://cqkqq87iyvah"]
 
 [ext_resource type="Script" uid="uid://do23sqb2gtju5" path="res://seashore-gameoff/Scripts/shore.gd" id="1_0jtmf"]
 [ext_resource type="PackedScene" uid="uid://dundrofrhxqh5" path="res://seashore-gameoff/scenes/player.tscn" id="1_jd5g7"]
 [ext_resource type="Texture2D" uid="uid://tnpxi8fx1eyt" path="res://seashore-gameoff/sprites/sand background.jpg" id="1_vojgn"]
+[ext_resource type="PackedScene" uid="uid://dcb5q4gh7mj7c" path="res://seashore-gameoff/scenes/collectible.tscn" id="3_40u51"]
+[ext_resource type="PackedScene" uid="uid://n2ciyqpf0wuj" path="res://seashore-gameoff/scenes/creature.tscn" id="4_g0wag"]
+[ext_resource type="Resource" uid="uid://bntqgtt2leccn" path="res://seashore-gameoff/midHighGradeShell.tres" id="4_wsm0j"]
+[ext_resource type="Resource" uid="uid://cm1umn6c4pphd" path="res://seashore-gameoff/highGrade.tres" id="5_83j6o"]
+[ext_resource type="Resource" uid="uid://cps4x6k1x6et8" path="res://seashore-gameoff/midGradeShell.tres" id="5_cq65s"]
 [ext_resource type="Texture2D" uid="uid://c8c3sgfi68t5n" path="res://seashore-gameoff/sprites/waves_sprite.png" id="5_vojgn"]
+[ext_resource type="Resource" uid="uid://cdksakx85yfpw" path="res://seashore-gameoff/lowGradeShell.tres" id="6_83j6o"]
+[ext_resource type="PackedScene" uid="uid://py1mi3cuoqa3" path="res://seashore-gameoff/scenes/moving_creature.tscn" id="11_83j6o"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3rpen"]
 size = Vector2(740.96356, 286.10132)
@@ -33,62 +40,9 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0, 1.0333333, 2)
 }
 
-[sub_resource type="Animation" id="Animation_67su5"]
-resource_name = "still"
-length = 5.0
-loop_mode = 1
-tracks/0/type = "bezier"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Wave:scale:x")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(1.45, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0)
-}
-tracks/1/type = "bezier"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Wave:scale:y")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"handle_modes": PackedInt32Array(0, 2, 0),
-"points": PackedFloat32Array(0.547, -1, 0, 1, 0, 0.6, -1, 0, 1, 0, 0.547, -1, 0, 1, 0),
-"times": PackedFloat32Array(0, 2.5, 5)
-}
-
-[sub_resource type="Animation" id="Animation_c0lc1"]
-resource_name = "wave_down"
-length = 2.5
-tracks/0/type = "bezier"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Wave:scale:x")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"handle_modes": PackedInt32Array(2),
-"points": PackedFloat32Array(1.45, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0)
-}
-tracks/1/type = "bezier"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Wave:scale:y")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"handle_modes": PackedInt32Array(0, 0),
-"points": PackedFloat32Array(1.117, -1, 0, 1, 0.091, 0.547, -1, 0, 1, 0),
-"times": PackedFloat32Array(0, 2.5)
-}
-
 [sub_resource type="Animation" id="Animation_83j6o"]
 resource_name = "new_animation"
-length = 2.5
+length = 7.0
 tracks/0/type = "bezier"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -107,17 +61,42 @@ tracks/1/path = NodePath("Wave:scale:y")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"handle_modes": PackedInt32Array(0, 0),
-"points": PackedFloat32Array(0.547, -1, 0, 1, 0, 1.117, -1, 0, 1, 0),
-"times": PackedFloat32Array(0, 2.5)
+"handle_modes": PackedInt32Array(0, 2, 2),
+"points": PackedFloat32Array(0.547, -0.25, 0, 0, 0, 1.117, -2, 0, 2, 0, 0.547, 0, 0, 0, 0),
+"times": PackedFloat32Array(0, 3.5, 7)
+}
+
+[sub_resource type="Animation" id="Animation_67su5"]
+resource_name = "still"
+length = 2.0
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Wave:scale:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(),
+"points": PackedFloat32Array(),
+"times": PackedFloat32Array()
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Wave:scale:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(0.547, -0.25, 0, 0.25, 0, 0.6, -0.17222223, 0, 0.16111112, 0, 0.547, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1.0333333, 2)
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_67su5"]
 _data = {
 &"RESET": SubResource("Animation_cq65s"),
 &"still": SubResource("Animation_67su5"),
-&"wave_down": SubResource("Animation_c0lc1"),
-&"wave_up": SubResource("Animation_83j6o")
+&"wave": SubResource("Animation_83j6o")
 }
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_cq65s"]
@@ -131,9 +110,40 @@ texture_repeat = 2
 scale = Vector2(1.6856697, 1.6856697)
 texture = ExtResource("1_vojgn")
 
-[node name="CollectibleContainer" type="Node2D" parent="."]
+[node name="Collectible_Container" type="Node2D" parent="."]
 
-[node name="CreatureContainer" type="Node2D" parent="."]
+[node name="Collectible" parent="Collectible_Container" instance=ExtResource("3_40u51")]
+position = Vector2(-422.6906, 43.943665)
+type = ExtResource("4_wsm0j")
+
+[node name="Collectible2" parent="Collectible_Container" instance=ExtResource("3_40u51")]
+position = Vector2(267.06818, -1.8699341)
+type = ExtResource("5_83j6o")
+
+[node name="Collectible3" parent="Collectible_Container" instance=ExtResource("3_40u51")]
+position = Vector2(657.6302, -66.38298)
+value = 3
+type = ExtResource("5_cq65s")
+
+[node name="Collectible4" parent="Collectible_Container" instance=ExtResource("3_40u51")]
+position = Vector2(289.15652, 258.05215)
+type = ExtResource("6_83j6o")
+
+[node name="Collectible5" parent="Collectible_Container" instance=ExtResource("3_40u51")]
+position = Vector2(-138.55417, 201.01888)
+value = 5
+
+[node name="creature container" type="Node2D" parent="."]
+
+[node name="creature" parent="creature container" instance=ExtResource("4_g0wag")]
+position = Vector2(-293.17258, 39.268803)
+scale = Vector2(2.1424787, 2.142479)
+
+[node name="moving_creature" parent="creature container" instance=ExtResource("11_83j6o")]
+position = Vector2(-114.45779, -139.31076)
+scale = Vector2(2.1424787, 2.142479)
+move_direction = Vector2(200, 0)
+move_speed = 100.0
 
 [node name="Player" parent="." instance=ExtResource("1_jd5g7")]
 position = Vector2(0, -600)
@@ -156,7 +166,6 @@ root_node = NodePath("../..")
 libraries = {
 &"": SubResource("AnimationLibrary_67su5")
 }
-autoplay = "still"
 
 [node name="Bounds_Container" type="Node2D" parent="."]
 
