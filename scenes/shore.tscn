@@ -135,14 +135,10 @@ texture = ExtResource("1_vojgn")
 
 [node name="CreatureContainer" type="Node2D" parent="."]
 
-[node name="Player" parent="." instance=ExtResource("1_jd5g7")]
-position = Vector2(0, -600)
-move_speed = 450.0
-
-[node name="Stand_Area" type="Area2D" parent="."]
+[node name="Collection_Area" type="Area2D" parent="."]
 position = Vector2(0, -812.49023)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Stand_Area"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Collection_Area"]
 shape = SubResource("RectangleShape2D_3rpen")
 
 [node name="Wave" type="Sprite2D" parent="."]
@@ -157,6 +153,10 @@ libraries = {
 &"": SubResource("AnimationLibrary_67su5")
 }
 autoplay = "still"
+
+[node name="Player" parent="." instance=ExtResource("1_jd5g7")]
+position = Vector2(0, -545.0884)
+move_speed = 450.0
 
 [node name="Bounds_Container" type="Node2D" parent="."]
 
@@ -187,4 +187,4 @@ position = Vector2(1454.016, 0)
 rotation = -1.5707964
 shape = SubResource("WorldBoundaryShape2D_cq65s")
 
-[connection signal="body_entered" from="Stand_Area" to="." method="_on_stand_area_body_entered"]
+[connection signal="body_entered" from="Collection_Area" to="." method="_on_collection_area_body_entered"]

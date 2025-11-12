@@ -1,14 +1,16 @@
-[gd_scene load_steps=5 format=3 uid="uid://dundrofrhxqh5"]
+[gd_scene load_steps=11 format=3 uid="uid://dundrofrhxqh5"]
 
 [ext_resource type="Script" uid="uid://cyjnqolhsu7o3" path="res://seashore-gameoff/Scripts/player.gd" id="1_d61yg"]
-[ext_resource type="Texture2D" uid="uid://caepxx2npfa68" path="res://icon.svg" id="2_y73uf"]
+[ext_resource type="Texture2D" uid="uid://brqwa5rerlc4v" path="res://seashore-gameoff/sprites/kiddo.png" id="2_d61yg"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_r7vu2"]
-size = Vector2(128, 128)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_y73uf"]
+radius = 66.43044
+height = 303.19534
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_d61yg"]
 particle_flag_rotate_y = true
 particle_flag_disable_z = true
+emission_shape_offset = Vector3(0, 20, 0)
 emission_shape = 3
 emission_box_extents = Vector3(50, 1, 1)
 angle_min = -19.99999
@@ -18,17 +20,90 @@ gravity = Vector3(0, 83.52, 0)
 scale_min = 4.0
 scale_max = 7.0
 
+[sub_resource type="Theme" id="Theme_d61yg"]
+Label/colors/font_color = Color(0, 0, 0, 1)
+Label/colors/font_outline_color = Color(1, 1, 1, 1)
+Label/constants/outline_size = 2
+Label/font_sizes/font_size = 30
+
+[sub_resource type="Animation" id="Animation_y73uf"]
+resource_name = "hit"
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(2, 2),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 6.2831855, -0.16666667, -1.0471976, 0, 0),
+"times": PackedFloat32Array(0, 1)
+}
+
+[sub_resource type="Animation" id="Animation_ljme6"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_d61yg"]
+resource_name = "walk"
+length = 0.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.125, 0.25, 0.36666667),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, -0.08726646, 0.0, 0.08726646]
+}
+
+[sub_resource type="Animation" id="Animation_sr0es"]
+resource_name = "idle"
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_sr0es"]
+_data = {
+&"RESET": SubResource("Animation_ljme6"),
+&"hit": SubResource("Animation_y73uf"),
+&"idle": SubResource("Animation_sr0es"),
+&"walk(temp)": SubResource("Animation_d61yg")
+}
+
 [node name="Player" type="CharacterBody2D" groups=["player"]]
 scale = Vector2(0.58708024, 0.58708024)
 motion_mode = 1
 script = ExtResource("1_d61yg")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(-1.9073486e-06, -1.9073486e-06)
-texture = ExtResource("2_y73uf")
+[node name="Sprite2D" type="Sprite2D" parent="." groups=["player"]]
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_d61yg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_r7vu2")
+shape = SubResource("CapsuleShape2D_y73uf")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(10.220068, 0)
@@ -47,7 +122,60 @@ drag_right_margin = 0.1
 drag_bottom_margin = 0.05
 
 [node name="Walking Particles" type="GPUParticles2D" parent="."]
-position = Vector2(0, 64.7271)
+position = Vector2(0, 136.26758)
 lifetime = 0.5
 visibility_rect = Rect2(-100, -100, 200, 119.815)
 process_material = SubResource("ParticleProcessMaterial_d61yg")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="UI" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_d61yg")
+
+[node name="MoneyDisplay" type="Label" parent="CanvasLayer/UI"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.2
+anchor_bottom = 0.05
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 10.0
+offset_bottom = 10.0
+text = "$$$"
+
+[node name="BasketDisplay" type="Label" parent="CanvasLayer/UI"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.1
+anchor_right = 0.2
+anchor_bottom = 0.15
+offset_left = 10.0
+offset_right = 10.0
+text = "shell Count"
+
+[node name="TimeDisplay" type="Label" parent="CanvasLayer/UI"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.8
+anchor_right = 1.0
+anchor_bottom = 0.1
+offset_left = -10.0
+offset_top = 10.0
+offset_right = -10.0
+offset_bottom = 10.0
+grow_horizontal = 0
+text = "Time"
+horizontal_alignment = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_sr0es")
+}

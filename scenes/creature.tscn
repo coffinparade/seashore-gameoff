@@ -1,21 +1,22 @@
 [gd_scene load_steps=4 format=3 uid="uid://n2ciyqpf0wuj"]
 
 [ext_resource type="Script" uid="uid://bn3w4refp6w0g" path="res://seashore-gameoff/Scripts/creature.gd" id="1_n3vtp"]
-[ext_resource type="Texture2D" uid="uid://caepxx2npfa68" path="res://icon.svg" id="1_qysio"]
+[ext_resource type="Texture2D" uid="uid://mr25ut0k7hsh" path="res://seashore-gameoff/sprites/pmow.png" id="2_n3vtp"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_n3vtp"]
-radius = 20.024984
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ei4pe"]
+radius = 18.203213
+height = 46.674904
 
 [node name="creature" type="Area2D"]
 scale = Vector2(2.142479, 2.142479)
 script = ExtResource("1_n3vtp")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-modulate = Color(1, 0.4240714, 0.37148204, 1)
-scale = Vector2(0.3156387, 0.312607)
-texture = ExtResource("1_qysio")
+scale = Vector2(0.06442265, 0.063803874)
+texture = ExtResource("2_n3vtp")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_n3vtp")
+rotation = -1.5683945
+shape = SubResource("CapsuleShape2D_ei4pe")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

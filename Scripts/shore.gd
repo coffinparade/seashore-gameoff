@@ -1,21 +1,20 @@
 extends Node2D
 
+
 @export var wave_time :=30.0
+@export var day_time:= 150.0
 var last_detect_time:float
 @onready var wave_anim = $Wave/AnimationPlayer
 @onready var collectibleContainer = $CollectibleContainer
 @onready var creatureContainer = $CreatureContainer
+@onready var timeDisplay = $Player/CanvasLayer/UI/TimeDisplay
 var new_collectible
 var new_creature
 
 
-
-func _on_stand_area_body_entered(body: Node2D) -> void:
-	if body.is_in_group("player"):
-		body.store_shells()
-
 func _process(_delta: float) -> void:
 	var time = Time.get_unix_time_from_system()
+	timeDisplay.text = str(day_time-(time-last_detect_time))
 	if time-last_detect_time>wave_time:
 		last_detect_time = time
 		_reset_shore()
@@ -53,3 +52,8 @@ func _spawn_shore():
 			new_creature = CreatureScenes.still_creature.instantiate()
 		new_creature.global_position = Vector2(randi_range(-1300,1300),randi_range(-200,650))
 		creatureContainer.add_child(new_creature)
+
+
+func _on_collection_area_body_entered(body):
+	if body.is_in_group("player"):
+		body.store_shells()

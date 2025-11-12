@@ -1,12 +1,10 @@
 [gd_resource type="Resource" script_class="Shell" load_steps=3 format=3 uid="uid://cdksakx85yfpw"]
 
 [ext_resource type="Script" uid="uid://dd2lqn8duwqra" path="res://seashore-gameoff/Scripts/shell_data.gd" id="1_x4b0a"]
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_x4b0a"]
-load_path = "res://.godot/imported/shell_one.png-b7f351c01353c3258df5b5a4a7406512.ctex"
+[ext_resource type="Texture2D" uid="uid://cwj0byk7r4bux" path="res://seashore-gameoff/sprites/shell_one.png" id="2_ahr8p"]
 
 [resource]
 script = ExtResource("1_x4b0a")
-texture = SubResource("CompressedTexture2D_x4b0a")
+texture = ExtResource("2_ahr8p")
 value = 1
 metadata/_custom_type_script = "uid://dd2lqn8duwqra"
