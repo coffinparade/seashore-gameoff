@@ -17,20 +17,22 @@ func _process(_delta: float) -> void:
 	timeDisplay.text = str(day_time-(time-last_detect_time))
 	if time-last_detect_time>wave_time:
 		last_detect_time = time
-		_reset_shore()
+		await _reset_shore()
+		_spawn_shore()
 
 
 func _reset_shore():
 	wave_anim.current_animation = "wave_up"
 	wave_anim.queue("wave_down")
 	wave_anim.queue("still")
+	
 	await wave_anim.animation_changed
+	
 	for creature in creatureContainer.get_children():
 		creature.queue_free()
 	for collectible in collectibleContainer.get_children():
 		collectible.queue_free()
 	
-	_spawn_shore()
 
 func _spawn_shore():
 	# create collectibles
@@ -43,7 +45,7 @@ func _spawn_shore():
 	#create creatures 
 	var test
 	for i in randi_range(0,10):
-		test = randf()>0.3
+		test = randf()>0.7
 		if test:
 			new_creature = CreatureScenes.moving_creature.instantiate()
 			new_creature.set_move_dir(Vector2.from_angle(randf_range(0,TAU))*randi_range(100,300))
