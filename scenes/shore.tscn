@@ -139,6 +139,7 @@ texture = ExtResource("1_vojgn")
 position = Vector2(0, -812.49023)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Collection_Area"]
+position = Vector2(1.0040157, 80.40755)
 shape = SubResource("RectangleShape2D_3rpen")
 
 [node name="Wave" type="Sprite2D" parent="."]
@@ -155,7 +156,7 @@ libraries = {
 autoplay = "still"
 
 [node name="Player" parent="." instance=ExtResource("1_jd5g7")]
-position = Vector2(0, -545.0884)
+position = Vector2(0, -482.44528)
 move_speed = 450.0
 
 [node name="Bounds_Container" type="Node2D" parent="."]
