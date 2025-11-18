@@ -1,11 +1,22 @@
-[gd_scene load_steps=11 format=3 uid="uid://dundrofrhxqh5"]
+[gd_scene load_steps=26 format=3 uid="uid://dundrofrhxqh5"]
 
 [ext_resource type="Script" uid="uid://cyjnqolhsu7o3" path="res://seashore-gameoff/Scripts/player.gd" id="1_d61yg"]
-[ext_resource type="Texture2D" uid="uid://brqwa5rerlc4v" path="res://seashore-gameoff/sprites/kiddo.png" id="2_d61yg"]
+[ext_resource type="Texture2D" uid="uid://brqwa5rerlc4v" path="res://seashore-gameoff/sprites/player_sprites/kiddo.png" id="2_d61yg"]
+[ext_resource type="Texture2D" uid="uid://ctall7k6dy6ni" path="res://seashore-gameoff/sprites/sun_background.png" id="3_ljme6"]
+[ext_resource type="Texture2D" uid="uid://cwof57xk7rlyp" path="res://seashore-gameoff/sprites/sun_vivid_light.png" id="4_ljme6"]
+[ext_resource type="Texture2D" uid="uid://bgmk26bwwvxkm" path="res://seashore-gameoff/sprites/player_sprites/lilguy_move_side_1.png" id="5_os5j8"]
+[ext_resource type="Texture2D" uid="uid://c2v4rawv12v33" path="res://seashore-gameoff/sprites/player_sprites/lilguy_move_side_2.png" id="6_bosog"]
+[ext_resource type="Texture2D" uid="uid://dhog2ia40xgb1" path="res://seashore-gameoff/sprites/player_sprites/lilguy_move_side_3.png" id="7_40gbk"]
+[ext_resource type="Texture2D" uid="uid://no6hu883ya3u" path="res://seashore-gameoff/sprites/player_sprites/lilguy_move_down_1.png" id="8_jgkmo"]
+[ext_resource type="Texture2D" uid="uid://cecdfobf1h6ah" path="res://seashore-gameoff/sprites/player_sprites/lilguy_move_down_2.png" id="9_mtrcb"]
+[ext_resource type="Texture2D" uid="uid://mfe71sry4l2f" path="res://seashore-gameoff/sprites/player_sprites/lilguy_move_down_3.png" id="10_77jmw"]
+[ext_resource type="Texture2D" uid="uid://cwx0s3cbd8qjd" path="res://seashore-gameoff/sprites/player_sprites/lilguy_move_up_1.png" id="11_3nswx"]
+[ext_resource type="Texture2D" uid="uid://bvjh3owmj1qfr" path="res://seashore-gameoff/sprites/player_sprites/lilguy_move_up_2.png" id="12_nyc2f"]
+[ext_resource type="Texture2D" uid="uid://dcsshuh7slj6u" path="res://seashore-gameoff/sprites/player_sprites/lilguy_move_up_3.png" id="13_4rcsy"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_y73uf"]
-radius = 66.43044
-height = 303.19534
+radius = 90.27727
+height = 405.39603
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_d61yg"]
 particle_flag_rotate_y = true
@@ -26,6 +37,56 @@ Label/colors/font_outline_color = Color(1, 1, 1, 1)
 Label/constants/outline_size = 2
 Label/font_sizes/font_size = 30
 
+[sub_resource type="Animation" id="Animation_ljme6"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_d61yg")]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.3063123, 0.30631223)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sprite2D:flip_h")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
 [sub_resource type="Animation" id="Animation_y73uf"]
 resource_name = "hit"
 tracks/0/type = "bezier"
@@ -40,18 +101,31 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 1)
 }
 
-[sub_resource type="Animation" id="Animation_ljme6"]
-length = 0.001
-tracks/0/type = "bezier"
+[sub_resource type="Animation" id="Animation_sr0es"]
+resource_name = "idle"
+tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:rotation")
+tracks/0/path = NodePath("Sprite2D:texture")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0)
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_d61yg")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.3063123, 0.30631223)]
 }
 
 [sub_resource type="Animation" id="Animation_d61yg"]
@@ -71,18 +145,164 @@ tracks/0/keys = {
 "values": [0.0, -0.08726646, 0.0, 0.08726646]
 }
 
-[sub_resource type="Animation" id="Animation_sr0es"]
-resource_name = "idle"
-tracks/0/type = "bezier"
+[sub_resource type="Animation" id="Animation_rq4vg"]
+resource_name = "move_down"
+length = 0.8
+loop_mode = 1
+tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:rotation")
+tracks/0/path = NodePath("Sprite2D:texture")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0)
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("8_jgkmo"), ExtResource("9_mtrcb"), ExtResource("10_77jmw"), ExtResource("9_mtrcb")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.49376988, 0.4937698)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:flip_h")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_76u0p"]
+resource_name = "move_up"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("11_3nswx"), ExtResource("12_nyc2f"), ExtResource("13_4rcsy"), ExtResource("12_nyc2f")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.49376988, 0.4937698)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:flip_h")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_ddw8m"]
+resource_name = "move_sideways"
+length = 0.8
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("5_os5j8"), ExtResource("6_bosog"), ExtResource("7_40gbk"), ExtResource("6_bosog")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.49376988, 0.4937698)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:flip_h")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_jgkmo"]
+resource_name = "move_left"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("5_os5j8"), ExtResource("6_bosog"), ExtResource("7_40gbk"), ExtResource("6_bosog")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.494, 0.494)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:flip_h")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_sr0es"]
@@ -90,6 +310,10 @@ _data = {
 &"RESET": SubResource("Animation_ljme6"),
 &"hit": SubResource("Animation_y73uf"),
 &"idle": SubResource("Animation_sr0es"),
+&"move_down": SubResource("Animation_rq4vg"),
+&"move_left": SubResource("Animation_jgkmo"),
+&"move_right": SubResource("Animation_ddw8m"),
+&"move_up": SubResource("Animation_76u0p"),
 &"walk(temp)": SubResource("Animation_d61yg")
 }
 
@@ -99,8 +323,9 @@ motion_mode = 1
 script = ExtResource("1_d61yg")
 
 [node name="Sprite2D" type="Sprite2D" parent="." groups=["player"]]
-scale = Vector2(0.25, 0.25)
+scale = Vector2(0.3063123, 0.30631223)
 texture = ExtResource("2_d61yg")
+flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_y73uf")
@@ -122,7 +347,7 @@ drag_right_margin = 0.1
 drag_bottom_margin = 0.05
 
 [node name="Walking Particles" type="GPUParticles2D" parent="."]
-position = Vector2(0, 136.26758)
+position = Vector2(0, 175.4445)
 lifetime = 0.5
 visibility_rect = Rect2(-100, -100, 200, 119.815)
 process_material = SubResource("ParticleProcessMaterial_d61yg")
@@ -138,18 +363,6 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = SubResource("Theme_d61yg")
 
-[node name="MoneyDisplay" type="Label" parent="CanvasLayer/UI"]
-unique_name_in_owner = true
-layout_mode = 1
-anchors_preset = -1
-anchor_right = 0.2
-anchor_bottom = 0.05
-offset_left = 10.0
-offset_top = 10.0
-offset_right = 10.0
-offset_bottom = 10.0
-text = "$$$"
-
 [node name="BasketDisplay" type="Label" parent="CanvasLayer/UI"]
 unique_name_in_owner = true
 layout_mode = 1
@@ -161,19 +374,27 @@ offset_left = 10.0
 offset_right = 10.0
 text = "shell Count"
 
-[node name="TimeDisplay" type="Label" parent="CanvasLayer/UI"]
+[node name="TimeDisplay" type="TextureProgressBar" parent="CanvasLayer/UI"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.8
+anchor_left = 0.95
 anchor_right = 1.0
-anchor_bottom = 0.1
-offset_left = -10.0
-offset_top = 10.0
-offset_right = -10.0
-offset_bottom = 10.0
 grow_horizontal = 0
-text = "Time"
-horizontal_alignment = 2
+step = 0.25
+value = 100.0
+fill_mode = 4
+texture_under = ExtResource("3_ljme6")
+texture_progress = ExtResource("4_ljme6")
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/UI"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

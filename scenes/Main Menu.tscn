@@ -1,0 +1,120 @@
+[gd_scene load_steps=7 format=3 uid="uid://ca5dxg8yu7j2x"]
+
+[ext_resource type="FontFile" uid="uid://8ibemi7h5xgk" path="res://seashore-gameoff/fonts/Poppin-Regular.ttf" id="1_wtopv"]
+[ext_resource type="Texture2D" uid="uid://brqwa5rerlc4v" path="res://seashore-gameoff/sprites/player_sprites/kiddo.png" id="2_k7qi2"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mercu"]
+bg_color = Color(0.33929998, 0.613495, 0.87, 1)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v870i"]
+bg_color = Color(0.387, 0.65204996, 0.9, 1)
+border_width_left = 7
+border_width_top = 7
+border_width_right = 7
+border_width_bottom = 7
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wtopv"]
+bg_color = Color(0.29230002, 0.54944503, 0.79, 1)
+border_width_left = 9
+border_width_top = 9
+border_width_right = 9
+border_width_bottom = 9
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="Theme" id="Theme_akoul"]
+Button/colors/font_color = Color(1, 1, 1, 1)
+Button/colors/font_focus_color = Color(1, 1, 1, 1)
+Button/colors/font_hover_color = Color(1, 1, 1, 1)
+Button/colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+Button/colors/font_pressed_color = Color(1, 1, 1, 1)
+Button/font_sizes/font_size = 50
+Button/fonts/font = ExtResource("1_wtopv")
+Button/styles/hover = SubResource("StyleBoxFlat_mercu")
+Button/styles/normal = SubResource("StyleBoxFlat_v870i")
+Button/styles/pressed = SubResource("StyleBoxFlat_wtopv")
+MarginContainer/constants/margin_bottom = 175
+MarginContainer/constants/margin_left = 20
+MarginContainer/constants/margin_right = 20
+MarginContainer/constants/margin_top = 175
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_akoul")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_k7qi2")
+expand_mode = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TextureRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Control" type="Control" parent="TextureRect/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 3.0
+
+[node name="MarginContainer" type="MarginContainer" parent="TextureRect/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 5
+size_flags_stretch_ratio = 1.5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TextureRect/HBoxContainer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Button" type="Button" parent="TextureRect/HBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Play"
+
+[node name="Control" type="Control" parent="TextureRect/HBoxContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+
+[node name="Button2" type="Button" parent="TextureRect/HBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Credits"
+
+[node name="Control2" type="Control" parent="TextureRect/HBoxContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+
+[node name="Button3" type="Button" parent="TextureRect/HBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Quit"

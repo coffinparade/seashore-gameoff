@@ -1,20 +1,27 @@
 extends Node2D
 
 
-@export var wave_time :=30.0
-@export var day_time:= 150.0
+@export var wave_time :=20.0
+@export var day_time:= 20.0
 var last_detect_time:float
 @onready var wave_anim = $Wave/AnimationPlayer
 @onready var collectibleContainer = $CollectibleContainer
 @onready var creatureContainer = $CreatureContainer
 @onready var timeDisplay = $Player/CanvasLayer/UI/TimeDisplay
+@onready var player = %Player
 var new_collectible
 var new_creature
+@onready var start_time = Time.get_unix_time_from_system()
+var time_left:float
+
+func _ready():
+	timeDisplay.max_value = day_time
 
 
 func _process(_delta: float) -> void:
 	var time = Time.get_unix_time_from_system()
-	timeDisplay.text = str(day_time-(time-last_detect_time))
+	time_left = day_time-(time-start_time)
+	timeDisplay.value = time_left
 	if time-last_detect_time>wave_time:
 		last_detect_time = time
 		await _reset_shore()
@@ -22,6 +29,9 @@ func _process(_delta: float) -> void:
 
 
 func _reset_shore():
+	if time_left<0:
+		_end_game()
+		pass
 	wave_anim.current_animation = "wave_up"
 	wave_anim.queue("wave_down")
 	wave_anim.queue("still")
@@ -59,3 +69,7 @@ func _spawn_shore():
 func _on_collection_area_body_entered(body):
 	if body.is_in_group("player"):
 		body.store_shells()
+
+func _end_game():
+	player.can_move = false
+	player.time_out()

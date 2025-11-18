@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://do23sqb2gtju5" path="res://seashore-gameoff/Scripts/shore.gd" id="1_0jtmf"]
 [ext_resource type="PackedScene" uid="uid://dundrofrhxqh5" path="res://seashore-gameoff/scenes/player.tscn" id="1_jd5g7"]
-[ext_resource type="Texture2D" uid="uid://tnpxi8fx1eyt" path="res://seashore-gameoff/sprites/sand background.jpg" id="1_vojgn"]
+[ext_resource type="Texture2D" uid="uid://qjxpr2yxjyfd" path="res://seashore-gameoff/sprites/sand_background.png" id="2_g0wag"]
 [ext_resource type="Texture2D" uid="uid://c8c3sgfi68t5n" path="res://seashore-gameoff/sprites/waves_sprite.png" id="5_vojgn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3rpen"]
@@ -125,11 +125,13 @@ _data = {
 [node name="main" type="Node2D"]
 scale = Vector2(0.99600035, 1.0695513)
 script = ExtResource("1_0jtmf")
+wave_time = null
+day_time = null
 
 [node name="background" type="Sprite2D" parent="."]
 texture_repeat = 2
 scale = Vector2(1.6856697, 1.6856697)
-texture = ExtResource("1_vojgn")
+texture = ExtResource("2_g0wag")
 
 [node name="CollectibleContainer" type="Node2D" parent="."]
 
@@ -156,6 +158,7 @@ libraries = {
 autoplay = "still"
 
 [node name="Player" parent="." instance=ExtResource("1_jd5g7")]
+unique_name_in_owner = true
 position = Vector2(0, -482.44528)
 move_speed = 450.0
 
