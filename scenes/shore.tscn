@@ -125,8 +125,6 @@ _data = {
 [node name="main" type="Node2D"]
 scale = Vector2(0.99600035, 1.0695513)
 script = ExtResource("1_0jtmf")
-wave_time = null
-day_time = null
 
 [node name="background" type="Sprite2D" parent="."]
 texture_repeat = 2

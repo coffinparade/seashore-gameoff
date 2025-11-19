@@ -8,13 +8,15 @@ var _collectedShells:Array[Shell]
 @onready var transition:=$CanvasLayer/UI/ColorRect
 var can_move:=true
 
-func _physics_process(delta: float) -> void:
+
+func _physics_process(_delta: float) -> void:
 	if can_move:
 		var move_dir = Input.get_vector("move_left","move_right","move_up","move_down")
 		velocity = move_dir*move_speed*weight_factor
 		animate()
 		$"Walking Particles".emitting = (velocity.x!=0||velocity.y!=0)&&!(velocity.y>0)
 		move_and_slide()
+
 
 func animate():
 	if velocity.length()!=0:
@@ -55,3 +57,8 @@ func store_shells():
 
 func update_basket():
 	basketDisplay.text = str(_collectedShells.size())
+
+
+func time_out():
+	await $CanvasLayer/UI.times_up()
+	$CanvasLayer/UI.end_screen()

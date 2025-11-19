@@ -2,7 +2,7 @@ extends Node2D
 
 
 @export var wave_time :=20.0
-@export var day_time:= 20.0
+@export var day_time:= 10.0
 var last_detect_time:float
 @onready var wave_anim = $Wave/AnimationPlayer
 @onready var collectibleContainer = $CollectibleContainer

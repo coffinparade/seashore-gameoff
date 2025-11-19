@@ -9,3 +9,5 @@ func increase_cash(increment:int):
 
 func decrease_cash(decrement:int):
 	_cash-=decrement
+func get_cash():
+	return _cash
