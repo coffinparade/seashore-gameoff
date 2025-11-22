@@ -1,15 +1,18 @@
 extends CharacterBody2D
 
 @export var move_speed:=150.0
-var weight_factor:=1.0
-var _collectedShells:Array[Shell]
+
 @onready var basketDisplay:=%BasketDisplay
 @onready var anim := $AnimationPlayer
 @onready var transition:=$CanvasLayer/UI/ColorRect
-var can_move:=true
 
+var can_move:=true
+var weight_factor:=1.0
+var _shellBasket:Array[Shell]
+var _collectedShells:Array[Shell]
 
 func _physics_process(_delta: float) -> void:
+	#player shouldn't be able to move at the end of the level, checks for that
 	if can_move:
 		var move_dir = Input.get_vector("move_left","move_right","move_up","move_down")
 		velocity = move_dir*move_speed*weight_factor
@@ -30,35 +33,45 @@ func animate():
 			anim.current_animation = "move_left"
 	else:
 		anim.current_animation = "idle"
+
+
 func drop_shells():
 	print( "hit")
-	_collectedShells.clear()
+	_shellBasket.clear()
 	update_basket()
 
 
 func print_shells():
-	for shell in _collectedShells:
+	for shell in _shellBasket:
 		print(str(shell.value)+" ")
 
 
 func add_shell(shell:Shell):
-	_collectedShells.append(shell)
+	_shellBasket.append(shell)
 	weight_factor-=0.05
 	update_basket()
 
 
 func store_shells():
-	for shell in _collectedShells:
+	for shell in _shellBasket:
 		ScoreTracker.increase_cash(shell.value)
+		_collectedShells.append(shell)
 	weight_factor = 1.0
-	_collectedShells.clear()
+	_shellBasket.clear()
 	update_basket()
 
 
 func update_basket():
-	basketDisplay.text = str(_collectedShells.size())
+	basketDisplay.text = str(_shellBasket.size())
 
 
 func time_out():
 	await $CanvasLayer/UI.times_up()
-	$CanvasLayer/UI.end_screen()
+	$CanvasLayer/UI.end_screen(_collectedShells)
+
+
+func hit():
+	drop_shells()
+	modulate = Color(0.734, 0.0, 0.158, 1.0)
+	await get_tree().create_timer(0.25).timeout
+	modulate = Color(1.0, 1.0, 1.0, 1.0)

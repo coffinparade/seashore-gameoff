@@ -1,6 +1,7 @@
-[gd_scene load_steps=28 format=3 uid="uid://dundrofrhxqh5"]
+[gd_scene load_steps=34 format=3 uid="uid://dundrofrhxqh5"]
 
 [ext_resource type="Script" uid="uid://cyjnqolhsu7o3" path="res://seashore-gameoff/Scripts/player.gd" id="1_d61yg"]
+[ext_resource type="Texture2D" uid="uid://fuha1p652yoc" path="res://seashore-gameoff/sprites/player_sprites/shadow.png" id="2_3nswx"]
 [ext_resource type="Texture2D" uid="uid://brqwa5rerlc4v" path="res://seashore-gameoff/sprites/player_sprites/kiddo.png" id="2_d61yg"]
 [ext_resource type="Texture2D" uid="uid://ctall7k6dy6ni" path="res://seashore-gameoff/sprites/sun_background.png" id="3_ljme6"]
 [ext_resource type="FontFile" uid="uid://8ibemi7h5xgk" path="res://seashore-gameoff/fonts/Poppin-Regular.ttf" id="3_mtrcb"]
@@ -10,15 +11,20 @@
 [ext_resource type="Texture2D" uid="uid://c2v4rawv12v33" path="res://seashore-gameoff/sprites/player_sprites/lilguy_move_side_2.png" id="6_bosog"]
 [ext_resource type="Texture2D" uid="uid://dhog2ia40xgb1" path="res://seashore-gameoff/sprites/player_sprites/lilguy_move_side_3.png" id="7_40gbk"]
 [ext_resource type="Texture2D" uid="uid://no6hu883ya3u" path="res://seashore-gameoff/sprites/player_sprites/lilguy_move_down_1.png" id="8_jgkmo"]
+[ext_resource type="Texture2D" uid="uid://cwj0byk7r4bux" path="res://seashore-gameoff/sprites/shell_one.png" id="8_mi6wm"]
+[ext_resource type="Texture2D" uid="uid://dwgw12qjmfiqp" path="res://seashore-gameoff/sprites/shell_two.png" id="9_28hv2"]
 [ext_resource type="Texture2D" uid="uid://cecdfobf1h6ah" path="res://seashore-gameoff/sprites/player_sprites/lilguy_move_down_2.png" id="9_mtrcb"]
 [ext_resource type="Texture2D" uid="uid://mfe71sry4l2f" path="res://seashore-gameoff/sprites/player_sprites/lilguy_move_down_3.png" id="10_77jmw"]
+[ext_resource type="Texture2D" uid="uid://xjw3siau8glb" path="res://seashore-gameoff/sprites/shell_three.png" id="10_fc86m"]
 [ext_resource type="Texture2D" uid="uid://cwx0s3cbd8qjd" path="res://seashore-gameoff/sprites/player_sprites/lilguy_move_up_1.png" id="11_3nswx"]
+[ext_resource type="Texture2D" uid="uid://bc24hdo82rij7" path="res://seashore-gameoff/sprites/shell_four.png" id="11_e1v3u"]
 [ext_resource type="Texture2D" uid="uid://bvjh3owmj1qfr" path="res://seashore-gameoff/sprites/player_sprites/lilguy_move_up_2.png" id="12_nyc2f"]
+[ext_resource type="Texture2D" uid="uid://by2dsphp24p2y" path="res://seashore-gameoff/sprites/shell_five.png" id="12_shrwa"]
 [ext_resource type="Texture2D" uid="uid://dcsshuh7slj6u" path="res://seashore-gameoff/sprites/player_sprites/lilguy_move_up_3.png" id="13_4rcsy"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_y73uf"]
-radius = 90.27727
-height = 405.39603
+radius = 85.16724
+height = 224.8415
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_d61yg"]
 particle_flag_rotate_y = true
@@ -43,6 +49,10 @@ Label/colors/font_outline_color = Color(1, 1, 1, 1)
 Label/constants/outline_size = 2
 Label/font_sizes/font_size = 30
 Label/fonts/font = ExtResource("3_mtrcb")
+MarginContainer/constants/margin_bottom = 80
+MarginContainer/constants/margin_left = 80
+MarginContainer/constants/margin_right = 80
+MarginContainer/constants/margin_top = 80
 
 [sub_resource type="Animation" id="Animation_ljme6"]
 length = 0.001
@@ -329,12 +339,18 @@ scale = Vector2(0.58708024, 0.58708024)
 motion_mode = 1
 script = ExtResource("1_d61yg")
 
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(-9.536743e-07, 183.96123)
+scale = Vector2(0.23079492, 0.2526319)
+texture = ExtResource("2_3nswx")
+
 [node name="Sprite2D" type="Sprite2D" parent="." groups=["player"]]
 scale = Vector2(0.3063123, 0.30631223)
 texture = ExtResource("2_d61yg")
 flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(6.813379, 105.60737)
 shape = SubResource("CapsuleShape2D_y73uf")
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -368,6 +384,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(1, 1.0074873)
 theme = SubResource("Theme_d61yg")
 script = ExtResource("4_77jmw")
 
@@ -420,7 +437,6 @@ theme_type_variation = &"CenterLabel"
 text = "Time's up!"
 
 [node name="End Panel" type="Panel" parent="CanvasLayer/UI"]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -428,19 +444,102 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Label" type="Label" parent="CanvasLayer/UI/End Panel"]
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/UI/End Panel"]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -14.5
-offset_right = 20.0
-offset_bottom = 14.5
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -70.5
+offset_bottom = 70.5
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/UI/End Panel/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MoneyDisplay" type="Label" parent="CanvasLayer/UI/End Panel/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"CenterLabel"
+text = "Money"
+
+[node name="Control" type="Control" parent="CanvasLayer/UI/End Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 5.0
+
+[node name="LowDisplay" type="HBoxContainer" parent="CanvasLayer/UI/End Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/UI/End Panel/MarginContainer/VBoxContainer/LowDisplay"]
+layout_mode = 2
+texture = ExtResource("8_mi6wm")
+
+[node name="LowDisplayText" type="Label" parent="CanvasLayer/UI/End Panel/MarginContainer/VBoxContainer/LowDisplay"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 6
+theme_type_variation = &"CenterLabel"
+text = "4"
+
+[node name="LowMidDisplay" type="HBoxContainer" parent="CanvasLayer/UI/End Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/UI/End Panel/MarginContainer/VBoxContainer/LowMidDisplay"]
+layout_mode = 2
+texture = ExtResource("9_28hv2")
+
+[node name="LowMidDisplayText" type="Label" parent="CanvasLayer/UI/End Panel/MarginContainer/VBoxContainer/LowMidDisplay"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 6
+theme_type_variation = &"CenterLabel"
+
+[node name="MidDisplay" type="HBoxContainer" parent="CanvasLayer/UI/End Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect2" type="TextureRect" parent="CanvasLayer/UI/End Panel/MarginContainer/VBoxContainer/MidDisplay"]
+layout_mode = 2
+texture = ExtResource("10_fc86m")
+
+[node name="MidDisplayText" type="Label" parent="CanvasLayer/UI/End Panel/MarginContainer/VBoxContainer/MidDisplay"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 6
+theme_type_variation = &"CenterLabel"
+
+[node name="MidHighDisplay" type="HBoxContainer" parent="CanvasLayer/UI/End Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect3" type="TextureRect" parent="CanvasLayer/UI/End Panel/MarginContainer/VBoxContainer/MidHighDisplay"]
+layout_mode = 2
+texture = ExtResource("11_e1v3u")
+
+[node name="MidHighDisplayText" type="Label" parent="CanvasLayer/UI/End Panel/MarginContainer/VBoxContainer/MidHighDisplay"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 6
+theme_type_variation = &"CenterLabel"
+
+[node name="HighDisplay" type="HBoxContainer" parent="CanvasLayer/UI/End Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect3" type="TextureRect" parent="CanvasLayer/UI/End Panel/MarginContainer/VBoxContainer/HighDisplay"]
+layout_mode = 2
+texture = ExtResource("12_shrwa")
+
+[node name="HighDisplayText" type="Label" parent="CanvasLayer/UI/End Panel/MarginContainer/VBoxContainer/HighDisplay"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 6
 theme_type_variation = &"CenterLabel"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]

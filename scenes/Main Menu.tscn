@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://ca5dxg8yu7j2x"]
+[gd_scene load_steps=8 format=3 uid="uid://ca5dxg8yu7j2x"]
 
 [ext_resource type="FontFile" uid="uid://8ibemi7h5xgk" path="res://seashore-gameoff/fonts/Poppin-Regular.ttf" id="1_wtopv"]
 [ext_resource type="Texture2D" uid="uid://brqwa5rerlc4v" path="res://seashore-gameoff/sprites/player_sprites/kiddo.png" id="2_k7qi2"]
+[ext_resource type="Script" uid="uid://cmswlj84odl1l" path="res://seashore-gameoff/scenes/main_menu.gd" id="2_mercu"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mercu"]
 bg_color = Color(0.33929998, 0.613495, 0.87, 1)
@@ -62,6 +63,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = SubResource("Theme_akoul")
+script = ExtResource("2_mercu")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
@@ -96,7 +98,7 @@ size_flags_stretch_ratio = 1.5
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Button" type="Button" parent="TextureRect/HBoxContainer/MarginContainer/VBoxContainer"]
+[node name="PlayButton" type="Button" parent="TextureRect/HBoxContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 text = "Play"
@@ -105,7 +107,7 @@ text = "Play"
 custom_minimum_size = Vector2(0, 10)
 layout_mode = 2
 
-[node name="Button2" type="Button" parent="TextureRect/HBoxContainer/MarginContainer/VBoxContainer"]
+[node name="CreditsButton" type="Button" parent="TextureRect/HBoxContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 text = "Credits"
@@ -114,7 +116,11 @@ text = "Credits"
 custom_minimum_size = Vector2(0, 10)
 layout_mode = 2
 
-[node name="Button3" type="Button" parent="TextureRect/HBoxContainer/MarginContainer/VBoxContainer"]
+[node name="QuitButton" type="Button" parent="TextureRect/HBoxContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 text = "Quit"
+
+[connection signal="pressed" from="TextureRect/HBoxContainer/MarginContainer/VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="TextureRect/HBoxContainer/MarginContainer/VBoxContainer/CreditsButton" to="." method="_on_credits_button_pressed"]
+[connection signal="pressed" from="TextureRect/HBoxContainer/MarginContainer/VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
