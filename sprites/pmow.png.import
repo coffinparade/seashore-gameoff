@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://mr25ut0k7hsh"
-path="res://.godot/imported/pmow.png-a4e12b649ce6b42557e9ca852e44658b.ctex"
+path="res://.godot/imported/pmow.png-ed0d2d66f947dbfcb090a4bd12865184.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://seashore-gameoff/sprites/pmow.png"
-dest_files=["res://.godot/imported/pmow.png-a4e12b649ce6b42557e9ca852e44658b.ctex"]
+source_file="res://seashore-gameoff/Sprites/pmow.png"
+dest_files=["res://.godot/imported/pmow.png-ed0d2d66f947dbfcb090a4bd12865184.ctex"]
 
 [params]
 

@@ -1,7 +1,7 @@
 extends Node2D
 
 @export var wave_time :=20.0
-@export var daytime:= 20.0
+@export var daytime:= 40.0
 
 @onready var start_time = Time.get_unix_time_from_system()
 @onready var wave_anim = $Wave/AnimationPlayer
@@ -82,3 +82,7 @@ func _on_collection_area_body_entered(body):
 func _end_game():
 	player.can_move = false
 	player.time_out()
+
+#loop that shit again!
+func _on_audio_stream_player_finished():
+	$AudioStreamPlayer.play()

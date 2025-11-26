@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://n2ciyqpf0wuj"]
 
-[ext_resource type="Script" uid="uid://bn3w4refp6w0g" path="res://seashore-gameoff/Scripts/creature.gd" id="1_n3vtp"]
-[ext_resource type="Texture2D" uid="uid://fuha1p652yoc" path="res://seashore-gameoff/sprites/player_sprites/shadow.png" id="2_ei4pe"]
-[ext_resource type="Texture2D" uid="uid://mr25ut0k7hsh" path="res://seashore-gameoff/sprites/pmow.png" id="2_n3vtp"]
+[ext_resource type="Script" uid="uid://bn3w4refp6w0g" path="res://seashore-gameoff/Scripts/creature.gd" id="1_lp5vf"]
+[ext_resource type="Texture2D" uid="uid://fuha1p652yoc" path="res://seashore-gameoff/Sprites/player_sprites/shadow.png" id="2_y14m1"]
+[ext_resource type="Texture2D" uid="uid://mr25ut0k7hsh" path="res://seashore-gameoff/Sprites/pmow.png" id="3_6uiey"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ei4pe"]
 radius = 18.203213
@@ -10,16 +10,16 @@ height = 46.674904
 
 [node name="creature" type="Area2D"]
 scale = Vector2(2.142479, 2.142479)
-script = ExtResource("1_n3vtp")
+script = ExtResource("1_lp5vf")
 
 [node name="Sprite2D2" type="Sprite2D" parent="."]
 position = Vector2(0, 9.80173)
 scale = Vector2(0.06506218, 0.06465611)
-texture = ExtResource("2_ei4pe")
+texture = ExtResource("2_y14m1")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.06442265, 0.063803874)
-texture = ExtResource("2_n3vtp")
+texture = ExtResource("3_6uiey")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 rotation = -1.5683945

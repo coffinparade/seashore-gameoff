@@ -1,26 +1,26 @@
 [gd_scene load_steps=34 format=3 uid="uid://dundrofrhxqh5"]
 
-[ext_resource type="Script" uid="uid://cyjnqolhsu7o3" path="res://seashore-gameoff/Scripts/player.gd" id="1_d61yg"]
-[ext_resource type="Texture2D" uid="uid://fuha1p652yoc" path="res://seashore-gameoff/sprites/player_sprites/shadow.png" id="2_3nswx"]
-[ext_resource type="Texture2D" uid="uid://brqwa5rerlc4v" path="res://seashore-gameoff/sprites/player_sprites/kiddo.png" id="2_d61yg"]
-[ext_resource type="Texture2D" uid="uid://ctall7k6dy6ni" path="res://seashore-gameoff/sprites/sun_background.png" id="3_ljme6"]
-[ext_resource type="FontFile" uid="uid://8ibemi7h5xgk" path="res://seashore-gameoff/fonts/Poppin-Regular.ttf" id="3_mtrcb"]
-[ext_resource type="Script" uid="uid://djp21gskxtn45" path="res://seashore-gameoff/scenes/ui.gd" id="4_77jmw"]
-[ext_resource type="Texture2D" uid="uid://cwof57xk7rlyp" path="res://seashore-gameoff/sprites/sun_vivid_light.png" id="4_ljme6"]
-[ext_resource type="Texture2D" uid="uid://bgmk26bwwvxkm" path="res://seashore-gameoff/sprites/player_sprites/lilguy_move_side_1.png" id="5_os5j8"]
-[ext_resource type="Texture2D" uid="uid://c2v4rawv12v33" path="res://seashore-gameoff/sprites/player_sprites/lilguy_move_side_2.png" id="6_bosog"]
-[ext_resource type="Texture2D" uid="uid://dhog2ia40xgb1" path="res://seashore-gameoff/sprites/player_sprites/lilguy_move_side_3.png" id="7_40gbk"]
-[ext_resource type="Texture2D" uid="uid://no6hu883ya3u" path="res://seashore-gameoff/sprites/player_sprites/lilguy_move_down_1.png" id="8_jgkmo"]
-[ext_resource type="Texture2D" uid="uid://cwj0byk7r4bux" path="res://seashore-gameoff/sprites/shell_one.png" id="8_mi6wm"]
-[ext_resource type="Texture2D" uid="uid://dwgw12qjmfiqp" path="res://seashore-gameoff/sprites/shell_two.png" id="9_28hv2"]
-[ext_resource type="Texture2D" uid="uid://cecdfobf1h6ah" path="res://seashore-gameoff/sprites/player_sprites/lilguy_move_down_2.png" id="9_mtrcb"]
-[ext_resource type="Texture2D" uid="uid://mfe71sry4l2f" path="res://seashore-gameoff/sprites/player_sprites/lilguy_move_down_3.png" id="10_77jmw"]
-[ext_resource type="Texture2D" uid="uid://xjw3siau8glb" path="res://seashore-gameoff/sprites/shell_three.png" id="10_fc86m"]
-[ext_resource type="Texture2D" uid="uid://cwx0s3cbd8qjd" path="res://seashore-gameoff/sprites/player_sprites/lilguy_move_up_1.png" id="11_3nswx"]
-[ext_resource type="Texture2D" uid="uid://bc24hdo82rij7" path="res://seashore-gameoff/sprites/shell_four.png" id="11_e1v3u"]
-[ext_resource type="Texture2D" uid="uid://bvjh3owmj1qfr" path="res://seashore-gameoff/sprites/player_sprites/lilguy_move_up_2.png" id="12_nyc2f"]
-[ext_resource type="Texture2D" uid="uid://by2dsphp24p2y" path="res://seashore-gameoff/sprites/shell_five.png" id="12_shrwa"]
-[ext_resource type="Texture2D" uid="uid://dcsshuh7slj6u" path="res://seashore-gameoff/sprites/player_sprites/lilguy_move_up_3.png" id="13_4rcsy"]
+[ext_resource type="Script" uid="uid://cyjnqolhsu7o3" path="res://seashore-gameoff/Scripts/player.gd" id="1_p8ieb"]
+[ext_resource type="Texture2D" uid="uid://fuha1p652yoc" path="res://seashore-gameoff/Sprites/player_sprites/shadow.png" id="2_l3ye3"]
+[ext_resource type="Texture2D" uid="uid://brqwa5rerlc4v" path="res://seashore-gameoff/Sprites/player_sprites/kiddo.png" id="3_dx4mx"]
+[ext_resource type="FontFile" uid="uid://8ibemi7h5xgk" path="res://seashore-gameoff/Fonts/Poppin-Regular.ttf" id="4_at0vw"]
+[ext_resource type="Script" uid="uid://djp21gskxtn45" path="res://seashore-gameoff/Scripts/ui.gd" id="5_gj0g3"]
+[ext_resource type="Texture2D" uid="uid://ctall7k6dy6ni" path="res://seashore-gameoff/Sprites/sun_background.png" id="6_wfq6g"]
+[ext_resource type="Texture2D" uid="uid://cwof57xk7rlyp" path="res://seashore-gameoff/Sprites/sun_vivid_light.png" id="7_exq54"]
+[ext_resource type="Texture2D" uid="uid://cwj0byk7r4bux" path="res://seashore-gameoff/Sprites/shell_one.png" id="8_6yiaa"]
+[ext_resource type="Texture2D" uid="uid://dwgw12qjmfiqp" path="res://seashore-gameoff/Sprites/shell_two.png" id="9_jdn0l"]
+[ext_resource type="Texture2D" uid="uid://xjw3siau8glb" path="res://seashore-gameoff/Sprites/shell_three.png" id="10_pg7oi"]
+[ext_resource type="Texture2D" uid="uid://bc24hdo82rij7" path="res://seashore-gameoff/Sprites/shell_four.png" id="11_dghpv"]
+[ext_resource type="Texture2D" uid="uid://by2dsphp24p2y" path="res://seashore-gameoff/Sprites/shell_five.png" id="12_d3bup"]
+[ext_resource type="Texture2D" uid="uid://no6hu883ya3u" path="res://seashore-gameoff/Sprites/player_sprites/lilguy_move_down_1.png" id="13_mtyry"]
+[ext_resource type="Texture2D" uid="uid://cecdfobf1h6ah" path="res://seashore-gameoff/Sprites/player_sprites/lilguy_move_down_2.png" id="14_7j1ip"]
+[ext_resource type="Texture2D" uid="uid://mfe71sry4l2f" path="res://seashore-gameoff/Sprites/player_sprites/lilguy_move_down_3.png" id="15_quvy1"]
+[ext_resource type="Texture2D" uid="uid://bgmk26bwwvxkm" path="res://seashore-gameoff/Sprites/player_sprites/lilguy_move_side_1.png" id="16_rgemo"]
+[ext_resource type="Texture2D" uid="uid://c2v4rawv12v33" path="res://seashore-gameoff/Sprites/player_sprites/lilguy_move_side_2.png" id="17_mqi57"]
+[ext_resource type="Texture2D" uid="uid://dhog2ia40xgb1" path="res://seashore-gameoff/Sprites/player_sprites/lilguy_move_side_3.png" id="18_r8lwn"]
+[ext_resource type="Texture2D" uid="uid://cwx0s3cbd8qjd" path="res://seashore-gameoff/Sprites/player_sprites/lilguy_move_up_1.png" id="19_ycp4d"]
+[ext_resource type="Texture2D" uid="uid://bvjh3owmj1qfr" path="res://seashore-gameoff/Sprites/player_sprites/lilguy_move_up_2.png" id="20_0bo6v"]
+[ext_resource type="Texture2D" uid="uid://dcsshuh7slj6u" path="res://seashore-gameoff/Sprites/player_sprites/lilguy_move_up_3.png" id="21_lot61"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_y73uf"]
 radius = 85.16724
@@ -43,12 +43,12 @@ scale_max = 7.0
 CenterLabel/base_type = &"Label"
 CenterLabel/colors/font_color = Color(0, 0, 0, 1)
 CenterLabel/font_sizes/font_size = 45
-CenterLabel/fonts/font = ExtResource("3_mtrcb")
+CenterLabel/fonts/font = ExtResource("4_at0vw")
 Label/colors/font_color = Color(0, 0, 0, 1)
 Label/colors/font_outline_color = Color(1, 1, 1, 1)
 Label/constants/outline_size = 2
 Label/font_sizes/font_size = 30
-Label/fonts/font = ExtResource("3_mtrcb")
+Label/fonts/font = ExtResource("4_at0vw")
 MarginContainer/constants/margin_bottom = 80
 MarginContainer/constants/margin_left = 80
 MarginContainer/constants/margin_right = 80
@@ -77,7 +77,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("2_d61yg")]
+"values": [ExtResource("3_dx4mx")]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -130,7 +130,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("2_d61yg")]
+"values": [ExtResource("3_dx4mx")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -159,7 +159,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
-"values": [ExtResource("8_jgkmo"), ExtResource("9_mtrcb"), ExtResource("10_77jmw"), ExtResource("9_mtrcb")]
+"values": [ExtResource("13_mtyry"), ExtResource("14_7j1ip"), ExtResource("15_quvy1"), ExtResource("14_7j1ip")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -198,7 +198,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
-"values": [ExtResource("5_os5j8"), ExtResource("6_bosog"), ExtResource("7_40gbk"), ExtResource("6_bosog")]
+"values": [ExtResource("16_rgemo"), ExtResource("17_mqi57"), ExtResource("18_r8lwn"), ExtResource("17_mqi57")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -239,7 +239,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
-"values": [ExtResource("5_os5j8"), ExtResource("6_bosog"), ExtResource("7_40gbk"), ExtResource("6_bosog")]
+"values": [ExtResource("16_rgemo"), ExtResource("17_mqi57"), ExtResource("18_r8lwn"), ExtResource("17_mqi57")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -278,7 +278,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
-"values": [ExtResource("11_3nswx"), ExtResource("12_nyc2f"), ExtResource("13_4rcsy"), ExtResource("12_nyc2f")]
+"values": [ExtResource("19_ycp4d"), ExtResource("20_0bo6v"), ExtResource("21_lot61"), ExtResource("20_0bo6v")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -337,16 +337,16 @@ _data = {
 [node name="Player" type="CharacterBody2D" groups=["player"]]
 scale = Vector2(0.58708024, 0.58708024)
 motion_mode = 1
-script = ExtResource("1_d61yg")
+script = ExtResource("1_p8ieb")
 
 [node name="Sprite2D2" type="Sprite2D" parent="."]
 position = Vector2(-9.536743e-07, 183.96123)
 scale = Vector2(0.23079492, 0.2526319)
-texture = ExtResource("2_3nswx")
+texture = ExtResource("2_l3ye3")
 
 [node name="Sprite2D" type="Sprite2D" parent="." groups=["player"]]
 scale = Vector2(0.3063123, 0.30631223)
-texture = ExtResource("2_d61yg")
+texture = ExtResource("3_dx4mx")
 flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -386,7 +386,7 @@ grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(1, 1.0074873)
 theme = SubResource("Theme_d61yg")
-script = ExtResource("4_77jmw")
+script = ExtResource("5_gj0g3")
 
 [node name="BasketDisplay" type="Label" parent="CanvasLayer/UI"]
 unique_name_in_owner = true
@@ -408,8 +408,8 @@ grow_horizontal = 0
 step = 0.25
 value = 100.0
 fill_mode = 4
-texture_under = ExtResource("3_ljme6")
-texture_progress = ExtResource("4_ljme6")
+texture_under = ExtResource("6_wfq6g")
+texture_progress = ExtResource("7_exq54")
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer/UI"]
 modulate = Color(1, 1, 1, 0)
@@ -476,7 +476,7 @@ size_flags_vertical = 3
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer/UI/End Panel/MarginContainer/VBoxContainer/LowDisplay"]
 layout_mode = 2
-texture = ExtResource("8_mi6wm")
+texture = ExtResource("8_6yiaa")
 
 [node name="LowDisplayText" type="Label" parent="CanvasLayer/UI/End Panel/MarginContainer/VBoxContainer/LowDisplay"]
 unique_name_in_owner = true
@@ -491,7 +491,7 @@ layout_mode = 2
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer/UI/End Panel/MarginContainer/VBoxContainer/LowMidDisplay"]
 layout_mode = 2
-texture = ExtResource("9_28hv2")
+texture = ExtResource("9_jdn0l")
 
 [node name="LowMidDisplayText" type="Label" parent="CanvasLayer/UI/End Panel/MarginContainer/VBoxContainer/LowMidDisplay"]
 unique_name_in_owner = true
@@ -505,7 +505,7 @@ layout_mode = 2
 
 [node name="TextureRect2" type="TextureRect" parent="CanvasLayer/UI/End Panel/MarginContainer/VBoxContainer/MidDisplay"]
 layout_mode = 2
-texture = ExtResource("10_fc86m")
+texture = ExtResource("10_pg7oi")
 
 [node name="MidDisplayText" type="Label" parent="CanvasLayer/UI/End Panel/MarginContainer/VBoxContainer/MidDisplay"]
 unique_name_in_owner = true
@@ -519,7 +519,7 @@ layout_mode = 2
 
 [node name="TextureRect3" type="TextureRect" parent="CanvasLayer/UI/End Panel/MarginContainer/VBoxContainer/MidHighDisplay"]
 layout_mode = 2
-texture = ExtResource("11_e1v3u")
+texture = ExtResource("11_dghpv")
 
 [node name="MidHighDisplayText" type="Label" parent="CanvasLayer/UI/End Panel/MarginContainer/VBoxContainer/MidHighDisplay"]
 unique_name_in_owner = true
@@ -533,7 +533,7 @@ layout_mode = 2
 
 [node name="TextureRect3" type="TextureRect" parent="CanvasLayer/UI/End Panel/MarginContainer/VBoxContainer/HighDisplay"]
 layout_mode = 2
-texture = ExtResource("12_shrwa")
+texture = ExtResource("12_d3bup")
 
 [node name="HighDisplayText" type="Label" parent="CanvasLayer/UI/End Panel/MarginContainer/VBoxContainer/HighDisplay"]
 unique_name_in_owner = true

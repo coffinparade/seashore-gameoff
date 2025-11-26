@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://qjxpr2yxjyfd"
-path="res://.godot/imported/sand_background.png-9b315a514369c5d5d2c4692b9172d4f4.ctex"
+path="res://.godot/imported/sand_background.png-129509a9982a608161be3c722f519782.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://seashore-gameoff/sprites/sand_background.png"
-dest_files=["res://.godot/imported/sand_background.png-9b315a514369c5d5d2c4692b9172d4f4.ctex"]
+source_file="res://seashore-gameoff/Sprites/sand_background.png"
+dest_files=["res://.godot/imported/sand_background.png-129509a9982a608161be3c722f519782.ctex"]
 
 [params]
 

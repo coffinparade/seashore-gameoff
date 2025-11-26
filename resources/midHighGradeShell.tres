@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="Shell" load_steps=3 format=3 uid="uid://bntqgtt2leccn"]
 
 [ext_resource type="Script" uid="uid://dd2lqn8duwqra" path="res://seashore-gameoff/Scripts/shell_data.gd" id="1_hdti6"]
-[ext_resource type="Texture2D" uid="uid://bc24hdo82rij7" path="res://seashore-gameoff/sprites/shell_four.png" id="2_8vdhu"]
+[ext_resource type="Texture2D" uid="uid://bc24hdo82rij7" path="res://seashore-gameoff/Sprites/shell_four.png" id="2_8vdhu"]
 
 [resource]
 script = ExtResource("1_hdti6")

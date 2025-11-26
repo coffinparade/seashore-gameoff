@@ -1,9 +1,10 @@
-[gd_scene load_steps=12 format=3 uid="uid://cqkqq87iyvah"]
+[gd_scene load_steps=13 format=3 uid="uid://cqkqq87iyvah"]
 
 [ext_resource type="Script" uid="uid://do23sqb2gtju5" path="res://seashore-gameoff/Scripts/shore.gd" id="1_0jtmf"]
-[ext_resource type="PackedScene" uid="uid://dundrofrhxqh5" path="res://seashore-gameoff/scenes/player.tscn" id="1_jd5g7"]
-[ext_resource type="Texture2D" uid="uid://qjxpr2yxjyfd" path="res://seashore-gameoff/sprites/sand_background.png" id="2_g0wag"]
-[ext_resource type="Texture2D" uid="uid://c8c3sgfi68t5n" path="res://seashore-gameoff/sprites/waves_sprite.png" id="5_vojgn"]
+[ext_resource type="PackedScene" uid="uid://dundrofrhxqh5" path="res://seashore-gameoff/Scenes/player.tscn" id="1_jd5g7"]
+[ext_resource type="Texture2D" uid="uid://qjxpr2yxjyfd" path="res://seashore-gameoff/Sprites/sand_background.png" id="2_g0wag"]
+[ext_resource type="AudioStream" uid="uid://ciylbrmyv1xu7" path="res://seashore-gameoff/Music/the game song thing.wav" id="5_0jtmf"]
+[ext_resource type="Texture2D" uid="uid://c8c3sgfi68t5n" path="res://seashore-gameoff/Sprites/waves_sprite.png" id="5_vojgn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3rpen"]
 size = Vector2(740.96356, 286.10132)
@@ -189,4 +190,9 @@ position = Vector2(1454.016, 0)
 rotation = -1.5707964
 shape = SubResource("WorldBoundaryShape2D_cq65s")
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_0jtmf")
+autoplay = true
+
 [connection signal="body_entered" from="Collection_Area" to="." method="_on_collection_area_body_entered"]
+[connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]

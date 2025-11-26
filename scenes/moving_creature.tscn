@@ -1,8 +1,8 @@
 [gd_scene load_steps=8 format=3 uid="uid://py1mi3cuoqa3"]
 
-[ext_resource type="Script" uid="uid://dfgpe087i4n7b" path="res://seashore-gameoff/Scripts/creature_movement.gd" id="1_obh2n"]
-[ext_resource type="Texture2D" uid="uid://fuha1p652yoc" path="res://seashore-gameoff/sprites/player_sprites/shadow.png" id="2_m4ywk"]
-[ext_resource type="Texture2D" uid="uid://dy85b4me6hfn2" path="res://seashore-gameoff/sprites/crab.png" id="2_obh2n"]
+[ext_resource type="Script" uid="uid://dfgpe087i4n7b" path="res://seashore-gameoff/Scripts/creature_movement.gd" id="1_tqahw"]
+[ext_resource type="Texture2D" uid="uid://fuha1p652yoc" path="res://seashore-gameoff/Sprites/player_sprites/shadow.png" id="2_0pjlf"]
+[ext_resource type="Texture2D" uid="uid://dy85b4me6hfn2" path="res://seashore-gameoff/Sprites/crab.png" id="3_wkqyw"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_m4ywk"]
 radius = 13.055433
@@ -20,7 +20,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("2_obh2n")]
+"values": [ExtResource("3_wkqyw")]
 }
 
 [sub_resource type="Animation" id="Animation_i30o0"]
@@ -36,7 +36,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("2_obh2n")]
+"values": [ExtResource("3_wkqyw")]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_xv5du"]
@@ -47,16 +47,16 @@ _data = {
 
 [node name="moving_creature" type="Area2D"]
 scale = Vector2(3.6000335, 3.6000335)
-script = ExtResource("1_obh2n")
+script = ExtResource("1_tqahw")
 
 [node name="Sprite2D2" type="Sprite2D" parent="."]
 position = Vector2(0, 4.166628)
 scale = Vector2(0.057838507, 0.057838507)
-texture = ExtResource("2_m4ywk")
+texture = ExtResource("2_0pjlf")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.039046932, 0.039046932)
-texture = ExtResource("2_obh2n")
+texture = ExtResource("3_wkqyw")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 rotation = 1.5707964
