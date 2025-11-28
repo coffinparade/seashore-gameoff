@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://c8c3sgfi68t5n" path="res://seashore-gameoff/Sprites/waves_sprite.png" id="5_vojgn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3rpen"]
-size = Vector2(740.96356, 286.10132)
+size = Vector2(2569.2761, 286.10132)
 
 [sub_resource type="Animation" id="Animation_cq65s"]
 length = 2.0
@@ -140,7 +140,7 @@ texture = ExtResource("2_g0wag")
 position = Vector2(0, -812.49023)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Collection_Area"]
-position = Vector2(1.0040157, 80.40755)
+position = Vector2(11.546181, 80.40753)
 shape = SubResource("RectangleShape2D_3rpen")
 
 [node name="Wave" type="Sprite2D" parent="."]
