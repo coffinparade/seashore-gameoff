@@ -4,9 +4,9 @@ extends Node
 @onready var journal := preload("res://seashore-gameoff/Scenes/journal.tscn")
 @onready var menu := preload("res://seashore-gameoff/Scenes/Main Menu.tscn")
 @onready var storyFile:=FileAccess.get_file_as_string("res://seashore-gameoff/Story.json")
-var dayCount := 0
+var dayCount := -1
 var story
-var lastDay = 2
+var lastDay = 4
 
 func _ready():
 	story = JSON.parse_string(storyFile)
@@ -21,10 +21,10 @@ func nextScene(scene:bool):
 		dayCount = 0
 	else:
 		if scene:
-			dayCount+=1
 			get_tree().change_scene_to_packed(shore)
 		else:
 			get_tree().change_scene_to_packed(journal)
+			dayCount+=1
 
 func journalText()->String:
 	var text :String

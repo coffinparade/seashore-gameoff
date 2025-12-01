@@ -1,7 +1,7 @@
 extends Node2D
 
 @export var wave_time :=20.0
-@export var daytime:= 40.0
+@export var daytime:= 60.0
 
 @onready var start_time = Time.get_unix_time_from_system()
 @onready var wave_anim = $Wave/AnimationPlayer

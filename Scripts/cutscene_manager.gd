@@ -9,3 +9,7 @@ func _process(delta):
 
 func _on_button_pressed():
 	SceneManager.nextScene(1)
+
+
+func _on_audio_stream_player_finished():
+	$AudioStreamPlayer.play()

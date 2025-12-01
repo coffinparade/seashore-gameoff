@@ -202,9 +202,13 @@ grow_vertical = 2
 
 [node name="Tutorial Text" type="Label" parent="TextureRect/Tutorial Panel/CenterContainer"]
 layout_mode = 2
+theme_override_font_sizes/font_size = 46
 text = "- Use WASD or Arrow keys to move around
 - Collect shells by walking over them
-- Make sure to bring your shells back to your towel or else you will lose them"
+- Make sure to bring your shells back to
+ your towel or else you will lose them
+- Make sure not to hit any sea creatures or
+else you'll lose all your shells"
 
 [node name="CloseTutorial" type="Button" parent="TextureRect/Tutorial Panel"]
 layout_mode = 1
