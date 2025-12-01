@@ -11,6 +11,8 @@ var weight_factor:=1.0
 var _shellBasket:Array[Shell]
 var _collectedShells:Array[Shell]
 
+signal changeScene
+
 func _physics_process(_delta: float) -> void:
 	#player shouldn't be able to move at the end of the level, checks for that
 	if can_move:
@@ -75,3 +77,7 @@ func hit():
 	modulate = Color(0.734, 0.0, 0.158, 1.0)
 	await get_tree().create_timer(0.25).timeout
 	modulate = Color(1.0, 1.0, 1.0, 1.0)
+
+
+func _on_change_scene_button_pressed():
+	SceneManager.nextScene(0)

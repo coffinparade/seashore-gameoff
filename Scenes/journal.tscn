@@ -1,0 +1,100 @@
+[gd_scene load_steps=9 format=3 uid="uid://cepetu60xjjnn"]
+
+[ext_resource type="FontFile" uid="uid://d3y7jeeqifq8j" path="res://seashore-gameoff/Fonts/Poppin-Regular.otf" id="1_2j21j"]
+[ext_resource type="StyleBox" uid="uid://dpfjj1fl7wn0c" path="res://seashore-gameoff/Themes/ButtonHover.tres" id="1_8enpq"]
+[ext_resource type="StyleBox" uid="uid://bsqyalvttc6hu" path="res://seashore-gameoff/Themes/ButtonDefault.tres" id="2_hllkl"]
+[ext_resource type="Script" uid="uid://b6aamm5osu00s" path="res://seashore-gameoff/Scripts/cutscene_manager.gd" id="2_y7f3q"]
+[ext_resource type="StyleBox" uid="uid://0xm68j7088wl" path="res://seashore-gameoff/Themes/ButtonPressed.tres" id="3_4wmkr"]
+[ext_resource type="Texture2D" uid="uid://cmbt1loevvumo" path="res://seashore-gameoff/Sprites/journal.png" id="3_5w4qk"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r8otn"]
+bg_color = Color(0.5310511, 0.5310511, 0.5310511, 0.64705884)
+border_width_left = 50
+border_width_top = 50
+border_width_right = 50
+border_width_bottom = 50
+border_color = Color(0.8, 0.8, 0.8, 0)
+border_blend = true
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+corner_detail = 13
+
+[sub_resource type="Theme" id="Theme_mfopc"]
+Button/font_sizes/font_size = 20
+Button/fonts/font = ExtResource("1_2j21j")
+Button/styles/focus = ExtResource("1_8enpq")
+Button/styles/hover = ExtResource("1_8enpq")
+Button/styles/normal = ExtResource("2_hllkl")
+Button/styles/pressed = ExtResource("3_4wmkr")
+Label/colors/font_color = Color(0, 0, 0, 1)
+Label/font_sizes/font_size = 34
+Label/fonts/font = ExtResource("1_2j21j")
+MarginContainer/constants/margin_bottom = 30
+MarginContainer/constants/margin_left = 30
+MarginContainer/constants/margin_right = 30
+MarginContainer/constants/margin_top = 30
+Panel/styles/panel = SubResource("StyleBoxFlat_r8otn")
+
+[node name="Journal" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_mfopc")
+script = ExtResource("2_y7f3q")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_5w4qk")
+expand_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="MarginContainer"]
+modulate = Color(1, 1, 1, 0)
+self_modulate = Color(0.92, 0.92, 0.92, 1)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.05
+anchor_top = 0.095
+anchor_right = 0.95
+anchor_bottom = 0.905
+grow_horizontal = 2
+grow_vertical = 2
+text = "klj;laskdjfa;lsdkfjal;sdfkja;lsdfjka;lsdkjf;alskdjfal;sdjkf"
+autowrap_mode = 2
+justification_flags = 162
+
+[node name="Button" type="Button" parent="MarginContainer/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.45
+anchor_top = 0.85
+anchor_right = 0.55
+anchor_bottom = 0.9
+offset_left = -4.0
+offset_top = -8.0
+offset_right = 4.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Continue"
+
+[connection signal="pressed" from="MarginContainer/Panel/Button" to="." method="_on_button_pressed"]

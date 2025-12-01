@@ -2,45 +2,12 @@
 
 [ext_resource type="FontFile" uid="uid://8ibemi7h5xgk" path="res://seashore-gameoff/Fonts/Poppin-Regular.ttf" id="1_wtopv"]
 [ext_resource type="FontFile" uid="uid://d3y7jeeqifq8j" path="res://seashore-gameoff/Fonts/Poppin-Regular.otf" id="2_bb8sq"]
+[ext_resource type="StyleBox" uid="uid://dpfjj1fl7wn0c" path="res://seashore-gameoff/Themes/ButtonHover.tres" id="2_fubqv"]
 [ext_resource type="Script" uid="uid://cmswlj84odl1l" path="res://seashore-gameoff/Scripts/main_menu.gd" id="2_mercu"]
+[ext_resource type="StyleBox" uid="uid://bsqyalvttc6hu" path="res://seashore-gameoff/Themes/ButtonDefault.tres" id="3_gxpqy"]
+[ext_resource type="StyleBox" uid="uid://0xm68j7088wl" path="res://seashore-gameoff/Themes/ButtonPressed.tres" id="4_1ipbd"]
 [ext_resource type="Texture2D" uid="uid://dhxent8klv7h0" path="res://seashore-gameoff/Sprites/mainMenuBackground.png" id="4_bb8sq"]
 [ext_resource type="AudioStream" uid="uid://duyowmrwrjqr4" path="res://seashore-gameoff/Music/Theme for game.wav" id="4_yo4yc"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mercu"]
-bg_color = Color(0.33929998, 0.613495, 0.87, 1)
-border_width_left = 8
-border_width_top = 8
-border_width_right = 8
-border_width_bottom = 8
-border_color = Color(1, 1, 1, 1)
-corner_radius_top_left = 20
-corner_radius_top_right = 20
-corner_radius_bottom_right = 20
-corner_radius_bottom_left = 20
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v870i"]
-bg_color = Color(0.387, 0.65204996, 0.9, 1)
-border_width_left = 7
-border_width_top = 7
-border_width_right = 7
-border_width_bottom = 7
-border_color = Color(1, 1, 1, 1)
-corner_radius_top_left = 20
-corner_radius_top_right = 20
-corner_radius_bottom_right = 20
-corner_radius_bottom_left = 20
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wtopv"]
-bg_color = Color(0.29230002, 0.54944503, 0.79, 1)
-border_width_left = 9
-border_width_top = 9
-border_width_right = 9
-border_width_bottom = 9
-border_color = Color(1, 1, 1, 1)
-corner_radius_top_left = 20
-corner_radius_top_right = 20
-corner_radius_bottom_right = 20
-corner_radius_bottom_left = 20
 
 [sub_resource type="Theme" id="Theme_akoul"]
 Button/colors/font_color = Color(1, 1, 1, 1)
@@ -50,9 +17,10 @@ Button/colors/font_hover_pressed_color = Color(1, 1, 1, 1)
 Button/colors/font_pressed_color = Color(1, 1, 1, 1)
 Button/font_sizes/font_size = 50
 Button/fonts/font = ExtResource("1_wtopv")
-Button/styles/hover = SubResource("StyleBoxFlat_mercu")
-Button/styles/normal = SubResource("StyleBoxFlat_v870i")
-Button/styles/pressed = SubResource("StyleBoxFlat_wtopv")
+Button/styles/focus = ExtResource("2_fubqv")
+Button/styles/hover = ExtResource("2_fubqv")
+Button/styles/normal = ExtResource("3_gxpqy")
+Button/styles/pressed = ExtResource("4_1ipbd")
 Label/colors/font_color = Color(0, 0, 0, 1)
 Label/colors/font_outline_color = Color(0.83137256, 0.80784315, 0.7882353, 1)
 Label/constants/outline_size = 11
@@ -151,6 +119,15 @@ text = "Play"
 custom_minimum_size = Vector2(0, 10)
 layout_mode = 2
 
+[node name="TutorialButton" type="Button" parent="TextureRect/HBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Tutorial"
+
+[node name="Control3" type="Control" parent="TextureRect/HBoxContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+
 [node name="CreditsButton" type="Button" parent="TextureRect/HBoxContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
@@ -187,14 +164,54 @@ grow_vertical = 2
 layout_mode = 2
 text = "Music by Sebastian Serna
 
-Art and Gameplay by Fernando Forte"
+Art and Gameplay by Fernando Forte
+
+Font: Poppin by Chuupipi"
 
 [node name="CloseCredits" type="Button" parent="TextureRect/Credits Panel"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.05
+anchor_left = 0.85
 anchor_top = 0.05
-anchor_right = 0.05
+anchor_right = 0.86
+anchor_bottom = 0.05
+offset_right = 14.0
+offset_bottom = 14.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_bb8sq")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_i6kw1")
+theme_override_styles/hover = SubResource("StyleBoxFlat_0xqvf")
+text = "Close"
+
+[node name="Tutorial Panel" type="Panel" parent="TextureRect"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="TextureRect/Tutorial Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Tutorial Text" type="Label" parent="TextureRect/Tutorial Panel/CenterContainer"]
+layout_mode = 2
+text = "- Use WASD or Arrow keys to move around
+- Collect shells by walking over them
+- Make sure to bring your shells back to your towel or else you will lose them"
+
+[node name="CloseTutorial" type="Button" parent="TextureRect/Tutorial Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.85
+anchor_top = 0.05
+anchor_right = 0.86
 anchor_bottom = 0.05
 offset_right = 14.0
 offset_bottom = 14.0
@@ -218,7 +235,9 @@ stream = ExtResource("4_yo4yc")
 autoplay = true
 
 [connection signal="pressed" from="TextureRect/HBoxContainer/MarginContainer/VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="TextureRect/HBoxContainer/MarginContainer/VBoxContainer/TutorialButton" to="." method="_on_tutorial_button_pressed"]
 [connection signal="pressed" from="TextureRect/HBoxContainer/MarginContainer/VBoxContainer/CreditsButton" to="." method="_on_credits_button_pressed"]
 [connection signal="pressed" from="TextureRect/HBoxContainer/MarginContainer/VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
 [connection signal="pressed" from="TextureRect/Credits Panel/CloseCredits" to="." method="_on_close_credits_pressed"]
+[connection signal="pressed" from="TextureRect/Tutorial Panel/CloseTutorial" to="." method="_on_close_tutorial_pressed"]
 [connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]

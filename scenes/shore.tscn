@@ -1,13 +1,14 @@
-[gd_scene load_steps=13 format=3 uid="uid://cqkqq87iyvah"]
+[gd_scene load_steps=14 format=3 uid="uid://cqkqq87iyvah"]
 
 [ext_resource type="Script" uid="uid://do23sqb2gtju5" path="res://seashore-gameoff/Scripts/shore.gd" id="1_0jtmf"]
 [ext_resource type="PackedScene" uid="uid://dundrofrhxqh5" path="res://seashore-gameoff/Scenes/player.tscn" id="1_jd5g7"]
 [ext_resource type="Texture2D" uid="uid://qjxpr2yxjyfd" path="res://seashore-gameoff/Sprites/sand_background.png" id="2_g0wag"]
+[ext_resource type="Texture2D" uid="uid://djq0rtaud6wbo" path="res://seashore-gameoff/Sprites/towel.png" id="3_ke47c"]
 [ext_resource type="AudioStream" uid="uid://ciylbrmyv1xu7" path="res://seashore-gameoff/Music/the game song thing.wav" id="5_0jtmf"]
 [ext_resource type="Texture2D" uid="uid://c8c3sgfi68t5n" path="res://seashore-gameoff/Sprites/waves_sprite.png" id="5_vojgn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3rpen"]
-size = Vector2(2569.2761, 286.10132)
+size = Vector2(820.2808, 326.3051)
 
 [sub_resource type="Animation" id="Animation_cq65s"]
 length = 2.0
@@ -140,8 +141,13 @@ texture = ExtResource("2_g0wag")
 position = Vector2(0, -812.49023)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Collection_Area"]
-position = Vector2(11.546181, 80.40753)
+position = Vector2(2.5100303, 100.5094)
 shape = SubResource("RectangleShape2D_3rpen")
+
+[node name="Sprite2D" type="Sprite2D" parent="Collection_Area"]
+position = Vector2(-4.016063, 85.082405)
+scale = Vector2(0.45171365, 0.45171368)
+texture = ExtResource("3_ke47c")
 
 [node name="Wave" type="Sprite2D" parent="."]
 position = Vector2(24.096376, 1872.7478)
@@ -195,4 +201,5 @@ stream = ExtResource("5_0jtmf")
 autoplay = true
 
 [connection signal="body_entered" from="Collection_Area" to="." method="_on_collection_area_body_entered"]
+[connection signal="changeScene" from="Player" to="." method="_on_player_change_scene"]
 [connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]
