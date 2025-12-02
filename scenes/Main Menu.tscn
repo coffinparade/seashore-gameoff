@@ -1,12 +1,12 @@
 [gd_scene load_steps=13 format=3 uid="uid://ca5dxg8yu7j2x"]
 
-[ext_resource type="FontFile" uid="uid://8ibemi7h5xgk" path="res://seashore-gameoff/Fonts/Poppin-Regular.ttf" id="1_wtopv"]
-[ext_resource type="FontFile" uid="uid://d3y7jeeqifq8j" path="res://seashore-gameoff/Fonts/Poppin-Regular.otf" id="2_bb8sq"]
+[ext_resource type="FontFile" uid="uid://8ibemi7h5xgk" path="res://seashore-gameoff/fonts/Poppin-Regular.ttf" id="1_wtopv"]
+[ext_resource type="FontFile" uid="uid://d3y7jeeqifq8j" path="res://seashore-gameoff/fonts/Poppin-Regular.otf" id="2_bb8sq"]
 [ext_resource type="StyleBox" uid="uid://dpfjj1fl7wn0c" path="res://seashore-gameoff/Themes/ButtonHover.tres" id="2_fubqv"]
 [ext_resource type="Script" uid="uid://cmswlj84odl1l" path="res://seashore-gameoff/Scripts/main_menu.gd" id="2_mercu"]
 [ext_resource type="StyleBox" uid="uid://bsqyalvttc6hu" path="res://seashore-gameoff/Themes/ButtonDefault.tres" id="3_gxpqy"]
 [ext_resource type="StyleBox" uid="uid://0xm68j7088wl" path="res://seashore-gameoff/Themes/ButtonPressed.tres" id="4_1ipbd"]
-[ext_resource type="Texture2D" uid="uid://dhxent8klv7h0" path="res://seashore-gameoff/Sprites/mainMenuBackground.png" id="4_bb8sq"]
+[ext_resource type="Texture2D" uid="uid://dhxent8klv7h0" path="res://seashore-gameoff/sprites/mainMenuBackground.png" id="4_bb8sq"]
 [ext_resource type="AudioStream" uid="uid://duyowmrwrjqr4" path="res://seashore-gameoff/Music/Theme for game.wav" id="4_yo4yc"]
 
 [sub_resource type="Theme" id="Theme_akoul"]
@@ -26,7 +26,7 @@ Label/colors/font_outline_color = Color(0.83137256, 0.80784315, 0.7882353, 1)
 Label/constants/outline_size = 11
 Label/font_sizes/font_size = 60
 Label/fonts/font = ExtResource("2_bb8sq")
-MarginContainer/constants/margin_bottom = 175
+MarginContainer/constants/margin_bottom = 20
 MarginContainer/constants/margin_left = 20
 MarginContainer/constants/margin_right = 20
 MarginContainer/constants/margin_top = 175
@@ -109,6 +109,10 @@ size_flags_stretch_ratio = 1.5
 [node name="VBoxContainer" type="VBoxContainer" parent="TextureRect/HBoxContainer/MarginContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
+
+[node name="Control4" type="Control" parent="TextureRect/HBoxContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 125.955)
+layout_mode = 2
 
 [node name="PlayButton" type="Button" parent="TextureRect/HBoxContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
