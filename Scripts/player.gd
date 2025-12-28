@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
 @export var move_speed:=150.0
+@export var hit_speed:=4000.0
 
 @onready var basketDisplay:=%BasketDisplay
 @onready var anim := $AnimationPlayer
@@ -11,10 +12,11 @@ var weight_factor:=1.0
 var _shellBasket:Array[Shell]
 var _collectedShells:Array[Shell]
 
-signal changeScene
+func _ready():
+	$CanvasLayer/UI.showLabel("Go!")
 
 func _physics_process(_delta: float) -> void:
-	#player shouldn't be able to move at the end of the level, checks for that
+	#player shouldn't be able to move at the end of the level or when hit, checks for that
 	if can_move:
 		var move_dir = Input.get_vector("move_left","move_right","move_up","move_down")
 		velocity = move_dir*move_speed*weight_factor
@@ -38,11 +40,10 @@ func animate():
 
 
 func drop_shells():
-	print( "hit")
 	_shellBasket.clear()
 	update_basket()
 
-
+#helper/test function
 func print_shells():
 	for shell in _shellBasket:
 		print(str(shell.value)+" ")
@@ -68,15 +69,22 @@ func update_basket():
 
 
 func time_out():
-	await $CanvasLayer/UI.times_up()
+	await $CanvasLayer/UI.showLabel("Time's Up!")
 	$CanvasLayer/UI.end_screen(_collectedShells)
 
 
-func hit():
+func hit(enemy_position:Vector2):
 	drop_shells()
+	velocity = Vector2.from_angle(enemy_position.angle_to_point(position))*hit_speed
+	move_and_slide() 
+	
 	modulate = Color(0.734, 0.0, 0.158, 1.0)
+	can_move = false
+	
 	await get_tree().create_timer(0.25).timeout
+	
 	modulate = Color(1.0, 1.0, 1.0, 1.0)
+	can_move=true
 
 
 func _on_change_scene_button_pressed():

@@ -1,8 +1,11 @@
 extends Control
 
+#Variables
 @onready var label:=$CenterText
+
 var temp_cash:float
 var game_ended:=false
+
 
 func _ready() -> void:
 	$"End Panel".visible = false
@@ -12,17 +15,14 @@ func _process(delta: float) -> void:
 		temp_cash = lerp(temp_cash,ScoreTracker.get_cash(),5.0*delta)
 		%MoneyDisplay.text = "$"+str("%0.2f" % temp_cash) 
 
-func times_up():
+func showLabel(new_text:String):
 	label.visible = true
-	label.text = "Time's Up!"
+	label.text = new_text
 	await get_tree().create_timer(0.5).timeout
 	label.visible = false
 
 
 func end_screen(shells:Array[Shell]):
-	game_ended = true
-	$"End Panel".visible = true
-	
 	var collectedTypes={
 		"low":0,
 		"lowmid":0,
@@ -30,6 +30,10 @@ func end_screen(shells:Array[Shell]):
 		"midhigh":0,
 		"high":0
 	}
+	
+	game_ended = true
+	$"End Panel".visible = true
+	
 	for shell in shells:
 		match shell.id:
 			0: 
