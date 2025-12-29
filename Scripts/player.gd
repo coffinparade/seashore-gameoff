@@ -7,8 +7,12 @@ extends CharacterBody2D
 @onready var anim := $AnimationPlayer
 @onready var transition:=$CanvasLayer/UI/ColorRect
 
+const weight_default:=1.0
+const weight_change:=0.05
+
 var can_move:=true
-var weight_factor:=1.0
+var weight_factor:=weight_default
+
 var _shellBasket:Array[Shell]
 var _collectedShells:Array[Shell]
 
@@ -42,6 +46,7 @@ func animate():
 func drop_shells():
 	_shellBasket.clear()
 	update_basket()
+	weight_factor = weight_default
 
 #helper/test function
 func print_shells():
@@ -51,7 +56,7 @@ func print_shells():
 
 func add_shell(shell:Shell):
 	_shellBasket.append(shell)
-	weight_factor-=0.05
+	weight_factor-=weight_change
 	update_basket()
 
 
@@ -59,13 +64,14 @@ func store_shells():
 	for shell in _shellBasket:
 		ScoreTracker.increase_cash(shell.value)
 		_collectedShells.append(shell)
-	weight_factor = 1.0
+	weight_factor = weight_default
 	_shellBasket.clear()
 	update_basket()
 
 
 func update_basket():
 	basketDisplay.text = str(_shellBasket.size())
+	$CanvasLayer/UI.basketUpdate()
 
 
 func time_out():

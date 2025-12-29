@@ -1,29 +1,31 @@
-[gd_scene load_steps=38 format=3 uid="uid://dundrofrhxqh5"]
+[gd_scene load_steps=40 format=3 uid="uid://dundrofrhxqh5"]
 
 [ext_resource type="Script" uid="uid://cyjnqolhsu7o3" path="res://seashore-gameoff/Scripts/player.gd" id="1_p8ieb"]
-[ext_resource type="Texture2D" uid="uid://fuha1p652yoc" path="res://seashore-gameoff/Sprites/player_sprites/shadow.png" id="2_l3ye3"]
-[ext_resource type="Texture2D" uid="uid://brqwa5rerlc4v" path="res://seashore-gameoff/Sprites/player_sprites/kiddo.png" id="3_dx4mx"]
-[ext_resource type="FontFile" uid="uid://8ibemi7h5xgk" path="res://seashore-gameoff/Fonts/Poppin-Regular.ttf" id="4_at0vw"]
+[ext_resource type="Texture2D" uid="uid://fuha1p652yoc" path="res://seashore-gameoff/sprites/player_sprites/shadow.png" id="2_l3ye3"]
+[ext_resource type="Texture2D" uid="uid://brqwa5rerlc4v" path="res://seashore-gameoff/sprites/player_sprites/kiddo.png" id="3_dx4mx"]
+[ext_resource type="FontFile" uid="uid://8ibemi7h5xgk" path="res://seashore-gameoff/fonts/Poppin-Regular.ttf" id="4_at0vw"]
 [ext_resource type="StyleBox" uid="uid://dpfjj1fl7wn0c" path="res://seashore-gameoff/Themes/ButtonHover.tres" id="5_at0vw"]
 [ext_resource type="Script" uid="uid://djp21gskxtn45" path="res://seashore-gameoff/Scripts/ui.gd" id="5_gj0g3"]
 [ext_resource type="StyleBox" uid="uid://bsqyalvttc6hu" path="res://seashore-gameoff/Themes/ButtonDefault.tres" id="6_gj0g3"]
-[ext_resource type="Texture2D" uid="uid://ctall7k6dy6ni" path="res://seashore-gameoff/Sprites/sun_background.png" id="6_wfq6g"]
-[ext_resource type="Texture2D" uid="uid://cwof57xk7rlyp" path="res://seashore-gameoff/Sprites/sun_vivid_light.png" id="7_exq54"]
+[ext_resource type="Texture2D" uid="uid://ctall7k6dy6ni" path="res://seashore-gameoff/sprites/sun_background.png" id="6_wfq6g"]
+[ext_resource type="Texture2D" uid="uid://cwof57xk7rlyp" path="res://seashore-gameoff/sprites/sun_vivid_light.png" id="7_exq54"]
 [ext_resource type="StyleBox" uid="uid://0xm68j7088wl" path="res://seashore-gameoff/Themes/ButtonPressed.tres" id="7_wfq6g"]
-[ext_resource type="Texture2D" uid="uid://cwj0byk7r4bux" path="res://seashore-gameoff/Sprites/shell_one.png" id="8_6yiaa"]
-[ext_resource type="Texture2D" uid="uid://dwgw12qjmfiqp" path="res://seashore-gameoff/Sprites/shell_two.png" id="9_jdn0l"]
-[ext_resource type="Texture2D" uid="uid://xjw3siau8glb" path="res://seashore-gameoff/Sprites/shell_three.png" id="10_pg7oi"]
-[ext_resource type="Texture2D" uid="uid://bc24hdo82rij7" path="res://seashore-gameoff/Sprites/shell_four.png" id="11_dghpv"]
-[ext_resource type="Texture2D" uid="uid://by2dsphp24p2y" path="res://seashore-gameoff/Sprites/shell_five.png" id="12_d3bup"]
-[ext_resource type="Texture2D" uid="uid://no6hu883ya3u" path="res://seashore-gameoff/Sprites/player_sprites/lilguy_move_down_1.png" id="13_mtyry"]
-[ext_resource type="Texture2D" uid="uid://cecdfobf1h6ah" path="res://seashore-gameoff/Sprites/player_sprites/lilguy_move_down_2.png" id="14_7j1ip"]
-[ext_resource type="Texture2D" uid="uid://mfe71sry4l2f" path="res://seashore-gameoff/Sprites/player_sprites/lilguy_move_down_3.png" id="15_quvy1"]
-[ext_resource type="Texture2D" uid="uid://bgmk26bwwvxkm" path="res://seashore-gameoff/Sprites/player_sprites/lilguy_move_side_1.png" id="16_rgemo"]
-[ext_resource type="Texture2D" uid="uid://c2v4rawv12v33" path="res://seashore-gameoff/Sprites/player_sprites/lilguy_move_side_2.png" id="17_mqi57"]
-[ext_resource type="Texture2D" uid="uid://dhog2ia40xgb1" path="res://seashore-gameoff/Sprites/player_sprites/lilguy_move_side_3.png" id="18_r8lwn"]
-[ext_resource type="Texture2D" uid="uid://cwx0s3cbd8qjd" path="res://seashore-gameoff/Sprites/player_sprites/lilguy_move_up_1.png" id="19_ycp4d"]
-[ext_resource type="Texture2D" uid="uid://bvjh3owmj1qfr" path="res://seashore-gameoff/Sprites/player_sprites/lilguy_move_up_2.png" id="20_0bo6v"]
-[ext_resource type="Texture2D" uid="uid://dcsshuh7slj6u" path="res://seashore-gameoff/Sprites/player_sprites/lilguy_move_up_3.png" id="21_lot61"]
+[ext_resource type="Texture2D" uid="uid://cwj0byk7r4bux" path="res://seashore-gameoff/sprites/shell_one.png" id="8_6yiaa"]
+[ext_resource type="Texture2D" uid="uid://cu5eu7ph4pqej" path="res://seashore-gameoff/sprites/basket_handle.png" id="9_3p3ai"]
+[ext_resource type="Texture2D" uid="uid://dwgw12qjmfiqp" path="res://seashore-gameoff/sprites/shell_two.png" id="9_jdn0l"]
+[ext_resource type="Texture2D" uid="uid://xjw3siau8glb" path="res://seashore-gameoff/sprites/shell_three.png" id="10_pg7oi"]
+[ext_resource type="Texture2D" uid="uid://bc24hdo82rij7" path="res://seashore-gameoff/sprites/shell_four.png" id="11_dghpv"]
+[ext_resource type="Texture2D" uid="uid://by2dsphp24p2y" path="res://seashore-gameoff/sprites/shell_five.png" id="12_d3bup"]
+[ext_resource type="Texture2D" uid="uid://no6hu883ya3u" path="res://seashore-gameoff/sprites/player_sprites/lilguy_move_down_1.png" id="13_mtyry"]
+[ext_resource type="Texture2D" uid="uid://cecdfobf1h6ah" path="res://seashore-gameoff/sprites/player_sprites/lilguy_move_down_2.png" id="14_7j1ip"]
+[ext_resource type="Texture2D" uid="uid://mfe71sry4l2f" path="res://seashore-gameoff/sprites/player_sprites/lilguy_move_down_3.png" id="15_quvy1"]
+[ext_resource type="Texture2D" uid="uid://bgmk26bwwvxkm" path="res://seashore-gameoff/sprites/player_sprites/lilguy_move_side_1.png" id="16_rgemo"]
+[ext_resource type="Texture2D" uid="uid://b12gt5vi2tr8e" path="res://seashore-gameoff/sprites/shop_basket.png" id="16_shrwa"]
+[ext_resource type="Texture2D" uid="uid://c2v4rawv12v33" path="res://seashore-gameoff/sprites/player_sprites/lilguy_move_side_2.png" id="17_mqi57"]
+[ext_resource type="Texture2D" uid="uid://dhog2ia40xgb1" path="res://seashore-gameoff/sprites/player_sprites/lilguy_move_side_3.png" id="18_r8lwn"]
+[ext_resource type="Texture2D" uid="uid://cwx0s3cbd8qjd" path="res://seashore-gameoff/sprites/player_sprites/lilguy_move_up_1.png" id="19_ycp4d"]
+[ext_resource type="Texture2D" uid="uid://bvjh3owmj1qfr" path="res://seashore-gameoff/sprites/player_sprites/lilguy_move_up_2.png" id="20_0bo6v"]
+[ext_resource type="Texture2D" uid="uid://dcsshuh7slj6u" path="res://seashore-gameoff/sprites/player_sprites/lilguy_move_up_3.png" id="21_lot61"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_y73uf"]
 radius = 85.16724
@@ -67,7 +69,9 @@ Button/styles/normal = ExtResource("6_gj0g3")
 Button/styles/pressed = ExtResource("7_wfq6g")
 CenterLabel/base_type = &"Label"
 CenterLabel/colors/font_color = Color(0, 0, 0, 1)
-CenterLabel/font_sizes/font_size = 45
+CenterLabel/colors/font_outline_color = Color(1, 1, 1, 1)
+CenterLabel/constants/outline_size = 7
+CenterLabel/font_sizes/font_size = 51
 CenterLabel/fonts/font = ExtResource("4_at0vw")
 Label/colors/font_color = Color(0, 0, 0, 1)
 Label/colors/font_outline_color = Color(1, 1, 1, 1)
@@ -416,6 +420,159 @@ scale = Vector2(1, 1.0074873)
 theme = SubResource("Theme_d61yg")
 script = ExtResource("5_gj0g3")
 
+[node name="basket_handle" type="TextureRect" parent="CanvasLayer/UI"]
+layout_mode = 0
+offset_left = -18.0
+offset_top = -40.69531
+offset_right = 1222.0
+offset_bottom = 1280.3047
+scale = Vector2(0.122720405, 0.122720405)
+texture = ExtResource("9_3p3ai")
+
+[node name="ShellsInBasket" type="Control" parent="CanvasLayer/UI"]
+unique_name_in_owner = true
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="shell12" type="TextureRect" parent="CanvasLayer/UI/ShellsInBasket"]
+visible = false
+layout_mode = 0
+offset_left = 55.0
+offset_top = 33.747322
+offset_right = 88.0
+offset_bottom = 65.50954
+rotation = 0.36988437
+texture = ExtResource("12_d3bup")
+expand_mode = 1
+
+[node name="shell11" type="TextureRect" parent="CanvasLayer/UI/ShellsInBasket"]
+visible = false
+layout_mode = 0
+offset_left = 65.0
+offset_top = 78.4129
+offset_right = 97.99999
+offset_bottom = 110.17511
+rotation = 3.3920798
+texture = ExtResource("10_pg7oi")
+expand_mode = 1
+
+[node name="shell10" type="TextureRect" parent="CanvasLayer/UI/ShellsInBasket"]
+visible = false
+layout_mode = 0
+offset_left = 81.0
+offset_top = 33.747314
+offset_right = 113.999985
+offset_bottom = 65.50951
+rotation = 0.76804996
+texture = ExtResource("11_dghpv")
+expand_mode = 1
+
+[node name="shell9" type="TextureRect" parent="CanvasLayer/UI/ShellsInBasket"]
+visible = false
+layout_mode = 0
+offset_left = 54.0
+offset_top = 44.66557
+offset_right = 87.0
+offset_bottom = 76.427765
+rotation = -0.22533676
+texture = ExtResource("9_jdn0l")
+expand_mode = 1
+
+[node name="shell8" type="TextureRect" parent="CanvasLayer/UI/ShellsInBasket"]
+visible = false
+layout_mode = 0
+offset_left = 59.999992
+offset_top = 42.68043
+offset_right = 92.999985
+offset_bottom = 74.44262
+rotation = 0.68279624
+texture = ExtResource("11_dghpv")
+expand_mode = 1
+
+[node name="shell7" type="TextureRect" parent="CanvasLayer/UI/ShellsInBasket"]
+visible = false
+layout_mode = 0
+offset_left = 92.0
+offset_top = 50.620983
+offset_right = 125.0
+offset_bottom = 82.38318
+texture = ExtResource("9_jdn0l")
+expand_mode = 1
+
+[node name="shell6" type="TextureRect" parent="CanvasLayer/UI/ShellsInBasket"]
+visible = false
+layout_mode = 0
+offset_left = 42.999996
+offset_top = 64.516945
+offset_right = 76.0
+offset_bottom = 96.27914
+rotation = -0.7357667
+texture = ExtResource("9_jdn0l")
+expand_mode = 1
+
+[node name="shell5" type="TextureRect" parent="CanvasLayer/UI/ShellsInBasket"]
+visible = false
+layout_mode = 0
+offset_left = 82.0
+offset_top = 46.65071
+offset_right = 115.0
+offset_bottom = 78.41292
+texture = ExtResource("8_6yiaa")
+expand_mode = 1
+
+[node name="shell4" type="TextureRect" parent="CanvasLayer/UI/ShellsInBasket"]
+visible = false
+layout_mode = 0
+offset_left = 75.00001
+offset_top = 46.65071
+offset_right = 108.00001
+offset_bottom = 78.4129
+rotation = 0.43317136
+texture = ExtResource("12_d3bup")
+expand_mode = 1
+
+[node name="shell3" type="TextureRect" parent="CanvasLayer/UI/ShellsInBasket"]
+visible = false
+layout_mode = 0
+offset_left = 113.0
+offset_top = 54.591263
+offset_right = 146.0
+offset_bottom = 86.35346
+rotation = 1.1901312
+texture = ExtResource("11_dghpv")
+expand_mode = 1
+
+[node name="shell2" type="TextureRect" parent="CanvasLayer/UI/ShellsInBasket"]
+visible = false
+layout_mode = 0
+offset_left = 57.000004
+offset_top = 61.53924
+offset_right = 90.00001
+offset_bottom = 93.30144
+rotation = -0.28121698
+texture = ExtResource("8_6yiaa")
+expand_mode = 1
+
+[node name="shell1" type="TextureRect" parent="CanvasLayer/UI/ShellsInBasket"]
+visible = false
+layout_mode = 0
+offset_left = 73.0
+offset_top = 62.531807
+offset_right = 106.0
+offset_bottom = 94.29401
+texture = ExtResource("9_jdn0l")
+expand_mode = 1
+
+[node name="BasketFront" type="TextureRect" parent="CanvasLayer/UI"]
+layout_mode = 0
+offset_top = 7.940547
+offset_right = 146.0
+offset_bottom = 159.80351
+texture = ExtResource("16_shrwa")
+expand_mode = 4
+stretch_mode = 4
+
 [node name="BasketDisplay" type="Label" parent="CanvasLayer/UI"]
 unique_name_in_owner = true
 layout_mode = 1
@@ -423,9 +580,13 @@ anchors_preset = -1
 anchor_top = 0.05
 anchor_right = 0.2
 anchor_bottom = 0.15
-offset_left = 10.0
-offset_right = 10.0
+offset_left = -46.0
+offset_top = 65.24197
+offset_right = -46.0
+offset_bottom = 65.24197
+theme_override_font_sizes/font_size = 40
 text = "0"
+horizontal_alignment = 1
 
 [node name="TimeDisplay" type="TextureProgressBar" parent="CanvasLayer/UI"]
 layout_mode = 1
@@ -450,7 +611,6 @@ grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
 [node name="CenterText" type="Label" parent="CanvasLayer/UI"]
-visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5

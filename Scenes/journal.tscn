@@ -1,12 +1,13 @@
 [gd_scene load_steps=10 format=3 uid="uid://cepetu60xjjnn"]
 
-[ext_resource type="FontFile" uid="uid://d3y7jeeqifq8j" path="res://windows version/seashore-gameoff/fonts/Poppin-Regular.otf" id="1_2j21j"]
-[ext_resource type="StyleBox" uid="uid://dpfjj1fl7wn0c" path="res://windows version/seashore-gameoff/Themes/ButtonHover.tres" id="1_8enpq"]
-[ext_resource type="StyleBox" uid="uid://bsqyalvttc6hu" path="res://windows version/seashore-gameoff/Themes/ButtonDefault.tres" id="2_hllkl"]
-[ext_resource type="Script" uid="uid://b6aamm5osu00s" path="res://windows version/seashore-gameoff/Scripts/cutscene_manager.gd" id="2_y7f3q"]
-[ext_resource type="StyleBox" uid="uid://0xm68j7088wl" path="res://windows version/seashore-gameoff/Themes/ButtonPressed.tres" id="3_4wmkr"]
-[ext_resource type="Texture2D" uid="uid://cmbt1loevvumo" path="res://windows version/seashore-gameoff/sprites/journal.png" id="3_5w4qk"]
-[ext_resource type="AudioStream" uid="uid://d1vl6udu5dvkh" path="res://windows version/seashore-gameoff/Music/Anotha one.wav" id="7_hllkl"]
+[ext_resource type="FontFile" uid="uid://d3y7jeeqifq8j" path="res://seashore-gameoff/fonts/Poppin-Regular.otf" id="1_2j21j"]
+[ext_resource type="StyleBox" uid="uid://dpfjj1fl7wn0c" path="res://seashore-gameoff/Themes/ButtonHover.tres" id="1_8enpq"]
+[ext_resource type="StyleBox" uid="uid://bsqyalvttc6hu" path="res://seashore-gameoff/Themes/ButtonDefault.tres" id="2_hllkl"]
+[ext_resource type="Script" path="res://seashore-gameoff/Scripts/cutscene_manager.gd" id="2_y7f3q"]
+[ext_resource type="StyleBox" uid="uid://0xm68j7088wl" path="res://seashore-gameoff/Themes/ButtonPressed.tres" id="3_4wmkr"]
+[ext_resource type="Texture2D" uid="uid://cmbt1loevvumo" path="res://seashore-gameoff/sprites/journal.png" id="3_5w4qk"]
+[ext_resource type="AudioStream" uid="uid://d1vl6udu5dvkh" path="res://seashore-gameoff/Music/Anotha one.wav" id="7_hllkl"]
+
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r8otn"]
 bg_color = Color(0.79, 0.79, 0.79, 0.83137256)

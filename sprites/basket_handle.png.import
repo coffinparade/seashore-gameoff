@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://djq0rtaud6wbo"
-path="res://.godot/imported/towel.png-810cfee70353388384d8b04e42cc9e2b.ctex"
+uid="uid://cu5eu7ph4pqej"
+path="res://.godot/imported/basket_handle.png-288833365e9784f54751a36f77478fad.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://seashore-gameoff/sprites/towel.png"
-dest_files=["res://.godot/imported/towel.png-810cfee70353388384d8b04e42cc9e2b.ctex"]
+source_file="res://seashore-gameoff/sprites/basket_handle.png"
+dest_files=["res://.godot/imported/basket_handle.png-288833365e9784f54751a36f77478fad.ctex"]
 
 [params]
 

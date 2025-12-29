@@ -2,14 +2,14 @@ extends Control
 
 #Variables
 @onready var label:=$CenterText
-
+@onready var displayShells:=%ShellsInBasket.get_children()
 var temp_cash:float
 var game_ended:=false
 
 
 func _ready() -> void:
 	$"End Panel".visible = false
-
+	displayShells.reverse()
 func _process(delta: float) -> void:
 	if game_ended:
 		temp_cash = lerp(temp_cash,ScoreTracker.get_cash(),5.0*delta)
@@ -21,6 +21,10 @@ func showLabel(new_text:String):
 	await get_tree().create_timer(0.5).timeout
 	label.visible = false
 
+func basketUpdate():
+	var temp_shell_int = int(%BasketDisplay.text)
+	for i in displayShells.size()-1:
+		displayShells[i].visible = temp_shell_int>i
 
 func end_screen(shells:Array[Shell]):
 	var collectedTypes={
