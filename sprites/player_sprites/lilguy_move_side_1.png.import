@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bgmk26bwwvxkm"
-path="res://.godot/imported/lilguy_move_side_1.png-05a4a32ef4777abd6ac37dd777d20303.ctex"
+path="res://.godot/imported/lilguy_move_side_1.png-486f126d1d8a71a9915d9868357162ca.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://seashore-gameoff/sprites/player_sprites/lilguy_move_side_1.png"
-dest_files=["res://.godot/imported/lilguy_move_side_1.png-05a4a32ef4777abd6ac37dd777d20303.ctex"]
+source_file="res://seashore-gameoff/Sprites/player_sprites/lilguy_move_side_1.png"
+dest_files=["res://.godot/imported/lilguy_move_side_1.png-486f126d1d8a71a9915d9868357162ca.ctex"]
 
 [params]
 

@@ -13,7 +13,7 @@ func _ready():
 	
 
 func nextScene(scene:bool):
-	# if scene is false, open a journal scene, else open a shore scene
+	# if scene is 0 open a journal scene, if 1 open a shore scene
 	print(dayCount)
 	if dayCount==lastDay:
 		print("To the main menu")

@@ -20,13 +20,14 @@ var time_left:float
 func _ready():
 	timeDisplay.max_value = daytime
 
-
+#ticks down timer, also handles when the wave comes in
 func _process(_delta: float) -> void:
 	var time = Time.get_unix_time_from_system()
 	time_left = daytime-(time-start_time)
 	timeDisplay.value = time_left
 
 	#wave process
+	#spawns shore after reset so that it can come in after the collectibles have been reset
 	if time-last_detect_time>wave_time:
 		last_detect_time = time
 		await _reset_shore()
@@ -50,11 +51,11 @@ func _reset_shore():
 		creature.queue_free()
 	for collectible in collectibleContainer.get_children():
 		collectible.queue_free()
-	
+
 
 func _spawn_shore():
 	# create collectibles
-	for i in randi_range(5,15):
+	for i in randi_range(5+SceneManager.dayCount,15+SceneManager.dayCount):
 		new_collectible = ShellGrades.collectableShell.instantiate()
 		new_collectible.type = ShellGrades.shellGrades[randi_range(0,ShellGrades.shellGrades.size()-1)]
 		new_collectible.set_texture()
@@ -62,7 +63,7 @@ func _spawn_shore():
 		collectibleContainer.add_child(new_collectible)
 	
 	#create creatures 
-	for i in randi_range(3,10):
+	for i in randi_range(4+SceneManager.dayCount,10+SceneManager.dayCount):
 		#chance that a creeature is a crab or man o war
 		if randf()>0.6:
 			new_creature = CreatureScenes.moving_creature.instantiate()

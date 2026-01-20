@@ -16,8 +16,10 @@ var weight_factor:=weight_default
 var _shellBasket:Array[Shell]
 var _collectedShells:Array[Shell]
 
+#shows the word go for a bi then it'll disappear
 func _ready():
 	$CanvasLayer/UI.showLabel("Go!")
+
 
 func _physics_process(_delta: float) -> void:
 	#player shouldn't be able to move at the end of the level or when hit, checks for that
@@ -29,6 +31,7 @@ func _physics_process(_delta: float) -> void:
 		move_and_slide()
 
 
+#checks what direction the player is moving in and changes to corresponding animation
 func animate():
 	if velocity.length()!=0:
 		if velocity.y<0:
@@ -43,6 +46,7 @@ func animate():
 		anim.current_animation = "idle"
 
 
+#removes all the shells from the player's basket
 func drop_shells():
 	_shellBasket.clear()
 	update_basket()
@@ -53,20 +57,19 @@ func print_shells():
 	for shell in _shellBasket:
 		print(str(shell.value)+" ")
 
-
+#increases weight that the player is carrying and adds shell to basket
 func add_shell(shell:Shell):
 	_shellBasket.append(shell)
 	weight_factor-=weight_change
 	update_basket()
 
-
+#takes all the shells, tracks their value, adds them to a more permanent collected shells basket,
+#then drops the duplicate shells in the basket
 func store_shells():
 	for shell in _shellBasket:
 		ScoreTracker.increase_cash(shell.value)
 		_collectedShells.append(shell)
-	weight_factor = weight_default
-	_shellBasket.clear()
-	update_basket()
+	drop_shells()
 
 
 func update_basket():
@@ -78,9 +81,10 @@ func time_out():
 	await $CanvasLayer/UI.showLabel("Time's Up!")
 	$CanvasLayer/UI.end_screen(_collectedShells)
 
-
+#makes the player drop all their shells, makes them move away from the enemy, and makes them red for a quarter of a second
 func hit(enemy_position:Vector2):
 	drop_shells()
+	
 	velocity = Vector2.from_angle(enemy_position.angle_to_point(position))*hit_speed
 	move_and_slide() 
 	
@@ -92,6 +96,6 @@ func hit(enemy_position:Vector2):
 	modulate = Color(1.0, 1.0, 1.0, 1.0)
 	can_move=true
 
-
+#goes to the next journal scene
 func _on_change_scene_button_pressed():
 	SceneManager.nextScene(0)

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cmbt1loevvumo"
-path="res://.godot/imported/journal.png-3ac5e890061167c095cd21a7a301caa8.ctex"
+path="res://.godot/imported/journal.png-d211a0afeddbff7d1053074ba2a8b219.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://seashore-gameoff/sprites/journal.png"
-dest_files=["res://.godot/imported/journal.png-3ac5e890061167c095cd21a7a301caa8.ctex"]
+source_file="res://seashore-gameoff/Sprites/journal.png"
+dest_files=["res://.godot/imported/journal.png-d211a0afeddbff7d1053074ba2a8b219.ctex"]
 
 [params]
 
