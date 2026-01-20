@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dhxent8klv7h0"
-path="res://.godot/imported/mainMenuBackground.png-d7b697a79f82643a1f139c90c4dee7ff.ctex"
+path="res://.godot/imported/mainMenuBackground.png-f3371463360e8149d4b17f78f794b844.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://seashore-gameoff/Sprites/mainMenuBackground.png"
-dest_files=["res://.godot/imported/mainMenuBackground.png-d7b697a79f82643a1f139c90c4dee7ff.ctex"]
+source_file="res://seashore-gameoff/sprites/mainMenuBackground.png"
+dest_files=["res://.godot/imported/mainMenuBackground.png-f3371463360e8149d4b17f78f794b844.ctex"]
 
 [params]
 

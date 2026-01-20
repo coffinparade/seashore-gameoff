@@ -18,6 +18,9 @@ var time_left:float
 
 #makes sure the timer's representing time properly
 func _ready():
+	if SceneManager.dayCount>=1:
+		for i in randi_range(0,4):
+			_spawn_rock()
 	timeDisplay.max_value = daytime
 
 #ticks down timer, also handles when the wave comes in
@@ -55,7 +58,7 @@ func _reset_shore():
 
 func _spawn_shore():
 	# create collectibles
-	for i in randi_range(5+SceneManager.dayCount,15+SceneManager.dayCount):
+	for i in randi_range(5+SceneManager.dayCount,15+(SceneManager.dayCount/2.0)):
 		new_collectible = ShellGrades.collectableShell.instantiate()
 		new_collectible.type = ShellGrades.shellGrades[randi_range(0,ShellGrades.shellGrades.size()-1)]
 		new_collectible.set_texture()
@@ -63,7 +66,7 @@ func _spawn_shore():
 		collectibleContainer.add_child(new_collectible)
 	
 	#create creatures 
-	for i in randi_range(4+SceneManager.dayCount,10+SceneManager.dayCount):
+	for i in randi_range(4+SceneManager.dayCount,10+SceneManager.dayCount*1.25):
 		#chance that a creeature is a crab or man o war
 		if randf()>0.6:
 			new_creature = CreatureScenes.moving_creature.instantiate()
@@ -87,3 +90,6 @@ func _end_game():
 #loop that shit again!
 func _on_audio_stream_player_finished():
 	$AudioStreamPlayer.play()
+
+func _spawn_rock():
+	print("rock created")
