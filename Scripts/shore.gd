@@ -3,13 +3,13 @@ extends Node2D
 @export var wave_time :=20.0
 @export var daytime:= 60.0
 
-@onready var start_time = Time.get_unix_time_from_system()
-@onready var wave_anim = $Wave/AnimationPlayer
-@onready var collectibleContainer = $CollectibleContainer
-@onready var creatureContainer = $CreatureContainer
-@onready var timeDisplay = $Player/CanvasLayer/UI/TimeDisplay
-@onready var player = %Player
-
+@onready var start_time := Time.get_unix_time_from_system()
+@onready var wave_anim := $Wave/AnimationPlayer
+@onready var collectibleContainer := $CollectibleContainer
+@onready var creatureContainer := $CreatureContainer
+@onready var timeDisplay := $Player/CanvasLayer/UI/TimeDisplay
+@onready var player := %Player
+@onready var obstacleContainer := $ObstacleContainer
 var new_collectible
 var new_creature
 var last_detect_time:float
@@ -92,4 +92,6 @@ func _on_audio_stream_player_finished():
 	$AudioStreamPlayer.play()
 
 func _spawn_rock():
-	print("rock created")
+	var rock = CreatureScenes.rock.instantiate()
+	rock.global_position = Vector2(randi_range(-1000,1000),randi_range(-200,450))
+	obstacleContainer.add_child(rock)
