@@ -1,19 +1,21 @@
-[gd_scene load_steps=3 format=3 uid="uid://b03nh2uh6j00o"]
+[gd_scene load_steps=4 format=3 uid="uid://b03nh2uh6j00o"]
 
+[ext_resource type="Script" uid="uid://bp32uwc6dhkx0" path="res://seashore-gameoff/Scenes/rock.gd" id="1_3dxtf"]
 [ext_resource type="Texture2D" uid="uid://caepxx2npfa68" path="res://icon.svg" id="1_hkcvn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3044t"]
-size = Vector2(128.96297, 106.982056)
+size = Vector2(128.96297, 84.98199)
 
 [node name="Rock" type="StaticBody2D"]
 collision_layer = 129
 collision_mask = 129
+script = ExtResource("1_3dxtf")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(2.0005744, 2.0005744)
 texture = ExtResource("1_hkcvn")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(2, -18)
+position = Vector2(2, 4.0063877)
 scale = Vector2(2.0005744, 2.0005744)
 shape = SubResource("RectangleShape2D_3044t")

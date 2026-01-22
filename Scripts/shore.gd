@@ -15,7 +15,6 @@ var new_creature
 var last_detect_time:float
 var time_left:float
 
-
 #makes sure the timer's representing time properly
 func _ready():
 	if SceneManager.dayCount>=1:
@@ -48,6 +47,7 @@ func _reset_shore():
 	wave_anim.queue("wave_down")
 	wave_anim.queue("still")
 	
+	
 	await wave_anim.animation_changed
 	#once wave up finished, get rid of leftover creatures and shells
 	for creature in creatureContainer.get_children():
@@ -71,7 +71,7 @@ func _spawn_shore():
 		if randf()>0.6:
 			new_creature = CreatureScenes.moving_creature.instantiate()
 			new_creature.set_move_dir(Vector2.from_angle(PI)*randi_range(200,600))
-			new_creature.set_move_speed(randi_range(40,100))
+			new_creature.set_move_speed(randi_range(40,120))
 		else:
 			new_creature = CreatureScenes.still_creature.instantiate()
 		new_creature.global_position = Vector2(randi_range(-1300,1300),randi_range(-200,650))
@@ -94,4 +94,5 @@ func _on_audio_stream_player_finished():
 func _spawn_rock():
 	var rock = CreatureScenes.rock.instantiate()
 	rock.global_position = Vector2(randi_range(-1000,1000),randi_range(-200,450))
+	
 	obstacleContainer.add_child(rock)
