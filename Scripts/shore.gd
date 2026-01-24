@@ -18,7 +18,7 @@ var time_left:float
 
 #makes sure the timer's representing time properly
 func _ready():
-	if SceneManager.dayCount>=0:
+	if SceneManager.dayCount>=1:
 		for i in randi_range(0,4):
 			_spawn_rock()
 	timeDisplay.max_value = daytime
