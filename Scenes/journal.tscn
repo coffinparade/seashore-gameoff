@@ -1,13 +1,12 @@
-[gd_scene load_steps=10 format=3 uid="uid://cepetu60xjjnn"]
+[gd_scene load_steps=10 format=3 uid="uid://dgvdfihovfflg"]
 
 [ext_resource type="FontFile" uid="uid://d3y7jeeqifq8j" path="res://seashore-gameoff/fonts/Poppin-Regular.otf" id="1_2j21j"]
 [ext_resource type="StyleBox" uid="uid://dpfjj1fl7wn0c" path="res://seashore-gameoff/Themes/ButtonHover.tres" id="1_8enpq"]
 [ext_resource type="StyleBox" uid="uid://bsqyalvttc6hu" path="res://seashore-gameoff/Themes/ButtonDefault.tres" id="2_hllkl"]
-[ext_resource type="Script" path="res://seashore-gameoff/Scripts/cutscene_manager.gd" id="2_y7f3q"]
+[ext_resource type="Script" uid="uid://b6aamm5osu00s" path="res://seashore-gameoff/Scripts/cutscene_manager.gd" id="2_y7f3q"]
 [ext_resource type="StyleBox" uid="uid://0xm68j7088wl" path="res://seashore-gameoff/Themes/ButtonPressed.tres" id="3_4wmkr"]
 [ext_resource type="Texture2D" uid="uid://cmbt1loevvumo" path="res://seashore-gameoff/sprites/journal.png" id="3_5w4qk"]
 [ext_resource type="AudioStream" uid="uid://d1vl6udu5dvkh" path="res://seashore-gameoff/Music/Anotha one.wav" id="7_hllkl"]
-
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r8otn"]
 bg_color = Color(0.79, 0.79, 0.79, 0.83137256)
@@ -24,6 +23,7 @@ corner_radius_bottom_left = 100
 corner_detail = 13
 
 [sub_resource type="Theme" id="Theme_mfopc"]
+Button/colors/font_color = Color(1, 1, 1, 1)
 Button/font_sizes/font_size = 20
 Button/fonts/font = ExtResource("1_2j21j")
 Button/styles/focus = ExtResource("1_8enpq")
@@ -86,6 +86,7 @@ autowrap_mode = 2
 justification_flags = 162
 
 [node name="Button" type="Button" parent="MarginContainer/Panel"]
+modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.45

@@ -4,10 +4,10 @@ extends Creature
 @onready var target_pos:Vector2 = global_position+ _move_direction
 var _move_direction:Vector2
 var _move_speed:float=20.0
-@onready  var anim :=$AnimationPlayer
+@onready  var anim :=$Sprite2D
 
 func _ready():
-	anim.current_animation = "new_animation"
+	anim.speed_scale=randf_range(0.8,1.2)
 
 func _physics_process(delta: float) -> void:
 	global_position = global_position.move_toward(target_pos, _move_speed*delta)

@@ -1,12 +1,50 @@
-[gd_scene load_steps=5 format=3 uid="uid://n2ciyqpf0wuj"]
+[gd_scene load_steps=8 format=3 uid="uid://n2ciyqpf0wuj"]
 
 [ext_resource type="Script" uid="uid://bn3w4refp6w0g" path="res://seashore-gameoff/Scripts/creature.gd" id="1_lp5vf"]
-[ext_resource type="Texture2D" uid="uid://fuha1p652yoc" path="res://seashore-gameoff/Sprites/player_sprites/shadow.png" id="2_y14m1"]
-[ext_resource type="Texture2D" uid="uid://mr25ut0k7hsh" path="res://seashore-gameoff/Sprites/pmow.png" id="3_6uiey"]
+[ext_resource type="Texture2D" uid="uid://fuha1p652yoc" path="res://seashore-gameoff/sprites/player_sprites/shadow.png" id="2_y14m1"]
+[ext_resource type="Texture2D" uid="uid://mr25ut0k7hsh" path="res://seashore-gameoff/sprites/pmow.png" id="3_6uiey"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ei4pe"]
 radius = 18.203213
 height = 46.674904
+
+[sub_resource type="Animation" id="Animation_ei4pe"]
+resource_name = "still"
+length = 2.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:scale:y")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.2666667, 2.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.063803874, 0.06, 0.063803874]
+}
+
+[sub_resource type="Animation" id="Animation_r4e4g"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:scale:y")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0.063803874]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_jb8vb"]
+_data = {
+&"RESET": SubResource("Animation_r4e4g"),
+&"still": SubResource("Animation_ei4pe")
+}
 
 [node name="creature" type="Area2D"]
 scale = Vector2(2.142479, 2.142479)
@@ -24,5 +62,11 @@ texture = ExtResource("3_6uiey")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 rotation = -1.5683945
 shape = SubResource("CapsuleShape2D_ei4pe")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_jb8vb")
+}
+autoplay = "still"
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

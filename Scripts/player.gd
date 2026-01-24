@@ -12,6 +12,7 @@ const weight_change:=0.05
 
 var can_move:=true
 var weight_factor:=weight_default
+@onready var prevPos:= position
 
 var _shellBasket:Array[Shell]
 var _collectedShells:Array[Shell]
@@ -24,12 +25,12 @@ func _ready():
 func _physics_process(_delta: float) -> void:
 	#player shouldn't be able to move at the end of the level or when hit, checks for that
 	if can_move:
+		
 		var move_dir = Input.get_vector("move_left","move_right","move_up","move_down")
 		velocity = move_dir*move_speed*weight_factor
 		animate()
 		$"Walking Particles".emitting = (velocity.x!=0||velocity.y!=0)&&!(velocity.y>0)
 		move_and_slide()
-
 
 #checks what direction the player is moving in and changes to corresponding animation
 func animate():
@@ -62,6 +63,7 @@ func add_shell(shell:Shell):
 	_shellBasket.append(shell)
 	weight_factor-=weight_change
 	update_basket()
+	collectionAnim()
 
 #takes all the shells, tracks their value, adds them to a more permanent collected shells basket,
 #then drops the duplicate shells in the basket
@@ -99,3 +101,12 @@ func hit(enemy_position:Vector2):
 #goes to the next journal scene
 func _on_change_scene_button_pressed():
 	SceneManager.nextScene(0)
+
+func get_collected_shell_count()->int:
+	return _collectedShells.size()
+	
+
+func collectionAnim():
+	var tween=get_tree().create_tween()
+	tween.parallel().tween_property(self,"scale:x",0.587,0.15).from(0.65)
+	tween.parallel().tween_property(self,"scale:y",0.587,0.15).from(0.65)

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d38dmjh8tgywb"
-path="res://.godot/imported/shop bg.png-93e0415af95b92cd7dcde977b63513ed.ctex"
+uid="uid://crj2c8qiv535m"
+path="res://.godot/imported/shell_pile_1.png-6ccdc542ed06e28fc4befc84557b0639.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://seashore-gameoff/Sprites/shop bg.png"
-dest_files=["res://.godot/imported/shop bg.png-93e0415af95b92cd7dcde977b63513ed.ctex"]
+source_file="res://seashore-gameoff/sprites/shellPile/shell_pile_1.png"
+dest_files=["res://.godot/imported/shell_pile_1.png-6ccdc542ed06e28fc4befc84557b0639.ctex"]
 
 [params]
 

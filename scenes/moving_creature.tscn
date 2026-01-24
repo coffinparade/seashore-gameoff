@@ -1,49 +1,27 @@
-[gd_scene load_steps=8 format=3 uid="uid://py1mi3cuoqa3"]
+[gd_scene load_steps=7 format=3 uid="uid://py1mi3cuoqa3"]
 
 [ext_resource type="Script" uid="uid://dfgpe087i4n7b" path="res://seashore-gameoff/Scripts/creature_movement.gd" id="1_tqahw"]
-[ext_resource type="Texture2D" uid="uid://fuha1p652yoc" path="res://seashore-gameoff/Sprites/player_sprites/shadow.png" id="2_0pjlf"]
-[ext_resource type="Texture2D" uid="uid://dy85b4me6hfn2" path="res://seashore-gameoff/Sprites/crab.png" id="3_wkqyw"]
+[ext_resource type="Texture2D" uid="uid://fuha1p652yoc" path="res://seashore-gameoff/sprites/player_sprites/shadow.png" id="2_0pjlf"]
+[ext_resource type="Texture2D" uid="uid://dorp3qlbydeg4" path="res://seashore-gameoff/sprites/crab2.png" id="3_i30o0"]
+[ext_resource type="Texture2D" uid="uid://dy85b4me6hfn2" path="res://seashore-gameoff/sprites/crab.png" id="3_wkqyw"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8ie6q"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_i30o0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_wkqyw")
+}],
+"loop": true,
+"name": &"default",
+"speed": 4.0
+}]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_m4ywk"]
-radius = 13.055433
-height = 59.443886
-
-[sub_resource type="Animation" id="Animation_8ie6q"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("3_wkqyw")]
-}
-
-[sub_resource type="Animation" id="Animation_i30o0"]
-resource_name = "new_animation"
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("3_wkqyw")]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_xv5du"]
-_data = {
-&"RESET": SubResource("Animation_8ie6q"),
-&"new_animation": SubResource("Animation_i30o0")
-}
+radius = 11.527256
+height = 55.889725
 
 [node name="moving_creature" type="Area2D"]
 scale = Vector2(3.6000335, 3.6000335)
@@ -54,18 +32,16 @@ position = Vector2(0, 4.166628)
 scale = Vector2(0.057838507, 0.057838507)
 texture = ExtResource("2_0pjlf")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.039046932, 0.039046932)
-texture = ExtResource("3_wkqyw")
+sprite_frames = SubResource("SpriteFrames_8ie6q")
+autoplay = "default"
+frame = 1
+frame_progress = 0.06334742
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 rotation = 1.5707964
 scale = Vector2(0.79520935, 0.79520935)
 shape = SubResource("CapsuleShape2D_m4ywk")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-&"": SubResource("AnimationLibrary_xv5du")
-}
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

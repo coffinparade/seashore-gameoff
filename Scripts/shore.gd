@@ -9,6 +9,7 @@ extends Node2D
 @onready var creatureContainer := $CreatureContainer
 @onready var timeDisplay := $Player/CanvasLayer/UI/TimeDisplay
 @onready var player := %Player
+@onready var collectionArea := $Collection_Area
 @onready var obstacleContainer := $ObstacleContainer
 var new_collectible
 var new_creature
@@ -17,7 +18,7 @@ var time_left:float
 
 #makes sure the timer's representing time properly
 func _ready():
-	if SceneManager.dayCount>=1:
+	if SceneManager.dayCount>=0:
 		for i in randi_range(0,4):
 			_spawn_rock()
 	timeDisplay.max_value = daytime
@@ -81,6 +82,7 @@ func _spawn_shore():
 func _on_collection_area_body_entered(body):
 	if body.is_in_group("player"):
 		body.store_shells()
+		collectionArea.shellCount(body.get_collected_shell_count())
 
 #tells player daytime is done and allows it to do what it needs for the UI
 func _end_game():

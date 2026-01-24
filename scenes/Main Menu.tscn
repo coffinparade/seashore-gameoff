@@ -1,12 +1,12 @@
 [gd_scene load_steps=13 format=3 uid="uid://ca5dxg8yu7j2x"]
 
-[ext_resource type="FontFile" uid="uid://8ibemi7h5xgk" path="res://seashore-gameoff/Fonts/Poppin-Regular.ttf" id="1_wtopv"]
-[ext_resource type="FontFile" uid="uid://d3y7jeeqifq8j" path="res://seashore-gameoff/Fonts/Poppin-Regular.otf" id="2_bb8sq"]
+[ext_resource type="FontFile" uid="uid://8ibemi7h5xgk" path="res://seashore-gameoff/fonts/Poppin-Regular.ttf" id="1_wtopv"]
+[ext_resource type="FontFile" uid="uid://d3y7jeeqifq8j" path="res://seashore-gameoff/fonts/Poppin-Regular.otf" id="2_bb8sq"]
 [ext_resource type="StyleBox" uid="uid://dpfjj1fl7wn0c" path="res://seashore-gameoff/Themes/ButtonHover.tres" id="2_fubqv"]
 [ext_resource type="Script" uid="uid://cmswlj84odl1l" path="res://seashore-gameoff/Scripts/main_menu.gd" id="2_mercu"]
 [ext_resource type="StyleBox" uid="uid://bsqyalvttc6hu" path="res://seashore-gameoff/Themes/ButtonDefault.tres" id="3_gxpqy"]
 [ext_resource type="StyleBox" uid="uid://0xm68j7088wl" path="res://seashore-gameoff/Themes/ButtonPressed.tres" id="4_1ipbd"]
-[ext_resource type="Texture2D" uid="uid://dhxent8klv7h0" path="res://seashore-gameoff/Sprites/mainMenuBackground.png" id="4_bb8sq"]
+[ext_resource type="Texture2D" uid="uid://dhxent8klv7h0" path="res://seashore-gameoff/sprites/mainMenuBackground.png" id="4_bb8sq"]
 [ext_resource type="AudioStream" uid="uid://duyowmrwrjqr4" path="res://seashore-gameoff/Music/Theme for game.wav" id="4_yo4yc"]
 
 [sub_resource type="Theme" id="Theme_akoul"]
@@ -95,54 +95,57 @@ anchor_bottom = 0.198
 text = "Shells by 
 the Shore"
 
-[node name="HBoxContainer" type="HBoxContainer" parent="TextureRect"]
+[node name="MenuButtons" type="HBoxContainer" parent="TextureRect"]
+unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.75
 anchor_top = 0.45
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 492.0
+offset_right = 492.0
 grow_horizontal = 0
 grow_vertical = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="TextureRect/HBoxContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="TextureRect/MenuButtons"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 5
 size_flags_stretch_ratio = 1.5
 
-[node name="VBoxContainer" type="VBoxContainer" parent="TextureRect/HBoxContainer/MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="TextureRect/MenuButtons/MarginContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="PlayButton" type="Button" parent="TextureRect/HBoxContainer/MarginContainer/VBoxContainer"]
+[node name="PlayButton" type="Button" parent="TextureRect/MenuButtons/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 text = "Play"
 
-[node name="Spacer2" type="Control" parent="TextureRect/HBoxContainer/MarginContainer/VBoxContainer"]
+[node name="Spacer2" type="Control" parent="TextureRect/MenuButtons/MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(0, 10)
 layout_mode = 2
 
-[node name="TutorialButton" type="Button" parent="TextureRect/HBoxContainer/MarginContainer/VBoxContainer"]
+[node name="TutorialButton" type="Button" parent="TextureRect/MenuButtons/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 text = "Tutorial"
 
-[node name="Spacer3" type="Control" parent="TextureRect/HBoxContainer/MarginContainer/VBoxContainer"]
+[node name="Spacer3" type="Control" parent="TextureRect/MenuButtons/MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(0, 10)
 layout_mode = 2
 
-[node name="CreditsButton" type="Button" parent="TextureRect/HBoxContainer/MarginContainer/VBoxContainer"]
+[node name="CreditsButton" type="Button" parent="TextureRect/MenuButtons/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 text = "Credits"
 
-[node name="Spacer4" type="Control" parent="TextureRect/HBoxContainer/MarginContainer/VBoxContainer"]
+[node name="Spacer4" type="Control" parent="TextureRect/MenuButtons/MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(0, 10)
 layout_mode = 2
 
-[node name="QuitButton" type="Button" parent="TextureRect/HBoxContainer/MarginContainer/VBoxContainer"]
+[node name="QuitButton" type="Button" parent="TextureRect/MenuButtons/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 text = "Quit"
@@ -233,10 +236,10 @@ text = "Close"
 stream = ExtResource("4_yo4yc")
 autoplay = true
 
-[connection signal="pressed" from="TextureRect/HBoxContainer/MarginContainer/VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
-[connection signal="pressed" from="TextureRect/HBoxContainer/MarginContainer/VBoxContainer/TutorialButton" to="." method="_on_tutorial_button_pressed"]
-[connection signal="pressed" from="TextureRect/HBoxContainer/MarginContainer/VBoxContainer/CreditsButton" to="." method="_on_credits_button_pressed"]
-[connection signal="pressed" from="TextureRect/HBoxContainer/MarginContainer/VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="TextureRect/MenuButtons/MarginContainer/VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="TextureRect/MenuButtons/MarginContainer/VBoxContainer/TutorialButton" to="." method="_on_tutorial_button_pressed"]
+[connection signal="pressed" from="TextureRect/MenuButtons/MarginContainer/VBoxContainer/CreditsButton" to="." method="_on_credits_button_pressed"]
+[connection signal="pressed" from="TextureRect/MenuButtons/MarginContainer/VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
 [connection signal="pressed" from="TextureRect/Credits Panel/CloseCredits" to="." method="_on_close_credits_pressed"]
 [connection signal="pressed" from="TextureRect/Tutorial Panel/CloseTutorial" to="." method="_on_close_tutorial_pressed"]
 [connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]

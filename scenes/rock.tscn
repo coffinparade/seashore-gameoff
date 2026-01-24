@@ -1,21 +1,54 @@
-[gd_scene load_steps=4 format=3 uid="uid://b03nh2uh6j00o"]
+[gd_scene load_steps=8 format=3 uid="uid://b03nh2uh6j00o"]
 
-[ext_resource type="Script" uid="uid://bp32uwc6dhkx0" path="res://seashore-gameoff/Scenes/rock.gd" id="1_3dxtf"]
-[ext_resource type="Texture2D" uid="uid://caepxx2npfa68" path="res://icon.svg" id="1_hkcvn"]
+[ext_resource type="Script" uid="uid://jheshn4sxgtt" path="res://seashore-gameoff/Scripts/rock.gd" id="1_3dxtf"]
+[ext_resource type="Texture2D" uid="uid://dudq3asroj203" path="res://seashore-gameoff/sprites/rocksIMG.png" id="2_3044t"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_3044t"]
-size = Vector2(128.96297, 84.98199)
+[sub_resource type="AtlasTexture" id="AtlasTexture_gyspc"]
+atlas = ExtResource("2_3044t")
+region = Rect2(0, 0, 1042, 682)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jmj26"]
+atlas = ExtResource("2_3044t")
+region = Rect2(0, 682, 1042, 682)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jn13h"]
+atlas = ExtResource("2_3044t")
+region = Rect2(0, 1364, 1042, 682)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hkcvn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gyspc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jmj26")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jn13h")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3044t"]
+custom_solver_bias = 0.185
+radius = 34.0
+height = 302.00003
 
 [node name="Rock" type="StaticBody2D"]
-collision_layer = 129
-collision_mask = 129
+collision_layer = 128
+collision_mask = 128
 script = ExtResource("1_3dxtf")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(2.0005744, 2.0005744)
-texture = ExtResource("1_hkcvn")
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.39186463, 0.39186457)
+sprite_frames = SubResource("SpriteFrames_hkcvn")
+frame = 2
+frame_progress = 0.44742244
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(2, 4.0063877)
-scale = Vector2(2.0005744, 2.0005744)
-shape = SubResource("RectangleShape2D_3044t")
+position = Vector2(1, 24)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_3044t")

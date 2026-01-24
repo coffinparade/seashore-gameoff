@@ -1,31 +1,31 @@
 [gd_scene load_steps=40 format=3 uid="uid://dundrofrhxqh5"]
 
 [ext_resource type="Script" uid="uid://cyjnqolhsu7o3" path="res://seashore-gameoff/Scripts/player.gd" id="1_p8ieb"]
-[ext_resource type="Texture2D" uid="uid://fuha1p652yoc" path="res://seashore-gameoff/Sprites/player_sprites/shadow.png" id="2_l3ye3"]
-[ext_resource type="Texture2D" uid="uid://brqwa5rerlc4v" path="res://seashore-gameoff/Sprites/player_sprites/kiddo.png" id="3_dx4mx"]
-[ext_resource type="FontFile" uid="uid://8ibemi7h5xgk" path="res://seashore-gameoff/Fonts/Poppin-Regular.ttf" id="4_at0vw"]
+[ext_resource type="Texture2D" uid="uid://fuha1p652yoc" path="res://seashore-gameoff/sprites/player_sprites/shadow.png" id="2_l3ye3"]
+[ext_resource type="Texture2D" uid="uid://brqwa5rerlc4v" path="res://seashore-gameoff/sprites/player_sprites/kiddo.png" id="3_dx4mx"]
+[ext_resource type="FontFile" uid="uid://8ibemi7h5xgk" path="res://seashore-gameoff/fonts/Poppin-Regular.ttf" id="4_at0vw"]
 [ext_resource type="StyleBox" uid="uid://dpfjj1fl7wn0c" path="res://seashore-gameoff/Themes/ButtonHover.tres" id="5_at0vw"]
 [ext_resource type="Script" uid="uid://djp21gskxtn45" path="res://seashore-gameoff/Scripts/ui.gd" id="5_gj0g3"]
 [ext_resource type="StyleBox" uid="uid://bsqyalvttc6hu" path="res://seashore-gameoff/Themes/ButtonDefault.tres" id="6_gj0g3"]
-[ext_resource type="Texture2D" uid="uid://ctall7k6dy6ni" path="res://seashore-gameoff/Sprites/sun_background.png" id="6_wfq6g"]
-[ext_resource type="Texture2D" uid="uid://cwof57xk7rlyp" path="res://seashore-gameoff/Sprites/sun_vivid_light.png" id="7_exq54"]
+[ext_resource type="Texture2D" uid="uid://ctall7k6dy6ni" path="res://seashore-gameoff/sprites/sun_background.png" id="6_wfq6g"]
+[ext_resource type="Texture2D" uid="uid://cwof57xk7rlyp" path="res://seashore-gameoff/sprites/sun_vivid_light.png" id="7_exq54"]
 [ext_resource type="StyleBox" uid="uid://0xm68j7088wl" path="res://seashore-gameoff/Themes/ButtonPressed.tres" id="7_wfq6g"]
-[ext_resource type="Texture2D" uid="uid://cwj0byk7r4bux" path="res://seashore-gameoff/Sprites/shell_one.png" id="8_6yiaa"]
-[ext_resource type="Texture2D" uid="uid://cu5eu7ph4pqej" path="res://seashore-gameoff/Sprites/basket_handle.png" id="9_3p3ai"]
-[ext_resource type="Texture2D" uid="uid://dwgw12qjmfiqp" path="res://seashore-gameoff/Sprites/shell_two.png" id="9_jdn0l"]
-[ext_resource type="Texture2D" uid="uid://xjw3siau8glb" path="res://seashore-gameoff/Sprites/shell_three.png" id="10_pg7oi"]
-[ext_resource type="Texture2D" uid="uid://bc24hdo82rij7" path="res://seashore-gameoff/Sprites/shell_four.png" id="11_dghpv"]
-[ext_resource type="Texture2D" uid="uid://by2dsphp24p2y" path="res://seashore-gameoff/Sprites/shell_five.png" id="12_d3bup"]
-[ext_resource type="Texture2D" uid="uid://no6hu883ya3u" path="res://seashore-gameoff/Sprites/player_sprites/lilguy_move_down_1.png" id="13_mtyry"]
-[ext_resource type="Texture2D" uid="uid://cecdfobf1h6ah" path="res://seashore-gameoff/Sprites/player_sprites/lilguy_move_down_2.png" id="14_7j1ip"]
-[ext_resource type="Texture2D" uid="uid://mfe71sry4l2f" path="res://seashore-gameoff/Sprites/player_sprites/lilguy_move_down_3.png" id="15_quvy1"]
-[ext_resource type="Texture2D" uid="uid://bgmk26bwwvxkm" path="res://seashore-gameoff/Sprites/player_sprites/lilguy_move_side_1.png" id="16_rgemo"]
-[ext_resource type="Texture2D" uid="uid://b12gt5vi2tr8e" path="res://seashore-gameoff/Sprites/shop_basket.png" id="16_shrwa"]
-[ext_resource type="Texture2D" uid="uid://c2v4rawv12v33" path="res://seashore-gameoff/Sprites/player_sprites/lilguy_move_side_2.png" id="17_mqi57"]
-[ext_resource type="Texture2D" uid="uid://dhog2ia40xgb1" path="res://seashore-gameoff/Sprites/player_sprites/lilguy_move_side_3.png" id="18_r8lwn"]
-[ext_resource type="Texture2D" uid="uid://cwx0s3cbd8qjd" path="res://seashore-gameoff/Sprites/player_sprites/lilguy_move_up_1.png" id="19_ycp4d"]
-[ext_resource type="Texture2D" uid="uid://bvjh3owmj1qfr" path="res://seashore-gameoff/Sprites/player_sprites/lilguy_move_up_2.png" id="20_0bo6v"]
-[ext_resource type="Texture2D" uid="uid://dcsshuh7slj6u" path="res://seashore-gameoff/Sprites/player_sprites/lilguy_move_up_3.png" id="21_lot61"]
+[ext_resource type="Texture2D" uid="uid://cwj0byk7r4bux" path="res://seashore-gameoff/sprites/shell_one.png" id="8_6yiaa"]
+[ext_resource type="Texture2D" uid="uid://cu5eu7ph4pqej" path="res://seashore-gameoff/sprites/basket_handle.png" id="9_3p3ai"]
+[ext_resource type="Texture2D" uid="uid://dwgw12qjmfiqp" path="res://seashore-gameoff/sprites/shell_two.png" id="9_jdn0l"]
+[ext_resource type="Texture2D" uid="uid://xjw3siau8glb" path="res://seashore-gameoff/sprites/shell_three.png" id="10_pg7oi"]
+[ext_resource type="Texture2D" uid="uid://bc24hdo82rij7" path="res://seashore-gameoff/sprites/shell_four.png" id="11_dghpv"]
+[ext_resource type="Texture2D" uid="uid://by2dsphp24p2y" path="res://seashore-gameoff/sprites/shell_five.png" id="12_d3bup"]
+[ext_resource type="Texture2D" uid="uid://no6hu883ya3u" path="res://seashore-gameoff/sprites/player_sprites/lilguy_move_down_1.png" id="13_mtyry"]
+[ext_resource type="Texture2D" uid="uid://cecdfobf1h6ah" path="res://seashore-gameoff/sprites/player_sprites/lilguy_move_down_2.png" id="14_7j1ip"]
+[ext_resource type="Texture2D" uid="uid://mfe71sry4l2f" path="res://seashore-gameoff/sprites/player_sprites/lilguy_move_down_3.png" id="15_quvy1"]
+[ext_resource type="Texture2D" uid="uid://bgmk26bwwvxkm" path="res://seashore-gameoff/sprites/player_sprites/lilguy_move_side_1.png" id="16_rgemo"]
+[ext_resource type="Texture2D" uid="uid://b12gt5vi2tr8e" path="res://seashore-gameoff/sprites/shop_basket.png" id="16_shrwa"]
+[ext_resource type="Texture2D" uid="uid://c2v4rawv12v33" path="res://seashore-gameoff/sprites/player_sprites/lilguy_move_side_2.png" id="17_mqi57"]
+[ext_resource type="Texture2D" uid="uid://dhog2ia40xgb1" path="res://seashore-gameoff/sprites/player_sprites/lilguy_move_side_3.png" id="18_r8lwn"]
+[ext_resource type="Texture2D" uid="uid://cwx0s3cbd8qjd" path="res://seashore-gameoff/sprites/player_sprites/lilguy_move_up_1.png" id="19_ycp4d"]
+[ext_resource type="Texture2D" uid="uid://bvjh3owmj1qfr" path="res://seashore-gameoff/sprites/player_sprites/lilguy_move_up_2.png" id="20_0bo6v"]
+[ext_resource type="Texture2D" uid="uid://dcsshuh7slj6u" path="res://seashore-gameoff/sprites/player_sprites/lilguy_move_up_3.png" id="21_lot61"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_y73uf"]
 radius = 85.16724
@@ -371,6 +371,9 @@ scale = Vector2(0.58708024, 0.58708024)
 collision_layer = 129
 collision_mask = 129
 motion_mode = 1
+wall_min_slide_angle = 0.15358898
+platform_floor_layers = 4294967167
+platform_wall_layers = 128
 script = ExtResource("1_p8ieb")
 
 [node name="Sprite2D2" type="Sprite2D" parent="."]
