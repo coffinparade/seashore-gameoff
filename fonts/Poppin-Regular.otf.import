@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://d3y7jeeqifq8j"
-path="res://.godot/imported/Poppin-Regular.otf-59dbb7de9ee0fa02aae962027fbd6640.fontdata"
+path="res://.godot/imported/Poppin-Regular.otf-7d73d030b38431c4c938be2537d7c2d4.fontdata"
 
 [deps]
 
-source_file="res://seashore-gameoff/fonts/Poppin-Regular.otf"
-dest_files=["res://.godot/imported/Poppin-Regular.otf-59dbb7de9ee0fa02aae962027fbd6640.fontdata"]
+source_file="res://seashore-gameoff/Fonts/Poppin-Regular.otf"
+dest_files=["res://.godot/imported/Poppin-Regular.otf-7d73d030b38431c4c938be2537d7c2d4.fontdata"]
 
 [params]
 

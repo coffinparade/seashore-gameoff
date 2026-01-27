@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bm4xilso5mi3j"
-path="res://.godot/imported/shop_boots.png-c4c100a62a2e3e7fd6cebafdf1781476.ctex"
+path="res://.godot/imported/shop_boots.png-950c17d654524690271ca843ba051fc3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://seashore-gameoff/sprites/shop_boots.png"
-dest_files=["res://.godot/imported/shop_boots.png-c4c100a62a2e3e7fd6cebafdf1781476.ctex"]
+source_file="res://seashore-gameoff/Sprites/shop_boots.png"
+dest_files=["res://.godot/imported/shop_boots.png-950c17d654524690271ca843ba051fc3.ctex"]
 
 [params]
 

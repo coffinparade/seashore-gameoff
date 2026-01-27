@@ -46,3 +46,9 @@ func transitionPanel(n:Object,c:Color):
 		tween.kill()
 	tween=get_tree().create_tween()
 	tween.tween_property(n,"modulate",c,0.25)
+
+
+func _on_close_options_pressed():
+	transitionPanel(%OptionsPanel,Color.TRANSPARENT)
+	await tween.finished
+	%OptionsPanel.visible = false

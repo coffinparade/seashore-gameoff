@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b12gt5vi2tr8e"
-path="res://.godot/imported/shop_basket.png-ed04d2612d91cccf994623156177f76b.ctex"
+path="res://.godot/imported/shop_basket.png-48d64fd9ee68362a41fad05b71b07fac.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://seashore-gameoff/sprites/shop_basket.png"
-dest_files=["res://.godot/imported/shop_basket.png-ed04d2612d91cccf994623156177f76b.ctex"]
+source_file="res://seashore-gameoff/Sprites/shop_basket.png"
+dest_files=["res://.godot/imported/shop_basket.png-48d64fd9ee68362a41fad05b71b07fac.ctex"]
 
 [params]
 
