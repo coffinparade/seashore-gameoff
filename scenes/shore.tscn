@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://dbq78eoh42n8d" path="res://seashore-gameoff/sprites/waves_sprite_2.png" id="3_p6ha6"]
 [ext_resource type="Script" uid="uid://niyoq1jrttqw" path="res://seashore-gameoff/Scripts/wave.gd" id="4_2mq4y"]
 [ext_resource type="Script" uid="uid://dv0pikcpgb50q" path="res://seashore-gameoff/Scripts/collection_area.gd" id="4_p6ha6"]
-[ext_resource type="AudioStream" uid="uid://ciylbrmyv1xu7" path="res://seashore-gameoff/Music/the game song thing.wav" id="5_0jtmf"]
+[ext_resource type="AudioStream" uid="uid://ciylbrmyv1xu7" path="res://seashore-gameoff/Sounds/Music/the game song thing.wav" id="5_0jtmf"]
 [ext_resource type="Texture2D" uid="uid://5e8c0k3tsn6h" path="res://seashore-gameoff/sprites/shellPile/shell_pile_0.png" id="6_2mq4y"]
 [ext_resource type="Texture2D" uid="uid://crj2c8qiv535m" path="res://seashore-gameoff/sprites/shellPile/shell_pile_1.png" id="7_oi4in"]
 [ext_resource type="Texture2D" uid="uid://b2pfnys2xt315" path="res://seashore-gameoff/sprites/shellPile/shell_pile_2.png" id="8_fag51"]

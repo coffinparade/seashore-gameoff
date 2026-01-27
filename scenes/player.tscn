@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://dundrofrhxqh5"]
+[gd_scene load_steps=53 format=3 uid="uid://dundrofrhxqh5"]
 
 [ext_resource type="Script" uid="uid://cyjnqolhsu7o3" path="res://seashore-gameoff/Scripts/player.gd" id="1_p8ieb"]
 [ext_resource type="Texture2D" uid="uid://fuha1p652yoc" path="res://seashore-gameoff/sprites/player_sprites/shadow.png" id="2_l3ye3"]
@@ -26,6 +26,17 @@
 [ext_resource type="Texture2D" uid="uid://cwx0s3cbd8qjd" path="res://seashore-gameoff/sprites/player_sprites/lilguy_move_up_1.png" id="19_ycp4d"]
 [ext_resource type="Texture2D" uid="uid://bvjh3owmj1qfr" path="res://seashore-gameoff/sprites/player_sprites/lilguy_move_up_2.png" id="20_0bo6v"]
 [ext_resource type="Texture2D" uid="uid://dcsshuh7slj6u" path="res://seashore-gameoff/sprites/player_sprites/lilguy_move_up_3.png" id="21_lot61"]
+[ext_resource type="AudioStream" uid="uid://cbi1rn67jnw83" path="res://seashore-gameoff/Sounds/steps/steps1.mp3" id="27_0td8p"]
+[ext_resource type="AudioStream" uid="uid://cni2co5k8kuhh" path="res://seashore-gameoff/Sounds/steps/steps2.mp3" id="28_5ggn2"]
+[ext_resource type="AudioStream" uid="uid://me5xkgmvfng0" path="res://seashore-gameoff/Sounds/steps/steps3.mp3" id="29_bmiy1"]
+[ext_resource type="AudioStream" uid="uid://c08f7jpruhk4w" path="res://seashore-gameoff/Sounds/steps/steps4.mp3" id="30_ju0de"]
+[ext_resource type="AudioStream" uid="uid://5j63uegwaer5" path="res://seashore-gameoff/Sounds/steps/steps5.mp3" id="31_bqhl5"]
+[ext_resource type="AudioStream" uid="uid://sgemx2fjmbvh" path="res://seashore-gameoff/Sounds/droppingShells/droppingShells1.mp3" id="32_l5l4w"]
+[ext_resource type="AudioStream" uid="uid://gvcyyi8vrdl3" path="res://seashore-gameoff/Sounds/droppingShells/droppingShells2.mp3" id="33_vng8u"]
+[ext_resource type="AudioStream" uid="uid://24jn4v7s2mgi" path="res://seashore-gameoff/Sounds/droppingShells/droppingShells3.mp3" id="34_xyiyb"]
+[ext_resource type="AudioStream" uid="uid://sxwbfwve7rmm" path="res://seashore-gameoff/Sounds/droppingShells/droppingShells4.mp3" id="35_mg304"]
+[ext_resource type="AudioStream" uid="uid://d1esfuqmuw3c5" path="res://seashore-gameoff/Sounds/droppingShells/droppingShells5.mp3" id="36_2tdve"]
+[ext_resource type="AudioStream" uid="uid://t7o66jc6mpwq" path="res://seashore-gameoff/Sounds/droppingShells/droppingShells6.mp3" id="37_i8wog"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_y73uf"]
 radius = 85.16724
@@ -365,6 +376,29 @@ _data = {
 &"move_up": SubResource("Animation_76u0p"),
 &"walk(temp)": SubResource("Animation_d61yg")
 }
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_qtbbn"]
+playback_mode = 1
+random_pitch = 1.1
+random_volume_offset_db = 0.1
+streams_count = 5
+stream_0/stream = ExtResource("28_5ggn2")
+stream_1/stream = ExtResource("27_0td8p")
+stream_2/stream = ExtResource("29_bmiy1")
+stream_3/stream = ExtResource("30_ju0de")
+stream_4/stream = ExtResource("31_bqhl5")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_y26h7"]
+playback_mode = 1
+random_pitch = 1.1
+random_volume_offset_db = 0.1
+streams_count = 6
+stream_0/stream = ExtResource("32_l5l4w")
+stream_1/stream = ExtResource("33_vng8u")
+stream_2/stream = ExtResource("34_xyiyb")
+stream_3/stream = ExtResource("35_mg304")
+stream_4/stream = ExtResource("36_2tdve")
+stream_5/stream = ExtResource("37_i8wog")
 
 [node name="Player" type="CharacterBody2D" groups=["player"]]
 scale = Vector2(0.58708024, 0.58708024)
@@ -760,6 +794,10 @@ libraries = {
 &"": SubResource("AnimationLibrary_sr0es")
 }
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="WalkSFX" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamRandomizer_qtbbn")
+
+[node name="CollectSFX" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamRandomizer_y26h7")
 
 [connection signal="pressed" from="CanvasLayer/UI/End Panel/MarginContainer/VBoxContainer/ChangeSceneButton" to="." method="_on_change_scene_button_pressed"]

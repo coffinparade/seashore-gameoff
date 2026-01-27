@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://ciylbrmyv1xu7"
-path="res://.godot/imported/the game song thing.wav-ce84b5fedacd052c19fd5b80ea78a9a3.sample"
+path="res://.godot/imported/the game song thing.wav-1b2f40496bceb3d98f9b4c0e9a372594.sample"
 
 [deps]
 
-source_file="res://seashore-gameoff/Music/the game song thing.wav"
-dest_files=["res://.godot/imported/the game song thing.wav-ce84b5fedacd052c19fd5b80ea78a9a3.sample"]
+source_file="res://seashore-gameoff/Sounds/Music/the game song thing.wav"
+dest_files=["res://.godot/imported/the game song thing.wav-1b2f40496bceb3d98f9b4c0e9a372594.sample"]
 
 [params]
 

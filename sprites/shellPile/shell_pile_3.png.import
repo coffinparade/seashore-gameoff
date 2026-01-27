@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dlt33nlk1syxs"
-path="res://.godot/imported/shell_pile_3.png-450c83d1c2514f473aa1804b6ee5ce18.ctex"
+path="res://.godot/imported/shell_pile_3.png-a3649925b74df11c6ebaa164056cb8c6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://seashore-gameoff/Sprites/shellPile/shell_pile_3.png"
-dest_files=["res://.godot/imported/shell_pile_3.png-450c83d1c2514f473aa1804b6ee5ce18.ctex"]
+source_file="res://seashore-gameoff/sprites/shellPile/shell_pile_3.png"
+dest_files=["res://.godot/imported/shell_pile_3.png-a3649925b74df11c6ebaa164056cb8c6.ctex"]
 
 [params]
 

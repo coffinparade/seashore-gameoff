@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://d1vl6udu5dvkh"
-path="res://.godot/imported/Anotha one.wav-5f138c60ae16239c2d8b085540b0d8df.sample"
+path="res://.godot/imported/Anotha one.wav-e458a53b0c82acae5b7621754eecb4b9.sample"
 
 [deps]
 
-source_file="res://seashore-gameoff/Music/Anotha one.wav"
-dest_files=["res://.godot/imported/Anotha one.wav-5f138c60ae16239c2d8b085540b0d8df.sample"]
+source_file="res://seashore-gameoff/Sounds/Music/Anotha one.wav"
+dest_files=["res://.godot/imported/Anotha one.wav-e458a53b0c82acae5b7621754eecb4b9.sample"]
 
 [params]
 

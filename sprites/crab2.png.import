@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dorp3qlbydeg4"
-path="res://.godot/imported/crab2.png-96098249a4098e4f2f223db0f55afa64.ctex"
+path="res://.godot/imported/crab2.png-44696a24fd35c50a2f40f0a7686a3791.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://seashore-gameoff/Sprites/crab2.png"
-dest_files=["res://.godot/imported/crab2.png-96098249a4098e4f2f223db0f55afa64.ctex"]
+source_file="res://seashore-gameoff/sprites/crab2.png"
+dest_files=["res://.godot/imported/crab2.png-44696a24fd35c50a2f40f0a7686a3791.ctex"]
 
 [params]
 

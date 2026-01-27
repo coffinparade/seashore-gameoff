@@ -6,7 +6,9 @@ extends CharacterBody2D
 @onready var basketDisplay:=%BasketDisplay
 @onready var anim := $AnimationPlayer
 @onready var transition:=$CanvasLayer/UI/ColorRect
-
+@onready var ui:=$CanvasLayer/UI
+@onready var walkAudio:=$WalkSFX
+@onready var collectAudio:=$CollectSFX
 const weight_default:=1.0
 const weight_change:=0.05
 
@@ -19,14 +21,19 @@ var _collectedShells:Array[Shell]
 
 #shows the word go for a bi then it'll disappear
 func _ready():
-	$CanvasLayer/UI.showLabel("Go!")
+	ui.showLabel("Go!")
 
 
 func _physics_process(_delta: float) -> void:
 	#player shouldn't be able to move at the end of the level or when hit, checks for that
 	if can_move:
-		
 		var move_dir = Input.get_vector("move_left","move_right","move_up","move_down")
+		if move_dir.length()>0:
+			if !walkAudio.playing:
+				walkAudio.play()
+		elif walkAudio.playing:
+			walkAudio.stop()
+			
 		velocity = move_dir*move_speed*weight_factor
 		animate()
 		$"Walking Particles".emitting = (velocity.x!=0||velocity.y!=0)&&!(velocity.y>0)
@@ -76,12 +83,12 @@ func store_shells():
 
 func update_basket():
 	basketDisplay.text = str(_shellBasket.size())
-	$CanvasLayer/UI.basketUpdate()
+	ui.basketUpdate()
 
 
 func time_out():
-	await $CanvasLayer/UI.showLabel("Time's Up!")
-	$CanvasLayer/UI.end_screen(_collectedShells)
+	await ui.showLabel("Time's Up!")
+	ui.end_screen(_collectedShells)
 
 #makes the player drop all their shells, makes them move away from the enemy, and makes them red for a quarter of a second
 func hit(enemy_position:Vector2):

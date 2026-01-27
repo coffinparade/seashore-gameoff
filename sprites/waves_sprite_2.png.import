@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dbq78eoh42n8d"
-path="res://.godot/imported/waves_sprite_2.png-01e05118c26964e5c963fcca54bd414b.ctex"
+path="res://.godot/imported/waves_sprite_2.png-480564c98bba65eaa6a6b1c0ee578341.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://seashore-gameoff/Sprites/waves_sprite_2.png"
-dest_files=["res://.godot/imported/waves_sprite_2.png-01e05118c26964e5c963fcca54bd414b.ctex"]
+source_file="res://seashore-gameoff/sprites/waves_sprite_2.png"
+dest_files=["res://.godot/imported/waves_sprite_2.png-480564c98bba65eaa6a6b1c0ee578341.ctex"]
 
 [params]
 
