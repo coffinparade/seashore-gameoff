@@ -1,4 +1,4 @@
-[gd_scene load_steps=62 format=3 uid="uid://dundrofrhxqh5"]
+[gd_scene load_steps=61 format=3 uid="uid://dundrofrhxqh5"]
 
 [ext_resource type="Script" uid="uid://cyjnqolhsu7o3" path="res://seashore-gameoff/Scripts/player.gd" id="1_p8ieb"]
 [ext_resource type="Texture2D" uid="uid://fuha1p652yoc" path="res://seashore-gameoff/sprites/player_sprites/shadow.png" id="2_l3ye3"]
@@ -26,24 +26,23 @@
 [ext_resource type="Texture2D" uid="uid://cwx0s3cbd8qjd" path="res://seashore-gameoff/sprites/player_sprites/lilguy_move_up_1.png" id="19_ycp4d"]
 [ext_resource type="Texture2D" uid="uid://bvjh3owmj1qfr" path="res://seashore-gameoff/sprites/player_sprites/lilguy_move_up_2.png" id="20_0bo6v"]
 [ext_resource type="Texture2D" uid="uid://dcsshuh7slj6u" path="res://seashore-gameoff/sprites/player_sprites/lilguy_move_up_3.png" id="21_lot61"]
-[ext_resource type="AudioStream" path="res://seashore-gameoff/Sounds/Collecting/droppingShells2.mp3" id="27_5ggn2"]
-[ext_resource type="AudioStream" path="res://seashore-gameoff/Sounds/Walking/steps4.mp3" id="27_vng8u"]
-[ext_resource type="AudioStream" path="res://seashore-gameoff/Sounds/Collecting/droppingShells3.mp3" id="28_bmiy1"]
-[ext_resource type="AudioStream" path="res://seashore-gameoff/Sounds/Walking/steps3.mp3" id="28_xyiyb"]
-[ext_resource type="AudioStream" path="res://seashore-gameoff/Sounds/Collecting/droppingShells4.mp3" id="29_ju0de"]
-[ext_resource type="AudioStream" path="res://seashore-gameoff/Sounds/Walking/steps2.mp3" id="29_mg304"]
-[ext_resource type="AudioStream" path="res://seashore-gameoff/Sounds/Walking/steps1.mp3" id="30_2tdve"]
-[ext_resource type="AudioStream" path="res://seashore-gameoff/Sounds/Collecting/droppingShells5.mp3" id="30_bqhl5"]
-[ext_resource type="AudioStream" path="res://seashore-gameoff/Sounds/Walking/steps5.mp3" id="31_i8wog"]
-[ext_resource type="AudioStream" path="res://seashore-gameoff/Sounds/Collecting/droppingShells1.mp3" id="32_l5l4w"]
-[ext_resource type="AudioStream" path="res://seashore-gameoff/Sounds/Walking/steps6.mp3" id="32_qtbbn"]
+[ext_resource type="AudioStream" uid="uid://gvcyyi8vrdl3" path="res://seashore-gameoff/Sounds/Collecting/droppingShells2.mp3" id="27_5ggn2"]
+[ext_resource type="AudioStream" uid="uid://c08f7jpruhk4w" path="res://seashore-gameoff/Sounds/Walking/steps4.mp3" id="27_vng8u"]
+[ext_resource type="AudioStream" uid="uid://24jn4v7s2mgi" path="res://seashore-gameoff/Sounds/Collecting/droppingShells3.mp3" id="28_bmiy1"]
+[ext_resource type="AudioStream" uid="uid://me5xkgmvfng0" path="res://seashore-gameoff/Sounds/Walking/steps3.mp3" id="28_xyiyb"]
+[ext_resource type="AudioStream" uid="uid://sxwbfwve7rmm" path="res://seashore-gameoff/Sounds/Collecting/droppingShells4.mp3" id="29_ju0de"]
+[ext_resource type="AudioStream" uid="uid://cni2co5k8kuhh" path="res://seashore-gameoff/Sounds/Walking/steps2.mp3" id="29_mg304"]
+[ext_resource type="AudioStream" uid="uid://cbi1rn67jnw83" path="res://seashore-gameoff/Sounds/Walking/steps1.mp3" id="30_2tdve"]
+[ext_resource type="AudioStream" uid="uid://d1esfuqmuw3c5" path="res://seashore-gameoff/Sounds/Collecting/droppingShells5.mp3" id="30_bqhl5"]
+[ext_resource type="AudioStream" uid="uid://5j63uegwaer5" path="res://seashore-gameoff/Sounds/Walking/steps5.mp3" id="31_i8wog"]
+[ext_resource type="AudioStream" uid="uid://sgemx2fjmbvh" path="res://seashore-gameoff/Sounds/Collecting/droppingShells1.mp3" id="32_l5l4w"]
 [ext_resource type="AudioStream" uid="uid://b2t2a7f0sva3n" path="res://seashore-gameoff/Sounds/Hurting/1hurt.mp3" id="39_wkn8d"]
 [ext_resource type="AudioStream" uid="uid://cahqeq1k40sy5" path="res://seashore-gameoff/Sounds/Hurting/2hurt.mp3" id="40_r42ek"]
 [ext_resource type="AudioStream" uid="uid://byq7sc3pk8xj0" path="res://seashore-gameoff/Sounds/Hurting/3hurt.mp3" id="41_e5o2p"]
 [ext_resource type="AudioStream" uid="uid://4tmkp1xht4oo" path="res://seashore-gameoff/Sounds/Hurting/4hurt.mp3" id="42_o7j23"]
 [ext_resource type="AudioStream" uid="uid://bnjbfwmbskb8o" path="res://seashore-gameoff/Sounds/Hurting/5hurt.mp3" id="43_87j80"]
 [ext_resource type="AudioStream" uid="uid://cc6lmypa7ovpn" path="res://seashore-gameoff/Sounds/Hurting/6hurt.mp3" id="44_ihgx3"]
-[ext_resource type="AudioStream" path="res://seashore-gameoff/Sounds/Collecting/storingShells.mp3" id="44_wkn8d"]
+[ext_resource type="AudioStream" uid="uid://t7o66jc6mpwq" path="res://seashore-gameoff/Sounds/Collecting/storingShells.mp3" id="44_wkn8d"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_y73uf"]
 radius = 85.16724
@@ -387,13 +386,12 @@ _data = {
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_vng8u"]
 random_pitch = 1.1
 random_volume_offset_db = 0.1
-streams_count = 6
-stream_0/stream = ExtResource("27_vng8u")
-stream_1/stream = ExtResource("28_xyiyb")
-stream_2/stream = ExtResource("29_mg304")
-stream_3/stream = ExtResource("30_2tdve")
+streams_count = 5
+stream_0/stream = ExtResource("30_2tdve")
+stream_1/stream = ExtResource("29_mg304")
+stream_2/stream = ExtResource("28_xyiyb")
+stream_3/stream = ExtResource("27_vng8u")
 stream_4/stream = ExtResource("31_i8wog")
-stream_5/stream = ExtResource("32_qtbbn")
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_xyiyb"]
 random_pitch = 1.1
