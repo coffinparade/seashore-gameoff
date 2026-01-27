@@ -4,6 +4,9 @@ extends Node
 @onready var journal := preload("res://seashore-gameoff/Scenes/journal.tscn")
 @onready var menu := preload("res://seashore-gameoff/Scenes/Main Menu.tscn")
 @onready var storyFile:=FileAccess.get_file_as_string("res://seashore-gameoff/Story.json")
+@onready var musicVolume := 0.0
+@onready var sfxVolume := 0.0
+
 var dayCount := -1
 var story
 var lastDay = 4

@@ -1,4 +1,4 @@
-[gd_scene load_steps=53 format=3 uid="uid://dundrofrhxqh5"]
+[gd_scene load_steps=62 format=3 uid="uid://dundrofrhxqh5"]
 
 [ext_resource type="Script" uid="uid://cyjnqolhsu7o3" path="res://seashore-gameoff/Scripts/player.gd" id="1_p8ieb"]
 [ext_resource type="Texture2D" uid="uid://fuha1p652yoc" path="res://seashore-gameoff/sprites/player_sprites/shadow.png" id="2_l3ye3"]
@@ -26,17 +26,24 @@
 [ext_resource type="Texture2D" uid="uid://cwx0s3cbd8qjd" path="res://seashore-gameoff/sprites/player_sprites/lilguy_move_up_1.png" id="19_ycp4d"]
 [ext_resource type="Texture2D" uid="uid://bvjh3owmj1qfr" path="res://seashore-gameoff/sprites/player_sprites/lilguy_move_up_2.png" id="20_0bo6v"]
 [ext_resource type="Texture2D" uid="uid://dcsshuh7slj6u" path="res://seashore-gameoff/sprites/player_sprites/lilguy_move_up_3.png" id="21_lot61"]
-[ext_resource type="AudioStream" uid="uid://cbi1rn67jnw83" path="res://seashore-gameoff/Sounds/steps/steps1.mp3" id="27_0td8p"]
-[ext_resource type="AudioStream" uid="uid://cni2co5k8kuhh" path="res://seashore-gameoff/Sounds/steps/steps2.mp3" id="28_5ggn2"]
-[ext_resource type="AudioStream" uid="uid://me5xkgmvfng0" path="res://seashore-gameoff/Sounds/steps/steps3.mp3" id="29_bmiy1"]
-[ext_resource type="AudioStream" uid="uid://c08f7jpruhk4w" path="res://seashore-gameoff/Sounds/steps/steps4.mp3" id="30_ju0de"]
-[ext_resource type="AudioStream" uid="uid://5j63uegwaer5" path="res://seashore-gameoff/Sounds/steps/steps5.mp3" id="31_bqhl5"]
-[ext_resource type="AudioStream" uid="uid://sgemx2fjmbvh" path="res://seashore-gameoff/Sounds/droppingShells/droppingShells1.mp3" id="32_l5l4w"]
-[ext_resource type="AudioStream" uid="uid://gvcyyi8vrdl3" path="res://seashore-gameoff/Sounds/droppingShells/droppingShells2.mp3" id="33_vng8u"]
-[ext_resource type="AudioStream" uid="uid://24jn4v7s2mgi" path="res://seashore-gameoff/Sounds/droppingShells/droppingShells3.mp3" id="34_xyiyb"]
-[ext_resource type="AudioStream" uid="uid://sxwbfwve7rmm" path="res://seashore-gameoff/Sounds/droppingShells/droppingShells4.mp3" id="35_mg304"]
-[ext_resource type="AudioStream" uid="uid://d1esfuqmuw3c5" path="res://seashore-gameoff/Sounds/droppingShells/droppingShells5.mp3" id="36_2tdve"]
-[ext_resource type="AudioStream" uid="uid://t7o66jc6mpwq" path="res://seashore-gameoff/Sounds/droppingShells/droppingShells6.mp3" id="37_i8wog"]
+[ext_resource type="AudioStream" path="res://seashore-gameoff/Sounds/Collecting/droppingShells2.mp3" id="27_5ggn2"]
+[ext_resource type="AudioStream" path="res://seashore-gameoff/Sounds/Walking/steps4.mp3" id="27_vng8u"]
+[ext_resource type="AudioStream" path="res://seashore-gameoff/Sounds/Collecting/droppingShells3.mp3" id="28_bmiy1"]
+[ext_resource type="AudioStream" path="res://seashore-gameoff/Sounds/Walking/steps3.mp3" id="28_xyiyb"]
+[ext_resource type="AudioStream" path="res://seashore-gameoff/Sounds/Collecting/droppingShells4.mp3" id="29_ju0de"]
+[ext_resource type="AudioStream" path="res://seashore-gameoff/Sounds/Walking/steps2.mp3" id="29_mg304"]
+[ext_resource type="AudioStream" path="res://seashore-gameoff/Sounds/Walking/steps1.mp3" id="30_2tdve"]
+[ext_resource type="AudioStream" path="res://seashore-gameoff/Sounds/Collecting/droppingShells5.mp3" id="30_bqhl5"]
+[ext_resource type="AudioStream" path="res://seashore-gameoff/Sounds/Walking/steps5.mp3" id="31_i8wog"]
+[ext_resource type="AudioStream" path="res://seashore-gameoff/Sounds/Collecting/droppingShells1.mp3" id="32_l5l4w"]
+[ext_resource type="AudioStream" path="res://seashore-gameoff/Sounds/Walking/steps6.mp3" id="32_qtbbn"]
+[ext_resource type="AudioStream" uid="uid://b2t2a7f0sva3n" path="res://seashore-gameoff/Sounds/Hurting/1hurt.mp3" id="39_wkn8d"]
+[ext_resource type="AudioStream" uid="uid://cahqeq1k40sy5" path="res://seashore-gameoff/Sounds/Hurting/2hurt.mp3" id="40_r42ek"]
+[ext_resource type="AudioStream" uid="uid://byq7sc3pk8xj0" path="res://seashore-gameoff/Sounds/Hurting/3hurt.mp3" id="41_e5o2p"]
+[ext_resource type="AudioStream" uid="uid://4tmkp1xht4oo" path="res://seashore-gameoff/Sounds/Hurting/4hurt.mp3" id="42_o7j23"]
+[ext_resource type="AudioStream" uid="uid://bnjbfwmbskb8o" path="res://seashore-gameoff/Sounds/Hurting/5hurt.mp3" id="43_87j80"]
+[ext_resource type="AudioStream" uid="uid://cc6lmypa7ovpn" path="res://seashore-gameoff/Sounds/Hurting/6hurt.mp3" id="44_ihgx3"]
+[ext_resource type="AudioStream" path="res://seashore-gameoff/Sounds/Collecting/storingShells.mp3" id="44_wkn8d"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_y73uf"]
 radius = 85.16724
@@ -377,28 +384,46 @@ _data = {
 &"walk(temp)": SubResource("Animation_d61yg")
 }
 
-[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_qtbbn"]
-playback_mode = 1
-random_pitch = 1.1
-random_volume_offset_db = 0.1
-streams_count = 5
-stream_0/stream = ExtResource("28_5ggn2")
-stream_1/stream = ExtResource("27_0td8p")
-stream_2/stream = ExtResource("29_bmiy1")
-stream_3/stream = ExtResource("30_ju0de")
-stream_4/stream = ExtResource("31_bqhl5")
-
-[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_y26h7"]
-playback_mode = 1
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_vng8u"]
 random_pitch = 1.1
 random_volume_offset_db = 0.1
 streams_count = 6
-stream_0/stream = ExtResource("32_l5l4w")
-stream_1/stream = ExtResource("33_vng8u")
-stream_2/stream = ExtResource("34_xyiyb")
-stream_3/stream = ExtResource("35_mg304")
-stream_4/stream = ExtResource("36_2tdve")
-stream_5/stream = ExtResource("37_i8wog")
+stream_0/stream = ExtResource("27_vng8u")
+stream_1/stream = ExtResource("28_xyiyb")
+stream_2/stream = ExtResource("29_mg304")
+stream_3/stream = ExtResource("30_2tdve")
+stream_4/stream = ExtResource("31_i8wog")
+stream_5/stream = ExtResource("32_qtbbn")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_xyiyb"]
+random_pitch = 1.1
+random_volume_offset_db = 0.1
+streams_count = 5
+stream_0/stream = ExtResource("27_5ggn2")
+stream_0/weight = 4.0
+stream_1/stream = ExtResource("28_bmiy1")
+stream_1/weight = 4.0
+stream_2/stream = ExtResource("29_ju0de")
+stream_2/weight = 4.0
+stream_3/stream = ExtResource("30_bqhl5")
+stream_3/weight = 4.0
+stream_4/stream = ExtResource("32_l5l4w")
+stream_4/weight = 4.0
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_mg304"]
+streams_count = 6
+stream_0/stream = ExtResource("39_wkn8d")
+stream_1/stream = ExtResource("40_r42ek")
+stream_2/stream = ExtResource("41_e5o2p")
+stream_3/stream = ExtResource("42_o7j23")
+stream_4/stream = ExtResource("43_87j80")
+stream_5/stream = ExtResource("44_ihgx3")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_wkn8d"]
+random_pitch = 1.2
+random_volume_offset_db = 0.1
+streams_count = 1
+stream_0/stream = ExtResource("44_wkn8d")
 
 [node name="Player" type="CharacterBody2D" groups=["player"]]
 scale = Vector2(0.58708024, 0.58708024)
@@ -679,11 +704,15 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/margin_left = 45
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 45
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/UI/End Panel/MarginContainer"]
 layout_mode = 2
+alignment = 1
 
-[node name="Hbox" type="HBoxContainer" parent="CanvasLayer/UI/End Panel/MarginContainer/VBoxContainer"]
+[node name="Hbox" type="VBoxContainer" parent="CanvasLayer/UI/End Panel/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -693,95 +722,108 @@ layout_mode = 2
 size_flags_horizontal = 3
 theme_type_variation = &"CenterLabel"
 text = "Money"
+horizontal_alignment = 1
 
 [node name="Control" type="Control" parent="CanvasLayer/UI/End Panel/MarginContainer/VBoxContainer/Hbox"]
+custom_minimum_size = Vector2(0, 12.035)
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 5.0
 
-[node name="LowDisplay" type="HBoxContainer" parent="CanvasLayer/UI/End Panel/MarginContainer/VBoxContainer/Hbox"]
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/UI/End Panel/MarginContainer/VBoxContainer/Hbox"]
 layout_mode = 2
 size_flags_vertical = 3
+alignment = 1
 
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer/UI/End Panel/MarginContainer/VBoxContainer/Hbox/LowDisplay"]
+[node name="LowDisplay" type="VBoxContainer" parent="CanvasLayer/UI/End Panel/MarginContainer/VBoxContainer/Hbox/HBoxContainer"]
 layout_mode = 2
+size_flags_vertical = 3
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/UI/End Panel/MarginContainer/VBoxContainer/Hbox/HBoxContainer/LowDisplay"]
+layout_mode = 2
+size_flags_vertical = 3
 texture = ExtResource("8_6yiaa")
+expand_mode = 2
 stretch_mode = 5
 
-[node name="LowDisplayText" type="Label" parent="CanvasLayer/UI/End Panel/MarginContainer/VBoxContainer/Hbox/LowDisplay"]
+[node name="LowDisplayText" type="Label" parent="CanvasLayer/UI/End Panel/MarginContainer/VBoxContainer/Hbox/HBoxContainer/LowDisplay"]
 unique_name_in_owner = true
 layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 6
+size_flags_horizontal = 6
 theme_type_variation = &"CenterLabel"
 text = "4"
 
-[node name="LowMidDisplay" type="HBoxContainer" parent="CanvasLayer/UI/End Panel/MarginContainer/VBoxContainer/Hbox"]
+[node name="LowMidDisplay" type="VBoxContainer" parent="CanvasLayer/UI/End Panel/MarginContainer/VBoxContainer/Hbox/HBoxContainer"]
 layout_mode = 2
+alignment = 1
 
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer/UI/End Panel/MarginContainer/VBoxContainer/Hbox/LowMidDisplay"]
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/UI/End Panel/MarginContainer/VBoxContainer/Hbox/HBoxContainer/LowMidDisplay"]
 layout_mode = 2
+size_flags_vertical = 3
 texture = ExtResource("9_jdn0l")
+expand_mode = 2
 stretch_mode = 5
 
-[node name="LowMidDisplayText" type="Label" parent="CanvasLayer/UI/End Panel/MarginContainer/VBoxContainer/Hbox/LowMidDisplay"]
+[node name="LowMidDisplayText" type="Label" parent="CanvasLayer/UI/End Panel/MarginContainer/VBoxContainer/Hbox/HBoxContainer/LowMidDisplay"]
 unique_name_in_owner = true
 layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 6
+size_flags_horizontal = 6
 theme_type_variation = &"CenterLabel"
 text = "5"
 
-[node name="MidDisplay" type="HBoxContainer" parent="CanvasLayer/UI/End Panel/MarginContainer/VBoxContainer/Hbox"]
+[node name="MidDisplay" type="VBoxContainer" parent="CanvasLayer/UI/End Panel/MarginContainer/VBoxContainer/Hbox/HBoxContainer"]
 layout_mode = 2
+alignment = 1
 
-[node name="TextureRect2" type="TextureRect" parent="CanvasLayer/UI/End Panel/MarginContainer/VBoxContainer/Hbox/MidDisplay"]
+[node name="TextureRect2" type="TextureRect" parent="CanvasLayer/UI/End Panel/MarginContainer/VBoxContainer/Hbox/HBoxContainer/MidDisplay"]
 layout_mode = 2
+size_flags_vertical = 3
 texture = ExtResource("10_pg7oi")
-stretch_mode = 5
+expand_mode = 2
 
-[node name="MidDisplayText" type="Label" parent="CanvasLayer/UI/End Panel/MarginContainer/VBoxContainer/Hbox/MidDisplay"]
+[node name="MidDisplayText" type="Label" parent="CanvasLayer/UI/End Panel/MarginContainer/VBoxContainer/Hbox/HBoxContainer/MidDisplay"]
 unique_name_in_owner = true
 layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 6
+size_flags_horizontal = 6
 theme_type_variation = &"CenterLabel"
 text = "5"
 
-[node name="MidHighDisplay" type="HBoxContainer" parent="CanvasLayer/UI/End Panel/MarginContainer/VBoxContainer/Hbox"]
+[node name="MidHighDisplay" type="VBoxContainer" parent="CanvasLayer/UI/End Panel/MarginContainer/VBoxContainer/Hbox/HBoxContainer"]
 layout_mode = 2
+alignment = 1
 
-[node name="TextureRect3" type="TextureRect" parent="CanvasLayer/UI/End Panel/MarginContainer/VBoxContainer/Hbox/MidHighDisplay"]
+[node name="TextureRect3" type="TextureRect" parent="CanvasLayer/UI/End Panel/MarginContainer/VBoxContainer/Hbox/HBoxContainer/MidHighDisplay"]
 layout_mode = 2
+size_flags_vertical = 3
 texture = ExtResource("11_dghpv")
-stretch_mode = 5
+expand_mode = 3
 
-[node name="MidHighDisplayText" type="Label" parent="CanvasLayer/UI/End Panel/MarginContainer/VBoxContainer/Hbox/MidHighDisplay"]
+[node name="MidHighDisplayText" type="Label" parent="CanvasLayer/UI/End Panel/MarginContainer/VBoxContainer/Hbox/HBoxContainer/MidHighDisplay"]
 unique_name_in_owner = true
 layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 6
+size_flags_horizontal = 6
 theme_type_variation = &"CenterLabel"
 text = "5"
 
-[node name="HighDisplay" type="HBoxContainer" parent="CanvasLayer/UI/End Panel/MarginContainer/VBoxContainer/Hbox"]
+[node name="HighDisplay" type="VBoxContainer" parent="CanvasLayer/UI/End Panel/MarginContainer/VBoxContainer/Hbox/HBoxContainer"]
 layout_mode = 2
+alignment = 1
 
-[node name="TextureRect3" type="TextureRect" parent="CanvasLayer/UI/End Panel/MarginContainer/VBoxContainer/Hbox/HighDisplay"]
+[node name="TextureRect3" type="TextureRect" parent="CanvasLayer/UI/End Panel/MarginContainer/VBoxContainer/Hbox/HBoxContainer/HighDisplay"]
 layout_mode = 2
+size_flags_vertical = 3
 texture = ExtResource("12_d3bup")
-stretch_mode = 5
 
-[node name="HighDisplayText" type="Label" parent="CanvasLayer/UI/End Panel/MarginContainer/VBoxContainer/Hbox/HighDisplay"]
+[node name="HighDisplayText" type="Label" parent="CanvasLayer/UI/End Panel/MarginContainer/VBoxContainer/Hbox/HBoxContainer/HighDisplay"]
 unique_name_in_owner = true
 layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 6
+size_flags_horizontal = 6
 theme_type_variation = &"CenterLabel"
 text = "5"
 
 [node name="Control" type="Control" parent="CanvasLayer/UI/End Panel/MarginContainer/VBoxContainer"]
-custom_minimum_size = Vector2(0, 150)
+custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 
 [node name="ChangeSceneButton" type="Button" parent="CanvasLayer/UI/End Panel/MarginContainer/VBoxContainer"]
@@ -794,10 +836,19 @@ libraries = {
 &"": SubResource("AnimationLibrary_sr0es")
 }
 
-[node name="WalkSFX" type="AudioStreamPlayer" parent="."]
-stream = SubResource("AudioStreamRandomizer_qtbbn")
+[node name="Sounds" type="Node2D" parent="."]
 
-[node name="CollectSFX" type="AudioStreamPlayer" parent="."]
-stream = SubResource("AudioStreamRandomizer_y26h7")
+[node name="WalkSFX" type="AudioStreamPlayer" parent="Sounds"]
+stream = SubResource("AudioStreamRandomizer_vng8u")
+volume_db = 1.0
+
+[node name="CollectSFX" type="AudioStreamPlayer" parent="Sounds"]
+stream = SubResource("AudioStreamRandomizer_xyiyb")
+
+[node name="HurtSFX" type="AudioStreamPlayer" parent="Sounds"]
+stream = SubResource("AudioStreamRandomizer_mg304")
+
+[node name="putDownShellsSFX" type="AudioStreamPlayer" parent="Sounds"]
+stream = SubResource("AudioStreamRandomizer_wkn8d")
 
 [connection signal="pressed" from="CanvasLayer/UI/End Panel/MarginContainer/VBoxContainer/ChangeSceneButton" to="." method="_on_change_scene_button_pressed"]

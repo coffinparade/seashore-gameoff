@@ -6,6 +6,7 @@ func _ready():
 	$MarginContainer/Panel/Label.text = SceneManager.journalText()
 	var timer=get_tree().create_timer(3)
 	timer.timeout.connect(fadeButton)
+	$AudioStreamPlayer.volume_db = SceneManager.musicVolume
 
 #fades in the text
 func _process(delta):

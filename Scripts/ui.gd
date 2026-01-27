@@ -1,10 +1,12 @@
 extends Control
 
 #Variables
+@onready var button = $"End Panel/MarginContainer/VBoxContainer/ChangeSceneButton"
 @onready var label:=$CenterText
 @onready var displayShells:=%ShellsInBasket.get_children()
 var temp_cash:float
 var game_ended:=false
+var tween
 
 #makes sure the end panel is hidden and that the shells will be shown from bottom to top of the basket
 func _ready() -> void:
@@ -40,8 +42,11 @@ func end_screen(shells:Array[Shell]):
 		"high":0
 	}
 	
+	button.modulate = Color("ffffff00")
+	tween = get_tree().create_tween()
 	game_ended = true
 	$"End Panel".visible = true
+	
 	
 	for shell in shells:
 		match shell.id:
@@ -61,3 +66,5 @@ func end_screen(shells:Array[Shell]):
 	%MidDisplayText.text = str(collectedTypes["mid"])
 	%MidHighDisplayText.text = str(collectedTypes["midhigh"])
 	%HighDisplayText.text = str(collectedTypes["high"])
+	
+	tween.tween_property(button,"modulate",Color.WHITE,1).set_delay(2.5)
