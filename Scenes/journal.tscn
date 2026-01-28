@@ -5,7 +5,7 @@
 [ext_resource type="StyleBox" uid="uid://bsqyalvttc6hu" path="res://seashore-gameoff/Themes/ButtonDefault.tres" id="2_hllkl"]
 [ext_resource type="Script" uid="uid://b6aamm5osu00s" path="res://seashore-gameoff/Scripts/cutscene_manager.gd" id="2_y7f3q"]
 [ext_resource type="StyleBox" uid="uid://0xm68j7088wl" path="res://seashore-gameoff/Themes/ButtonPressed.tres" id="3_4wmkr"]
-[ext_resource type="Texture2D" uid="uid://cmbt1loevvumo" path="res://seashore-gameoff/sprites/journal.png" id="3_5w4qk"]
+[ext_resource type="Texture2D" uid="uid://cmbt1loevvumo" path="res://seashore-gameoff/Sprites/journal.png" id="3_5w4qk"]
 [ext_resource type="AudioStream" uid="uid://d1vl6udu5dvkh" path="res://seashore-gameoff/Sounds/Music/Anotha one.wav" id="7_hllkl"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r8otn"]

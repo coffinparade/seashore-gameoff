@@ -46,7 +46,8 @@ func end_screen(shells:Array[Shell]):
 	tween = get_tree().create_tween()
 	game_ended = true
 	$"End Panel".visible = true
-	
+	$"End Panel".modulate = Color.TRANSPARENT
+	tween.tween_property($"End Panel","modulate",Color.WHITE,0.5)
 	
 	for shell in shells:
 		match shell.id:

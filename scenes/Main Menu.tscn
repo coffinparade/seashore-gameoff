@@ -6,9 +6,9 @@
 [ext_resource type="Script" uid="uid://cmswlj84odl1l" path="res://seashore-gameoff/Scripts/main_menu.gd" id="2_mercu"]
 [ext_resource type="StyleBox" uid="uid://bsqyalvttc6hu" path="res://seashore-gameoff/Themes/ButtonDefault.tres" id="3_gxpqy"]
 [ext_resource type="StyleBox" uid="uid://0xm68j7088wl" path="res://seashore-gameoff/Themes/ButtonPressed.tres" id="4_1ipbd"]
-[ext_resource type="Texture2D" uid="uid://dhxent8klv7h0" path="res://seashore-gameoff/sprites/mainMenuBackground.png" id="4_bb8sq"]
+[ext_resource type="Texture2D" uid="uid://dhxent8klv7h0" path="res://seashore-gameoff/Sprites/mainMenuBackground.png" id="4_bb8sq"]
 [ext_resource type="AudioStream" uid="uid://duyowmrwrjqr4" path="res://seashore-gameoff/Sounds/Music/Theme for game.wav" id="4_yo4yc"]
-[ext_resource type="Texture2D" uid="uid://cwj0byk7r4bux" path="res://seashore-gameoff/sprites/shell_one.png" id="5_t8wvi"]
+[ext_resource type="Texture2D" uid="uid://cwj0byk7r4bux" path="res://seashore-gameoff/Sprites/shell_one.png" id="5_t8wvi"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a4h1q"]
 bg_color = Color(0.21388698, 0.5243891, 0.81751984, 1)

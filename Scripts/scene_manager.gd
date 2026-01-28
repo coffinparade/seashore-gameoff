@@ -32,5 +32,8 @@ func nextScene(scene:bool):
 func journalText()->String:
 	var text :String
 	if story:
-		text = story[str(dayCount)]
+		if dayCount==lastDay&&ScoreTracker.get_cash()<1000:
+			text = story["5"]
+		else:
+			text = story[str(dayCount)]
 	return text

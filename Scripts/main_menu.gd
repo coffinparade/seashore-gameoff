@@ -1,6 +1,6 @@
 extends Control
 
-@onready var nextScene = preload("res://seashore-gameoff/scenes/shore.tscn")
+@onready var nextScene = preload("res://seashore-gameoff/Scenes/shore.tscn")
 @onready var buttons:=%MenuButtons
 var tween
 
